@@ -1,0 +1,2 @@
+9/28/2016	Entering digits and inserting convert function erases initiall digits.
+	Enter a number inside the entry box. Click insert in the tool bar and convert to base in the dropdown menu. Any conversion will highlight the insert box and override the existing numbers/inputs.
