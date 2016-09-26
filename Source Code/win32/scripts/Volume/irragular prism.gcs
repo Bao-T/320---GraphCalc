@@ -1,5 +1,0 @@
-#Volume of Irregular Prism
-[Tab=output]
-[PromptVal=base:Enter the area of the base]
-[PromptVal=height]
-base*height

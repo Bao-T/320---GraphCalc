@@ -1,4 +1,0 @@
-#Surface Area of Sphere
-[Tab=output]
-[PromptVal=radius]
-4*pi*radius^2

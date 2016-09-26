@@ -1,4 +1,0 @@
-#Directory Testing
-[RunScript=while_test.gcs]
-[RunScript="Test\solver.gcs"]
-[RunScript=while_test.gcs]
