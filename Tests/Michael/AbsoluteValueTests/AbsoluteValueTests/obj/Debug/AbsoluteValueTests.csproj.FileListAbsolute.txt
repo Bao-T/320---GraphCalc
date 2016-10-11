@@ -1,0 +1,5 @@
+\\Mac\Desktop\CS 320\EX07\AbsoluteValueTests\AbsoluteValueTests\bin\Debug\AbsoluteValueTests.dll
+\\Mac\Desktop\CS 320\EX07\AbsoluteValueTests\AbsoluteValueTests\bin\Debug\AbsoluteValueTests.pdb
+\\Mac\Desktop\CS 320\EX07\AbsoluteValueTests\AbsoluteValueTests\obj\Debug\AbsoluteValueTests.csprojResolveAssemblyReference.cache
+\\Mac\Desktop\CS 320\EX07\AbsoluteValueTests\AbsoluteValueTests\obj\Debug\AbsoluteValueTests.dll
+\\Mac\Desktop\CS 320\EX07\AbsoluteValueTests\AbsoluteValueTests\obj\Debug\AbsoluteValueTests.pdb
