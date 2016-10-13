@@ -32,7 +32,7 @@ namespace CodedUITestProject2
         /// <summary>
         /// Addition - Use 'AdditionParams' to pass parameters into this method.
         /// </summary>
-        public void Addition()
+        public void Addition(int x, int y)
         {
             #region Variable Declarations
             WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
@@ -40,7 +40,7 @@ namespace CodedUITestProject2
             #endregion
 
             // Select '1+2' in combo box
-            uIItemComboBox.EditableItem = this.AdditionParams.UIItemComboBoxEditableItem;
+            uIItemComboBox.EditableItem = "2+1";
 
             // Type '{Enter}' in text box
             Keyboard.SendKeys(uIItemEdit, this.AdditionParams.UIItemEditSendKeys, ModifierKeys.None);
@@ -2012,11 +2012,12 @@ namespace CodedUITestProject2
     [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
     public class AdditionParams
     {
-        
+
         #region Fields
         /// <summary>
         /// Select '1+2' in combo box
         /// </summary>
+
         public string UIItemComboBoxEditableItem = "1+2";
         
         /// <summary>
