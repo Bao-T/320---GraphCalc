@@ -52,9 +52,9 @@ namespace AbsoluteValueTests
         }
         
         /// <summary>
-        /// Test ABS(1), expect 1
+        /// TEST ABS (-(1/4)), expect 0.25
         /// </summary>
-        public void TestABSOne()
+        public void TestABSMinusOnefourth()
         {
             #region Variable Declarations
             WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
@@ -64,90 +64,13 @@ namespace AbsoluteValueTests
             // The recording for the application under test '\\Mac\Home\Downloads\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
 
             // Click 'GraphCalc' Dialog
-            Mouse.Click(uIGraphCalcDialog, new Point(416, 187));
+            Mouse.Click(uIGraphCalcDialog, new Point(416, 196));
 
-            // Select 'abs(1)' in combo box
-            uIItemComboBox.EditableItem = this.TestABSOneParams.UIItemComboBoxEditableItem;
-
-            // Click 'GraphCalc' Dialog
-            Mouse.Click(uIGraphCalcDialog, new Point(594, 409));
-        }
-        
-        /// <summary>
-        /// Test ABS(1.2), expect 1.2
-        /// </summary>
-        public void TestABSOnePointTwo()
-        {
-            #region Variable Declarations
-            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
-            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
-            #endregion
-
-            // The recording for the application under test '\\Mac\Home\Downloads\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+            // Select 'abs(-(1/4))' in combo box
+            uIItemComboBox.EditableItem = this.TestABSMinusOnefourthParams.UIItemComboBoxEditableItem;
 
             // Click 'GraphCalc' Dialog
-            Mouse.Click(uIGraphCalcDialog, new Point(413, 193));
-
-            // Select 'abs(1.2)' in combo box
-            uIItemComboBox.EditableItem = this.TestABSOnePointTwoParams.UIItemComboBoxEditableItem;
-
-            // Click 'GraphCalc' Dialog
-            Mouse.Click(uIGraphCalcDialog, new Point(589, 407));
-        }
-        
-        /// <summary>
-        /// Test ABS(-1.2), expect 1.2
-        /// </summary>
-        public void TestABSMinusOnePointTwo()
-        {
-            #region Variable Declarations
-            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
-            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
-            #endregion
-
-            // The recording for the application under test '\\Mac\Home\Downloads\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click 'GraphCalc' Dialog
-            Mouse.Click(uIGraphCalcDialog, new Point(415, 192));
-
-            // Select 'abs(-1.2)' in combo box
-            uIItemComboBox.EditableItem = this.TestABSMinusOnePointTwoParams.UIItemComboBoxEditableItem;
-
-            // Click 'GraphCalc' Dialog
-            Mouse.Click(uIGraphCalcDialog, new Point(606, 414));
-        }
-        
-        /// <summary>
-        /// Test ABS(1,000,000), expect 1,000,000
-        /// </summary>
-        public void TestABSOneMillion()
-        {
-            #region Variable Declarations
-            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
-            #endregion
-
-            // The recording for the application under test '\\Mac\Home\Downloads\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click 'GraphCalc' Dialog
-            Mouse.Click(uIGraphCalcDialog, new Point(409, 187));
-
-            // Click 'GraphCalc' Dialog
-            Mouse.Click(uIGraphCalcDialog, new Point(461, 374));
-
-            // Double-Click 'GraphCalc' Dialog
-            Mouse.DoubleClick(uIGraphCalcDialog, new Point(461, 402));
-
-            // Click 'GraphCalc' Dialog
-            Mouse.Click(uIGraphCalcDialog, new Point(461, 402));
-
-            // Double-Click 'GraphCalc' Dialog
-            Mouse.DoubleClick(uIGraphCalcDialog, new Point(461, 402));
-
-            // Click 'GraphCalc' Dialog
-            Mouse.Click(uIGraphCalcDialog, new Point(461, 402));
-
-            // Click 'GraphCalc' Dialog
-            Mouse.Click(uIGraphCalcDialog, new Point(597, 400));
+            Mouse.Click(uIGraphCalcDialog, new Point(597, 408));
         }
         
         /// <summary>
@@ -195,9 +118,97 @@ namespace AbsoluteValueTests
         }
         
         /// <summary>
-        /// TEST ABS(0), expect 0
+        /// Test ABS(-1.2), expect 1.2
         /// </summary>
-        public void TestABSZero()
+        public void TestABSMinusOnePointTwo()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Home\Downloads\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(415, 192));
+
+            // Select 'abs(-1.2)' in combo box
+            uIItemComboBox.EditableItem = this.TestABSMinusOnePointTwoParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(606, 414));
+        }
+        
+        /// <summary>
+        /// TEST ABS(-30), expect 30
+        /// </summary>
+        public void TestABSMinusThirty()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Home\Downloads\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(416, 192));
+
+            // Select 'abs(-30)' in combo box
+            uIItemComboBox.EditableItem = this.TestABSMinusThirtyParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(600, 411));
+        }
+        
+        /// <summary>
+        /// Test ABS(1), expect 1
+        /// </summary>
+        public void TestABSOne()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Home\Downloads\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(416, 187));
+
+            // Select 'abs(1)' in combo box
+            uIItemComboBox.EditableItem = this.TestABSOneParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(594, 409));
+        }
+        
+        /// <summary>
+        /// Test ABS(1/4), expect 0.25
+        /// </summary>
+        public void TestABSOnefourth()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Home\Downloads\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(413, 189));
+
+            // Select 'abs(1/4)' in combo box
+            uIItemComboBox.EditableItem = this.TestABSOnefourthParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(605, 404));
+        }
+        
+        /// <summary>
+        /// Test ABS(1,000,000), expect 1,000,000
+        /// </summary>
+        public void TestABSOneMillion()
         {
             #region Variable Declarations
             WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
@@ -206,13 +217,47 @@ namespace AbsoluteValueTests
             // The recording for the application under test '\\Mac\Home\Downloads\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
 
             // Click 'GraphCalc' Dialog
-            Mouse.Click(uIGraphCalcDialog, new Point(415, 193));
+            Mouse.Click(uIGraphCalcDialog, new Point(409, 187));
 
             // Click 'GraphCalc' Dialog
-            Mouse.Click(uIGraphCalcDialog, new Point(465, 409));
+            Mouse.Click(uIGraphCalcDialog, new Point(461, 374));
+
+            // Double-Click 'GraphCalc' Dialog
+            Mouse.DoubleClick(uIGraphCalcDialog, new Point(461, 402));
 
             // Click 'GraphCalc' Dialog
-            Mouse.Click(uIGraphCalcDialog, new Point(602, 409));
+            Mouse.Click(uIGraphCalcDialog, new Point(461, 402));
+
+            // Double-Click 'GraphCalc' Dialog
+            Mouse.DoubleClick(uIGraphCalcDialog, new Point(461, 402));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(461, 402));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(597, 400));
+        }
+        
+        /// <summary>
+        /// Test ABS(1.2), expect 1.2
+        /// </summary>
+        public void TestABSOnePointTwo()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Home\Downloads\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(413, 193));
+
+            // Select 'abs(1.2)' in combo box
+            uIItemComboBox.EditableItem = this.TestABSOnePointTwoParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(589, 407));
         }
         
         /// <summary>
@@ -240,69 +285,24 @@ namespace AbsoluteValueTests
         }
         
         /// <summary>
-        /// TEST ABS(-30), expect 30
+        /// TEST ABS(0), expect 0
         /// </summary>
-        public void TestABSMinusThirty()
+        public void TestABSZero()
         {
             #region Variable Declarations
             WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
-            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
             #endregion
 
             // The recording for the application under test '\\Mac\Home\Downloads\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
 
             // Click 'GraphCalc' Dialog
-            Mouse.Click(uIGraphCalcDialog, new Point(416, 192));
-
-            // Select 'abs(-30)' in combo box
-            uIItemComboBox.EditableItem = this.TestABSMinusThirtyParams.UIItemComboBoxEditableItem;
+            Mouse.Click(uIGraphCalcDialog, new Point(415, 193));
 
             // Click 'GraphCalc' Dialog
-            Mouse.Click(uIGraphCalcDialog, new Point(600, 411));
-        }
-        
-        /// <summary>
-        /// TEST ABS (-(1/4)), expect 0.25
-        /// </summary>
-        public void TestABSMinusOnefourth()
-        {
-            #region Variable Declarations
-            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
-            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
-            #endregion
-
-            // The recording for the application under test '\\Mac\Home\Downloads\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+            Mouse.Click(uIGraphCalcDialog, new Point(465, 409));
 
             // Click 'GraphCalc' Dialog
-            Mouse.Click(uIGraphCalcDialog, new Point(416, 196));
-
-            // Select 'abs(-(1/4))' in combo box
-            uIItemComboBox.EditableItem = this.TestABSMinusOnefourthParams.UIItemComboBoxEditableItem;
-
-            // Click 'GraphCalc' Dialog
-            Mouse.Click(uIGraphCalcDialog, new Point(597, 408));
-        }
-        
-        /// <summary>
-        /// Test ABS(1/4), expect 0.25
-        /// </summary>
-        public void TestABSOnefourth()
-        {
-            #region Variable Declarations
-            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
-            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
-            #endregion
-
-            // The recording for the application under test '\\Mac\Home\Downloads\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
-
-            // Click 'GraphCalc' Dialog
-            Mouse.Click(uIGraphCalcDialog, new Point(413, 189));
-
-            // Select 'abs(1/4)' in combo box
-            uIItemComboBox.EditableItem = this.TestABSOnefourthParams.UIItemComboBoxEditableItem;
-
-            // Click 'GraphCalc' Dialog
-            Mouse.Click(uIGraphCalcDialog, new Point(605, 404));
+            Mouse.Click(uIGraphCalcDialog, new Point(602, 409));
         }
         
         #region Properties
@@ -318,39 +318,15 @@ namespace AbsoluteValueTests
             }
         }
         
-        public virtual TestABSOneParams TestABSOneParams
+        public virtual TestABSMinusOnefourthParams TestABSMinusOnefourthParams
         {
             get
             {
-                if ((this.mTestABSOneParams == null))
+                if ((this.mTestABSMinusOnefourthParams == null))
                 {
-                    this.mTestABSOneParams = new TestABSOneParams();
+                    this.mTestABSMinusOnefourthParams = new TestABSMinusOnefourthParams();
                 }
-                return this.mTestABSOneParams;
-            }
-        }
-        
-        public virtual TestABSOnePointTwoParams TestABSOnePointTwoParams
-        {
-            get
-            {
-                if ((this.mTestABSOnePointTwoParams == null))
-                {
-                    this.mTestABSOnePointTwoParams = new TestABSOnePointTwoParams();
-                }
-                return this.mTestABSOnePointTwoParams;
-            }
-        }
-        
-        public virtual TestABSMinusOnePointTwoParams TestABSMinusOnePointTwoParams
-        {
-            get
-            {
-                if ((this.mTestABSMinusOnePointTwoParams == null))
-                {
-                    this.mTestABSMinusOnePointTwoParams = new TestABSMinusOnePointTwoParams();
-                }
-                return this.mTestABSMinusOnePointTwoParams;
+                return this.mTestABSMinusOnefourthParams;
             }
         }
         
@@ -378,6 +354,18 @@ namespace AbsoluteValueTests
             }
         }
         
+        public virtual TestABSMinusOnePointTwoParams TestABSMinusOnePointTwoParams
+        {
+            get
+            {
+                if ((this.mTestABSMinusOnePointTwoParams == null))
+                {
+                    this.mTestABSMinusOnePointTwoParams = new TestABSMinusOnePointTwoParams();
+                }
+                return this.mTestABSMinusOnePointTwoParams;
+            }
+        }
+        
         public virtual TestABSMinusThirtyParams TestABSMinusThirtyParams
         {
             get
@@ -390,15 +378,15 @@ namespace AbsoluteValueTests
             }
         }
         
-        public virtual TestABSMinusOnefourthParams TestABSMinusOnefourthParams
+        public virtual TestABSOneParams TestABSOneParams
         {
             get
             {
-                if ((this.mTestABSMinusOnefourthParams == null))
+                if ((this.mTestABSOneParams == null))
                 {
-                    this.mTestABSMinusOnefourthParams = new TestABSMinusOnefourthParams();
+                    this.mTestABSOneParams = new TestABSOneParams();
                 }
-                return this.mTestABSMinusOnefourthParams;
+                return this.mTestABSOneParams;
             }
         }
         
@@ -411,6 +399,18 @@ namespace AbsoluteValueTests
                     this.mTestABSOnefourthParams = new TestABSOnefourthParams();
                 }
                 return this.mTestABSOnefourthParams;
+            }
+        }
+        
+        public virtual TestABSOnePointTwoParams TestABSOnePointTwoParams
+        {
+            get
+            {
+                if ((this.mTestABSOnePointTwoParams == null))
+                {
+                    this.mTestABSOnePointTwoParams = new TestABSOnePointTwoParams();
+                }
+                return this.mTestABSOnePointTwoParams;
             }
         }
         
@@ -430,21 +430,21 @@ namespace AbsoluteValueTests
         #region Fields
         private TestABSMinusOneParams mTestABSMinusOneParams;
         
-        private TestABSOneParams mTestABSOneParams;
-        
-        private TestABSOnePointTwoParams mTestABSOnePointTwoParams;
-        
-        private TestABSMinusOnePointTwoParams mTestABSMinusOnePointTwoParams;
+        private TestABSMinusOnefourthParams mTestABSMinusOnefourthParams;
         
         private TestABSMinusOneMillionParams mTestABSMinusOneMillionParams;
         
         private TestABSMinusOneMinusThreeParams mTestABSMinusOneMinusThreeParams;
         
+        private TestABSMinusOnePointTwoParams mTestABSMinusOnePointTwoParams;
+        
         private TestABSMinusThirtyParams mTestABSMinusThirtyParams;
         
-        private TestABSMinusOnefourthParams mTestABSMinusOnefourthParams;
+        private TestABSOneParams mTestABSOneParams;
         
         private TestABSOnefourthParams mTestABSOnefourthParams;
+        
+        private TestABSOnePointTwoParams mTestABSOnePointTwoParams;
         
         private UIGraphCalcWindow mUIGraphCalcWindow;
         #endregion
@@ -466,47 +466,17 @@ namespace AbsoluteValueTests
     }
     
     /// <summary>
-    /// Parameters to be passed into 'TestABSOne'
+    /// Parameters to be passed into 'TestABSMinusOnefourth'
     /// </summary>
     [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
-    public class TestABSOneParams
+    public class TestABSMinusOnefourthParams
     {
         
         #region Fields
         /// <summary>
-        /// Select 'abs(1)' in combo box
+        /// Select 'abs(-(1/4))' in combo box
         /// </summary>
-        public string UIItemComboBoxEditableItem = "abs(1)";
-        #endregion
-    }
-    
-    /// <summary>
-    /// Parameters to be passed into 'TestABSOnePointTwo'
-    /// </summary>
-    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
-    public class TestABSOnePointTwoParams
-    {
-        
-        #region Fields
-        /// <summary>
-        /// Select 'abs(1.2)' in combo box
-        /// </summary>
-        public string UIItemComboBoxEditableItem = "abs(1.2)";
-        #endregion
-    }
-    
-    /// <summary>
-    /// Parameters to be passed into 'TestABSMinusOnePointTwo'
-    /// </summary>
-    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
-    public class TestABSMinusOnePointTwoParams
-    {
-        
-        #region Fields
-        /// <summary>
-        /// Select 'abs(-1.2)' in combo box
-        /// </summary>
-        public string UIItemComboBoxEditableItem = "abs(-1.2)";
+        public string UIItemComboBoxEditableItem = "abs(-(1/4))";
         #endregion
     }
     
@@ -541,6 +511,21 @@ namespace AbsoluteValueTests
     }
     
     /// <summary>
+    /// Parameters to be passed into 'TestABSMinusOnePointTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestABSMinusOnePointTwoParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'abs(-1.2)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "abs(-1.2)";
+        #endregion
+    }
+    
+    /// <summary>
     /// Parameters to be passed into 'TestABSMinusThirty'
     /// </summary>
     [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
@@ -556,17 +541,17 @@ namespace AbsoluteValueTests
     }
     
     /// <summary>
-    /// Parameters to be passed into 'TestABSMinusOnefourth'
+    /// Parameters to be passed into 'TestABSOne'
     /// </summary>
     [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
-    public class TestABSMinusOnefourthParams
+    public class TestABSOneParams
     {
         
         #region Fields
         /// <summary>
-        /// Select 'abs(-(1/4))' in combo box
+        /// Select 'abs(1)' in combo box
         /// </summary>
-        public string UIItemComboBoxEditableItem = "abs(-(1/4))";
+        public string UIItemComboBoxEditableItem = "abs(1)";
         #endregion
     }
     
@@ -582,6 +567,21 @@ namespace AbsoluteValueTests
         /// Select 'abs(1/4)' in combo box
         /// </summary>
         public string UIItemComboBoxEditableItem = "abs(1/4)";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestABSOnePointTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestABSOnePointTwoParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'abs(1.2)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "abs(1.2)";
         #endregion
     }
     
@@ -627,12 +627,26 @@ namespace AbsoluteValueTests
                 return this.mUIItemWindow;
             }
         }
+        
+        public UIItemWindow1 UIItemWindow1
+        {
+            get
+            {
+                if ((this.mUIItemWindow1 == null))
+                {
+                    this.mUIItemWindow1 = new UIItemWindow1(this);
+                }
+                return this.mUIItemWindow1;
+            }
+        }
         #endregion
         
         #region Fields
         private WinControl mUIGraphCalcDialog;
         
         private UIItemWindow mUIItemWindow;
+        
+        private UIItemWindow1 mUIItemWindow1;
         #endregion
     }
     
@@ -668,6 +682,41 @@ namespace AbsoluteValueTests
         
         #region Fields
         private WinComboBox mUIItemComboBox;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIItemWindow1 : WinWindow
+    {
+        
+        public UIItemWindow1(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "1003";
+            this.WindowTitles.Add("GraphCalc");
+            #endregion
+        }
+        
+        #region Properties
+        public WinEdit UIItemEdit
+        {
+            get
+            {
+                if ((this.mUIItemEdit == null))
+                {
+                    this.mUIItemEdit = new WinEdit(this);
+                    #region Search Criteria
+                    this.mUIItemEdit.WindowTitles.Add("GraphCalc");
+                    #endregion
+                }
+                return this.mUIItemEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinEdit mUIItemEdit;
         #endregion
     }
 }

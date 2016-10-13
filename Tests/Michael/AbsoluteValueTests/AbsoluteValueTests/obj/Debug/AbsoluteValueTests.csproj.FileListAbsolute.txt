@@ -3,3 +3,8 @@
 \\Mac\Desktop\CS 320\EX07\AbsoluteValueTests\AbsoluteValueTests\obj\Debug\AbsoluteValueTests.csprojResolveAssemblyReference.cache
 \\Mac\Desktop\CS 320\EX07\AbsoluteValueTests\AbsoluteValueTests\obj\Debug\AbsoluteValueTests.dll
 \\Mac\Desktop\CS 320\EX07\AbsoluteValueTests\AbsoluteValueTests\obj\Debug\AbsoluteValueTests.pdb
+\\Mac\Desktop\320 - GraphCalc\Tests\Michael\AbsoluteValueTests\AbsoluteValueTests\bin\Debug\AbsoluteValueTests.dll
+\\Mac\Desktop\320 - GraphCalc\Tests\Michael\AbsoluteValueTests\AbsoluteValueTests\bin\Debug\AbsoluteValueTests.pdb
+\\Mac\Desktop\320 - GraphCalc\Tests\Michael\AbsoluteValueTests\AbsoluteValueTests\obj\Debug\AbsoluteValueTests.csprojResolveAssemblyReference.cache
+\\Mac\Desktop\320 - GraphCalc\Tests\Michael\AbsoluteValueTests\AbsoluteValueTests\obj\Debug\AbsoluteValueTests.dll
+\\Mac\Desktop\320 - GraphCalc\Tests\Michael\AbsoluteValueTests\AbsoluteValueTests\obj\Debug\AbsoluteValueTests.pdb

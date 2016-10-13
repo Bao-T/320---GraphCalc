@@ -86,14 +86,14 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="416" Y="187" />
+      <Location X="416" Y="196" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
     <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow.UIItemComboBox">
       <ParameterName />
-      <Value Encoded="false">abs(1)</Value>
+      <Value Encoded="false">abs(-(1/4))</Value>
       <Type>String</Type>
       <PreferEdit>True</PreferEdit>
     </SetValueAction>
@@ -101,12 +101,12 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="594" Y="409" />
+      <Location X="597" Y="408" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <TestStepMarkerAction Comment="Test ABS(1), expect 1" MarkerInformation="TestABSOne">
+    <TestStepMarkerAction Comment="TEST ABS (-(1/4)), expect 0.25" MarkerInformation="TestABSMinusOnefourth">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -123,14 +123,14 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="413" Y="193" />
+      <Location X="414" Y="190" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
     <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow.UIItemComboBox">
       <ParameterName />
-      <Value Encoded="false">abs(1.2)</Value>
+      <Value Encoded="false">abs(-1000000)</Value>
       <Type>String</Type>
       <PreferEdit>True</PreferEdit>
     </SetValueAction>
@@ -138,12 +138,49 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="589" Y="407" />
+      <Location X="611" Y="406" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <TestStepMarkerAction Comment="Test ABS(1.2), expect 1.2" MarkerInformation="TestABSOnePointTwo">
+    <TestStepMarkerAction Comment="Test ABS(-1,000,000), expect 1,000,000" MarkerInformation="TestABSMinusOneMillion">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <ErrorAction>
+      <ParameterName />
+      <Message>The recording for the application under test '\\Mac\Home\Downloads\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.</Message>
+    </ErrorAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="408" Y="189" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow.UIItemComboBox">
+      <ParameterName />
+      <Value Encoded="false">abs(-1-3)</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="608" Y="405" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="TEST ABS(-1-3), expect 4" MarkerInformation="TestABSMinusOneMinusThree">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -181,6 +218,117 @@
       <MouseButton>Left</MouseButton>
     </MouseAction>
     <TestStepMarkerAction Comment="Test ABS(-1.2), expect 1.2" MarkerInformation="TestABSMinusOnePointTwo">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <ErrorAction>
+      <ParameterName />
+      <Message>The recording for the application under test '\\Mac\Home\Downloads\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.</Message>
+    </ErrorAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="416" Y="192" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow.UIItemComboBox">
+      <ParameterName />
+      <Value Encoded="false">abs(-30)</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="600" Y="411" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="TEST ABS(-30), expect 30" MarkerInformation="TestABSMinusThirty">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <ErrorAction>
+      <ParameterName />
+      <Message>The recording for the application under test '\\Mac\Home\Downloads\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.</Message>
+    </ErrorAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="416" Y="187" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow.UIItemComboBox">
+      <ParameterName />
+      <Value Encoded="false">abs(1)</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="594" Y="409" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="Test ABS(1), expect 1" MarkerInformation="TestABSOne">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <ErrorAction>
+      <ParameterName />
+      <Message>The recording for the application under test '\\Mac\Home\Downloads\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.</Message>
+    </ErrorAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="413" Y="189" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow.UIItemComboBox">
+      <ParameterName />
+      <Value Encoded="false">abs(1/4)</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="605" Y="404" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="Test ABS(1/4), expect 0.25" MarkerInformation="TestABSOnefourth">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -273,14 +421,14 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="414" Y="190" />
+      <Location X="413" Y="193" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
     <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow.UIItemComboBox">
       <ParameterName />
-      <Value Encoded="false">abs(-1000000)</Value>
+      <Value Encoded="false">abs(1.2)</Value>
       <Type>String</Type>
       <PreferEdit>True</PreferEdit>
     </SetValueAction>
@@ -288,89 +436,12 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="611" Y="406" />
+      <Location X="589" Y="407" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <TestStepMarkerAction Comment="Test ABS(-1,000,000), expect 1,000,000" MarkerInformation="TestABSMinusOneMillion">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Action</MarkerRegionType>
-    </TestStepMarkerAction>
-    <ErrorAction>
-      <ParameterName />
-      <Message>The recording for the application under test '\\Mac\Home\Downloads\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.</Message>
-    </ErrorAction>
-    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="408" Y="189" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow.UIItemComboBox">
-      <ParameterName />
-      <Value Encoded="false">abs(-1-3)</Value>
-      <Type>String</Type>
-      <PreferEdit>True</PreferEdit>
-    </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="608" Y="405" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <TestStepMarkerAction Comment="TEST ABS(-1-3), expect 4" MarkerInformation="TestABSMinusOneMinusThree">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Action</MarkerRegionType>
-    </TestStepMarkerAction>
-    <ErrorAction>
-      <ParameterName />
-      <Message>The recording for the application under test '\\Mac\Home\Downloads\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.</Message>
-    </ErrorAction>
-    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="415" Y="193" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="465" Y="409" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="602" Y="409" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <TestStepMarkerAction Comment="TEST ABS(0), expect 0" MarkerInformation="TestABSZero">
+    <TestStepMarkerAction Comment="Test ABS(1.2), expect 1.2" MarkerInformation="TestABSOnePointTwo">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -436,101 +507,30 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="416" Y="192" />
+      <Location X="415" Y="193" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow.UIItemComboBox">
-      <ParameterName />
-      <Value Encoded="false">abs(-30)</Value>
-      <Type>String</Type>
-      <PreferEdit>True</PreferEdit>
-    </SetValueAction>
     <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="600" Y="411" />
+      <Location X="465" Y="409" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <TestStepMarkerAction Comment="TEST ABS(-30), expect 30" MarkerInformation="TestABSMinusThirty">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Action</MarkerRegionType>
-    </TestStepMarkerAction>
-    <ErrorAction>
-      <ParameterName />
-      <Message>The recording for the application under test '\\Mac\Home\Downloads\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.</Message>
-    </ErrorAction>
     <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="416" Y="196" />
+      <Location X="602" Y="409" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow.UIItemComboBox">
-      <ParameterName />
-      <Value Encoded="false">abs(-(1/4))</Value>
-      <Type>String</Type>
-      <PreferEdit>True</PreferEdit>
-    </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="597" Y="408" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <TestStepMarkerAction Comment="TEST ABS (-(1/4)), expect 0.25" MarkerInformation="TestABSMinusOnefourth">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Action</MarkerRegionType>
-    </TestStepMarkerAction>
-    <ErrorAction>
-      <ParameterName />
-      <Message>The recording for the application under test '\\Mac\Home\Downloads\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.</Message>
-    </ErrorAction>
-    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="413" Y="189" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow.UIItemComboBox">
-      <ParameterName />
-      <Value Encoded="false">abs(1/4)</Value>
-      <Type>String</Type>
-      <PreferEdit>True</PreferEdit>
-    </SetValueAction>
-    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="605" Y="404" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <TestStepMarkerAction Comment="Test ABS(1/4), expect 0.25" MarkerInformation="TestABSOnefourth">
+    <TestStepMarkerAction Comment="TEST ABS(0), expect 0" MarkerInformation="TestABSZero">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -601,6 +601,36 @@
                     <PropertyCondition Name="ControlType">ComboBox</PropertyCondition>
                   </AndCondition>
                   <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+              </Descendants>
+            </UIObject>
+            <UIObject ControlType="Window" Id="UIItemWindow1" FriendlyName="" SpecialControlType="None">
+              <TechnologyName>MSAA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>GraphCalc</WindowTitle>
+              </WindowTitles>
+              <SearchConfigurations>
+                <SearchConfiguration>VisibleOnly</SearchConfiguration>
+              </SearchConfigurations>
+              <AndCondition Id="SearchCondition">
+                <PropertyCondition Name="ControlId">1003</PropertyCondition>
+                <PropertyCondition Name="ControlType">Window</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>1</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="Edit" Id="UIItemEdit" FriendlyName="" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>GraphCalc</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="ControlType">Edit</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>1</SupportLevel>
                   <Descendants />
                 </UIObject>
               </Descendants>

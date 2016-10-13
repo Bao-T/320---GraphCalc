@@ -29,6 +29,14 @@ namespace AbsoluteValueTests
             this.UIMap.TestABSMinusOne();
         }
 
+        [TestMethod]
+        public void CodedUITestMethod111()
+        {
+            // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
+            this.UIMap.TestABSMinusOne();
+        }
+
+
         #region Additional test attributes
 
         // You can use the following additional attributes as you write your tests:
