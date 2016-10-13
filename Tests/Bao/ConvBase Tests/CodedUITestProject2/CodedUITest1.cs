@@ -15,9 +15,13 @@ namespace CodedUITestProject2
     /// <summary>
     /// Summary description for CodedUITest1
     /// </summary>
+    ///    Random rnd = new Random();
+
     [CodedUITest]
     public class CodedUITest1
     {
+     
+
         private ApplicationUnderTest testapp;
         public CodedUITest1()
         {
@@ -31,8 +35,11 @@ namespace CodedUITestProject2
         [TestMethod]
         public void TestingAddition()
         {
+            Random rnd = new Random();
+            int x = rnd.Next();
+            int y = rnd.Next();
             // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
-            this.UIMap.Addition();
+            this.UIMap.Addition(x,y);
             this.UIMap.AssertAddition();
             this.UIMap.ClearOutput();
 
