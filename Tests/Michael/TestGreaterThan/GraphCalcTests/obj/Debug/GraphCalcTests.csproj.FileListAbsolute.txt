@@ -1,0 +1,5 @@
+\\Mac\Home\Desktop\CS 320\GraphCalcTests\GraphCalcTests\bin\Debug\GraphCalcTests.dll
+\\Mac\Home\Desktop\CS 320\GraphCalcTests\GraphCalcTests\bin\Debug\GraphCalcTests.pdb
+\\Mac\Home\Desktop\CS 320\GraphCalcTests\GraphCalcTests\obj\Debug\GraphCalcTests.csprojResolveAssemblyReference.cache
+\\Mac\Home\Desktop\CS 320\GraphCalcTests\GraphCalcTests\obj\Debug\GraphCalcTests.dll
+\\Mac\Home\Desktop\CS 320\GraphCalcTests\GraphCalcTests\obj\Debug\GraphCalcTests.pdb
