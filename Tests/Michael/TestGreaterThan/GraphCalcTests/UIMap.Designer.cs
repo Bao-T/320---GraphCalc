@@ -140,7 +140,7 @@ namespace GraphCalcTests
             #endregion
 
             // Verify that the 'Text' property of text box equals '4>2
-            //1
+            //1.000000000000000
             //
             //'
             Assert.AreEqual(this.AssertFourGreaterThanTwo2ExpectedValues.UIItemEditText, uIItemEdit.Text, "Is not Equal");
@@ -518,6 +518,211 @@ namespace GraphCalcTests
             Assert.AreEqual(this.AssertOnehundredGreaterThanTwoExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
         }
         
+        /// <summary>
+        /// TestTwoGreaterThanTen - Use 'TestTwoGreaterThanTenParams' to pass parameters into this method.
+        /// </summary>
+        public void TestTwoGreaterThanTen()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(501, 376));
+
+            // Select '2>100' in combo box
+            uIItemComboBox.EditableItem = this.TestTwoGreaterThanTenParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(612, 409));
+        }
+        
+        /// <summary>
+        /// AssertTwoGreaterThanTen - Use 'AssertTwoGreaterThanTenExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertTwoGreaterThanTen()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '2>100
+            //0
+            //
+            //'
+            Assert.AreEqual(this.AssertTwoGreaterThanTenExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestTwoGreaterThanOnehundred - Use 'TestTwoGreaterThanOnehundredParams' to pass parameters into this method.
+        /// </summary>
+        public void TestTwoGreaterThanOnehundred()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(499, 378));
+
+            // Select '2>100' in combo box
+            uIItemComboBox.EditableItem = this.TestTwoGreaterThanOnehundredParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(587, 405));
+        }
+        
+        /// <summary>
+        /// AssertTwoGreaterThanOnehundred - Use 'AssertTwoGreaterThanOnehundredExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertTwoGreaterThanOnehundred()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '2>100
+            //0
+            //
+            //'
+            Assert.AreEqual(this.AssertTwoGreaterThanOnehundredExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestOnethousandGreaterThanTwo - Use 'TestOnethousandGreaterThanTwoParams' to pass parameters into this method.
+        /// </summary>
+        public void TestOnethousandGreaterThanTwo()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(462, 379));
+
+            // Double-Click 'GraphCalc' Dialog
+            Mouse.DoubleClick(uIGraphCalcDialog, new Point(461, 400));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(461, 400));
+
+            // Select '1000>2' in combo box
+            uIItemComboBox.EditableItem = this.TestOnethousandGreaterThanTwoParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(603, 408));
+        }
+        
+        /// <summary>
+        /// AssertOnethousandGreaterThanTwo - Use 'AssertOnethousandGreaterThanTwoExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertOnethousandGreaterThanTwo()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '1000>2
+            //1
+            //
+            //'
+            Assert.AreEqual(this.AssertOnethousandGreaterThanTwoExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestTwoGreaterThanOnethousand - Use 'TestTwoGreaterThanOnethousandParams' to pass parameters into this method.
+        /// </summary>
+        public void TestTwoGreaterThanOnethousand()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(504, 376));
+
+            // Select '2>1000' in combo box
+            uIItemComboBox.EditableItem = this.TestTwoGreaterThanOnethousandParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(603, 407));
+        }
+        
+        /// <summary>
+        /// AssertTwoGreaterThanOnethousand - Use 'AssertTwoGreaterThanOnethousandExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertTwoGreaterThanOnethousand()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '2>1000
+            //0
+            //
+            //'
+            Assert.AreEqual(this.AssertTwoGreaterThanOnethousandExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestTenthousandGreaterThanTwo - Use 'TestTenthousandGreaterThanTwoParams' to pass parameters into this method.
+        /// </summary>
+        public void TestTenthousandGreaterThanTwo()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(458, 381));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(458, 399));
+
+            // Double-Click 'GraphCalc' Dialog
+            Mouse.DoubleClick(uIGraphCalcDialog, new Point(458, 399));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(458, 399));
+
+            // Select '10000>2' in combo box
+            uIItemComboBox.EditableItem = this.TestTenthousandGreaterThanTwoParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(593, 406));
+        }
+        
+        /// <summary>
+        /// AssertTenthousandGreaterThanTwo - Use 'AssertTenthousandGreaterThanTwoExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertTenthousandGreaterThanTwo()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '10000>2
+            //1
+            //
+            //'
+            Assert.AreEqual(this.AssertTenthousandGreaterThanTwoExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
         #region Properties
         public virtual AssertFourGreaterThanTwoExpectedValues AssertFourGreaterThanTwoExpectedValues
         {
@@ -771,6 +976,126 @@ namespace GraphCalcTests
             }
         }
         
+        public virtual TestTwoGreaterThanTenParams TestTwoGreaterThanTenParams
+        {
+            get
+            {
+                if ((this.mTestTwoGreaterThanTenParams == null))
+                {
+                    this.mTestTwoGreaterThanTenParams = new TestTwoGreaterThanTenParams();
+                }
+                return this.mTestTwoGreaterThanTenParams;
+            }
+        }
+        
+        public virtual AssertTwoGreaterThanTenExpectedValues AssertTwoGreaterThanTenExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertTwoGreaterThanTenExpectedValues == null))
+                {
+                    this.mAssertTwoGreaterThanTenExpectedValues = new AssertTwoGreaterThanTenExpectedValues();
+                }
+                return this.mAssertTwoGreaterThanTenExpectedValues;
+            }
+        }
+        
+        public virtual TestTwoGreaterThanOnehundredParams TestTwoGreaterThanOnehundredParams
+        {
+            get
+            {
+                if ((this.mTestTwoGreaterThanOnehundredParams == null))
+                {
+                    this.mTestTwoGreaterThanOnehundredParams = new TestTwoGreaterThanOnehundredParams();
+                }
+                return this.mTestTwoGreaterThanOnehundredParams;
+            }
+        }
+        
+        public virtual AssertTwoGreaterThanOnehundredExpectedValues AssertTwoGreaterThanOnehundredExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertTwoGreaterThanOnehundredExpectedValues == null))
+                {
+                    this.mAssertTwoGreaterThanOnehundredExpectedValues = new AssertTwoGreaterThanOnehundredExpectedValues();
+                }
+                return this.mAssertTwoGreaterThanOnehundredExpectedValues;
+            }
+        }
+        
+        public virtual TestOnethousandGreaterThanTwoParams TestOnethousandGreaterThanTwoParams
+        {
+            get
+            {
+                if ((this.mTestOnethousandGreaterThanTwoParams == null))
+                {
+                    this.mTestOnethousandGreaterThanTwoParams = new TestOnethousandGreaterThanTwoParams();
+                }
+                return this.mTestOnethousandGreaterThanTwoParams;
+            }
+        }
+        
+        public virtual AssertOnethousandGreaterThanTwoExpectedValues AssertOnethousandGreaterThanTwoExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertOnethousandGreaterThanTwoExpectedValues == null))
+                {
+                    this.mAssertOnethousandGreaterThanTwoExpectedValues = new AssertOnethousandGreaterThanTwoExpectedValues();
+                }
+                return this.mAssertOnethousandGreaterThanTwoExpectedValues;
+            }
+        }
+        
+        public virtual TestTwoGreaterThanOnethousandParams TestTwoGreaterThanOnethousandParams
+        {
+            get
+            {
+                if ((this.mTestTwoGreaterThanOnethousandParams == null))
+                {
+                    this.mTestTwoGreaterThanOnethousandParams = new TestTwoGreaterThanOnethousandParams();
+                }
+                return this.mTestTwoGreaterThanOnethousandParams;
+            }
+        }
+        
+        public virtual AssertTwoGreaterThanOnethousandExpectedValues AssertTwoGreaterThanOnethousandExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertTwoGreaterThanOnethousandExpectedValues == null))
+                {
+                    this.mAssertTwoGreaterThanOnethousandExpectedValues = new AssertTwoGreaterThanOnethousandExpectedValues();
+                }
+                return this.mAssertTwoGreaterThanOnethousandExpectedValues;
+            }
+        }
+        
+        public virtual TestTenthousandGreaterThanTwoParams TestTenthousandGreaterThanTwoParams
+        {
+            get
+            {
+                if ((this.mTestTenthousandGreaterThanTwoParams == null))
+                {
+                    this.mTestTenthousandGreaterThanTwoParams = new TestTenthousandGreaterThanTwoParams();
+                }
+                return this.mTestTenthousandGreaterThanTwoParams;
+            }
+        }
+        
+        public virtual AssertTenthousandGreaterThanTwoExpectedValues AssertTenthousandGreaterThanTwoExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertTenthousandGreaterThanTwoExpectedValues == null))
+                {
+                    this.mAssertTenthousandGreaterThanTwoExpectedValues = new AssertTenthousandGreaterThanTwoExpectedValues();
+                }
+                return this.mAssertTenthousandGreaterThanTwoExpectedValues;
+            }
+        }
+        
         public UIGraphCalcWindow UIGraphCalcWindow
         {
             get
@@ -826,6 +1151,26 @@ namespace GraphCalcTests
         private TestOnehundredGreaterThanTwoParams mTestOnehundredGreaterThanTwoParams;
         
         private AssertOnehundredGreaterThanTwoExpectedValues mAssertOnehundredGreaterThanTwoExpectedValues;
+        
+        private TestTwoGreaterThanTenParams mTestTwoGreaterThanTenParams;
+        
+        private AssertTwoGreaterThanTenExpectedValues mAssertTwoGreaterThanTenExpectedValues;
+        
+        private TestTwoGreaterThanOnehundredParams mTestTwoGreaterThanOnehundredParams;
+        
+        private AssertTwoGreaterThanOnehundredExpectedValues mAssertTwoGreaterThanOnehundredExpectedValues;
+        
+        private TestOnethousandGreaterThanTwoParams mTestOnethousandGreaterThanTwoParams;
+        
+        private AssertOnethousandGreaterThanTwoExpectedValues mAssertOnethousandGreaterThanTwoExpectedValues;
+        
+        private TestTwoGreaterThanOnethousandParams mTestTwoGreaterThanOnethousandParams;
+        
+        private AssertTwoGreaterThanOnethousandExpectedValues mAssertTwoGreaterThanOnethousandExpectedValues;
+        
+        private TestTenthousandGreaterThanTwoParams mTestTenthousandGreaterThanTwoParams;
+        
+        private AssertTenthousandGreaterThanTwoExpectedValues mAssertTenthousandGreaterThanTwoExpectedValues;
         
         private UIGraphCalcWindow mUIGraphCalcWindow;
         #endregion
@@ -1204,6 +1549,171 @@ namespace GraphCalcTests
         ///'
         /// </summary>
         public string UIItemEditText = "100>2\n1\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestTwoGreaterThanTen'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestTwoGreaterThanTenParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '2>100' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "2>100";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertTwoGreaterThanTen'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertTwoGreaterThanTenExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '2>100
+        ///0
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "2>100\n0\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestTwoGreaterThanOnehundred'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestTwoGreaterThanOnehundredParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '2>100' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "2>100";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertTwoGreaterThanOnehundred'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertTwoGreaterThanOnehundredExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '2>100
+        ///0
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "2>100\n0\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestOnethousandGreaterThanTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestOnethousandGreaterThanTwoParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '1000>2' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "1000>2";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertOnethousandGreaterThanTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertOnethousandGreaterThanTwoExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '1000>2
+        ///1
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "1000>2\n1\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestTwoGreaterThanOnethousand'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestTwoGreaterThanOnethousandParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '2>1000' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "2>1000";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertTwoGreaterThanOnethousand'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertTwoGreaterThanOnethousandExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '2>1000
+        ///0
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "2>1000\n0\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestTenthousandGreaterThanTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestTenthousandGreaterThanTwoParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '10000>2' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "10000>2";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertTenthousandGreaterThanTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertTenthousandGreaterThanTwoExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '10000>2
+        ///1
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "10000>2\n1\n\r\n";
         #endregion
     }
     

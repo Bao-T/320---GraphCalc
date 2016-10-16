@@ -97,6 +97,51 @@ namespace GraphCalcTests
             this.UIMap.TestOnehundredGreaterThanTwo();
             this.UIMap.AssertOnehundredGreaterThanTwo();
         }
+
+        [TestMethod]
+        public void TwoGreaterThanOneTen()
+        {
+
+            this.UIMap.TestTwoGreaterThanTen();
+            this.UIMap.AssertTwoGreaterThanTen();
+
+        }
+
+        [TestMethod]
+        public void TwoGreaterThanOnehundred()
+        {
+
+            this.UIMap.TestTwoGreaterThanOnehundred();
+            this.UIMap.AssertTwoGreaterThanOnehundred();
+
+        }
+
+        [TestMethod]
+        public void OnethousandGreaterThanTwo()
+        {
+
+            this.UIMap.TestOnethousandGreaterThanTwo();
+            this.UIMap.AssertOnethousandGreaterThanTwo();
+
+        }
+
+        [TestMethod]
+        public void TwoGreaterThanOnethousand()
+        {
+
+            this.UIMap.TestTwoGreaterThanOnethousand();
+            this.UIMap.AssertTwoGreaterThanOnethousand();
+
+        }
+
+        [TestMethod]
+        public void TenthousandGreaterThanTwo()
+        {
+
+            this.UIMap.TestTenthousandGreaterThanTwo();
+            this.UIMap.AssertTenthousandGreaterThanTwo();
+
+        }
         #region Additional test attributes
 
         // You can use the following additional attributes as you write your tests:
