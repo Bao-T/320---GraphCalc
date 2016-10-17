@@ -32,7 +32,7 @@ namespace CodedUITestProject2
         /// <summary>
         /// Addition - Use 'AdditionParams' to pass parameters into this method.
         /// </summary>
-        public void Addition(int x, int y)
+        public void Addition()
         {
             #region Variable Declarations
             WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
@@ -40,7 +40,7 @@ namespace CodedUITestProject2
             #endregion
 
             // Select '1+2' in combo box
-            uIItemComboBox.EditableItem = "2+1";
+            uIItemComboBox.EditableItem = this.AdditionParams.UIItemComboBoxEditableItem;
 
             // Type '{Enter}' in text box
             Keyboard.SendKeys(uIItemEdit, this.AdditionParams.UIItemEditSendKeys, ModifierKeys.None);
@@ -1413,6 +1413,353 @@ namespace CodedUITestProject2
             Assert.AreEqual(this.AssertConvertBaseBetweenBasesExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
         
+        /// <summary>
+        /// See if negative binary numbers are acceptable output
+        /// </summary>
+        public void ConvertBaseNegativeNumber()
+        {
+            #region Variable Declarations
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow1.UIItemEdit;
+            #endregion
+
+            // Select '-20 convbase 2' in combo box
+            uIItemComboBox.EditableItem = this.ConvertBaseNegativeNumberParams.UIItemComboBoxEditableItem;
+
+            // Type '{Enter}' in text box
+            Keyboard.SendKeys(uIItemEdit, this.ConvertBaseNegativeNumberParams.UIItemEditSendKeys, ModifierKeys.None);
+        }
+        
+        /// <summary>
+        /// AssertConvertBaseNegativeNumber - Use 'AssertConvertBaseNegativeNumberExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertConvertBaseNegativeNumber()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow2.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '-20 convbase 2
+            //-10,1002
+            //
+            //'
+            Assert.AreEqual(this.AssertConvertBaseNegativeNumberExpectedValues.UIItemEditText, uIItemEdit.Text);
+        }
+        
+        /// <summary>
+        /// converts a decimal
+        /// </summary>
+        public void ConvertBaseNonInteger()
+        {
+            #region Variable Declarations
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow1.UIItemEdit;
+            #endregion
+
+            // Select '3.333 convbase 2' in combo box
+            uIItemComboBox.EditableItem = this.ConvertBaseNonIntegerParams.UIItemComboBoxEditableItem;
+
+            // Type '{Enter}' in text box
+            Keyboard.SendKeys(uIItemEdit, this.ConvertBaseNonIntegerParams.UIItemEditSendKeys, ModifierKeys.None);
+        }
+        
+        /// <summary>
+        /// AssertConvertBaseNonInteger - Use 'AssertConvertBaseNonIntegerExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertConvertBaseNonInteger()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow2.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '3.333 convbase 2
+            //11.01010101001111110111110011101101100100010110100012
+            //
+            //'
+            Assert.AreEqual(this.AssertConvertBaseNonIntegerExpectedValues.UIItemEditText, uIItemEdit.Text);
+        }
+        
+        /// <summary>
+        /// ConvertBaseIrrationalNumber - Use 'ConvertBaseIrrationalNumberParams' to pass parameters into this method.
+        /// </summary>
+        public void ConvertBaseIrrationalNumber()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow1.UIItemEdit;
+            #endregion
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(404, 332));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(501, 371));
+
+            // Select 'sqrt 2 convbase 2' in combo box
+            uIItemComboBox.EditableItem = this.ConvertBaseIrrationalNumberParams.UIItemComboBoxEditableItem;
+
+            // Type '{Enter}' in text box
+            Keyboard.SendKeys(uIItemEdit, this.ConvertBaseIrrationalNumberParams.UIItemEditSendKeys, ModifierKeys.None);
+
+            // Select 'sqrt 3 convbase 2' in combo box
+            uIItemComboBox.EditableItem = this.ConvertBaseIrrationalNumberParams.UIItemComboBoxEditableItem1;
+
+            // Type '{Enter}' in text box
+            Keyboard.SendKeys(uIItemEdit, this.ConvertBaseIrrationalNumberParams.UIItemEditSendKeys1, ModifierKeys.None);
+        }
+        
+        /// <summary>
+        /// AssertConverBaseIrrationalNUmber - Use 'AssertConverBaseIrrationalNUmberExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertConverBaseIrrationalNUmber()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow2.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals 'sqrt 2 convbase 2
+            //1.011010100000100111100110011001111111001110111100112
+            //sqrt 3 convbase 2
+            //1.101110110110011110101110100001011000010011001010112
+            //
+            //'
+            Assert.AreEqual(this.AssertConverBaseIrrationalNUmberExpectedValues.UIItemEditText, uIItemEdit.Text);
+        }
+        
+        /// <summary>
+        /// ConvertBaseIrrationalBase - Use 'ConvertBaseIrrationalBaseParams' to pass parameters into this method.
+        /// </summary>
+        public void ConvertBaseIrrationalBase()
+        {
+            #region Variable Declarations
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow1.UIItemEdit;
+            #endregion
+
+            // Select '15 convbase ' in combo box
+            uIItemComboBox.EditableItem = this.ConvertBaseIrrationalBaseParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(406, 345));
+
+            // Select '15 convbase sqrt 2' in combo box
+            uIItemComboBox.EditableItem = this.ConvertBaseIrrationalBaseParams.UIItemComboBoxEditableItem1;
+
+            // Type '{Enter}' in text box
+            Keyboard.SendKeys(uIItemEdit, this.ConvertBaseIrrationalBaseParams.UIItemEditSendKeys, ModifierKeys.None);
+        }
+        
+        /// <summary>
+        /// Should Not Crash
+        /// </summary>
+        public void AssertConvertToBaseIrrationalBase()
+        {
+            #region Variable Declarations
+            WinTitleBar uIGrphCalcTitleBar = this.UIGrphCalcWindow.UIGrphCalcTitleBar;
+            #endregion
+
+            // Verify that the 'Exists' property of 'GrphCalc' title bar is not equal to 'True'
+            Assert.AreNotEqual(this.AssertConvertToBaseIrrationalBaseExpectedValues.UIGrphCalcTitleBarExists, uIGrphCalcTitleBar.Exists, "Crash");
+        }
+        
+        /// <summary>
+        /// ConvertToBaseDecimalBase - Use 'ConvertToBaseDecimalBaseParams' to pass parameters into this method.
+        /// </summary>
+        public void ConvertToBaseDecimalBase()
+        {
+            #region Variable Declarations
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            #endregion
+
+            // Select '15 convbase1.5' in combo box
+            uIItemComboBox.EditableItem = this.ConvertToBaseDecimalBaseParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(588, 390));
+        }
+        
+        /// <summary>
+        /// AssertConvertToBaseDecimalBase - Use 'AssertConvertToBaseDecimalBaseExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertConvertToBaseDecimalBase()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow2.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '
+            //'
+            Assert.AreEqual(this.AssertConvertToBaseDecimalBaseExpectedValues.UIItemEditText, uIItemEdit.Text);
+        }
+        
+        /// <summary>
+        /// ConvertBaseWithFunctionAsBase - Use 'ConvertBaseWithFunctionAsBaseParams' to pass parameters into this method.
+        /// </summary>
+        public void ConvertBaseWithFunctionAsBase()
+        {
+            #region Variable Declarations
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow1.UIItemEdit;
+            #endregion
+
+            // Select '15 convbase(1+3-1)' in combo box
+            uIItemComboBox.EditableItem = this.ConvertBaseWithFunctionAsBaseParams.UIItemComboBoxEditableItem;
+
+            // Type '{Enter}' in text box
+            Keyboard.SendKeys(uIItemEdit, this.ConvertBaseWithFunctionAsBaseParams.UIItemEditSendKeys, ModifierKeys.None);
+
+            // Select '15 convbase (1+1)' in combo box
+            uIItemComboBox.EditableItem = this.ConvertBaseWithFunctionAsBaseParams.UIItemComboBoxEditableItem1;
+
+            // Type '{Enter}' in text box
+            Keyboard.SendKeys(uIItemEdit, this.ConvertBaseWithFunctionAsBaseParams.UIItemEditSendKeys1, ModifierKeys.None);
+        }
+        
+        /// <summary>
+        /// AssertConvertBaseWithFunctionAsBase - Use 'AssertConvertBaseWithFunctionAsBaseExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertConvertBaseWithFunctionAsBase()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow2.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '15 convbase(1+3-1)
+            //1203
+            //15 convbase (1+1)
+            //1,1112
+            //
+            //'
+            Assert.AreEqual(this.AssertConvertBaseWithFunctionAsBaseExpectedValues.UIItemEditText, uIItemEdit.Text);
+        }
+        
+        /// <summary>
+        /// ConvertBaseButton - Use 'ConvertBaseButtonParams' to pass parameters into this method.
+        /// </summary>
+        public void ConvertBaseButton()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
+            WinMenuItem uIBinaryMenuItem = this.UIItemWindow.UIConvertToBaseMenuItem.UIBinaryMenuItem;
+            WinMenuItem uIItem36MenuItem = this.UIItemWindow.UIConvertToBaseMenuItem.UIItem36MenuItem;
+            #endregion
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(460, 226));
+
+            // Select '15 ' in combo box
+            uIItemComboBox.EditableItem = this.ConvertBaseButtonParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(462, 232));
+
+            // Click 'Convert To Base ->' -> 'Binary' menu item
+            Mouse.Click(uIBinaryMenuItem, new Point(62, 21));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(584, 392));
+
+            // Select '12345678' in combo box
+            uIItemComboBox.EditableItem = this.ConvertBaseButtonParams.UIItemComboBoxEditableItem1;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(450, 234));
+
+            // Click 'Convert To Base ->' -> '36' menu item
+            Mouse.Click(uIItem36MenuItem, new Point(39, 5));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(590, 392));
+        }
+        
+        /// <summary>
+        /// AssertConvertBaseButton - Use 'AssertConvertBaseButtonExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertConvertBaseButton()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow2.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '15  convbase 2
+            //1,1112
+            //12345678 convbase 36
+            //7C,LZI36
+            //
+            //'
+            Assert.AreEqual(this.AssertConvertBaseButtonExpectedValues.UIItemEditText, uIItemEdit.Text);
+        }
+        
+        /// <summary>
+        /// ConvertBaseEmptyInput
+        /// </summary>
+        public void ConvertBaseEmptyInput()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinMenuItem uIBinaryMenuItem = this.UIItemWindow.UIConvertToBaseMenuItem.UIBinaryMenuItem;
+            #endregion
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(459, 233));
+
+            // Click 'Convert To Base ->' -> 'Binary' menu item
+            Mouse.Click(uIBinaryMenuItem, new Point(51, 10));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(600, 382));
+        }
+        
+        /// <summary>
+        /// AssertConvertBaseButtonEmptyInput - Use 'AssertConvertBaseButtonEmptyInputExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertConvertBaseButtonEmptyInput()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow2.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals ''
+            Assert.AreEqual(this.AssertConvertBaseButtonEmptyInputExpectedValues.UIItemEditText, uIItemEdit.Text);
+        }
+        
+        /// <summary>
+        /// ConvertBaseFunctionAsNumber - Use 'ConvertBaseFunctionAsNumberParams' to pass parameters into this method.
+        /// </summary>
+        public void ConvertBaseFunctionAsNumber()
+        {
+            #region Variable Declarations
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow1.UIItemEdit;
+            #endregion
+
+            // Select '(20*100*0+15)convbase2' in combo box
+            uIItemComboBox.EditableItem = this.ConvertBaseFunctionAsNumberParams.UIItemComboBoxEditableItem;
+
+            // Type '{Enter}' in text box
+            Keyboard.SendKeys(uIItemEdit, this.ConvertBaseFunctionAsNumberParams.UIItemEditSendKeys, ModifierKeys.None);
+        }
+        
+        /// <summary>
+        /// AssertConverBaseFunctionAsNumber - Use 'AssertConverBaseFunctionAsNumberExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertConverBaseFunctionAsNumber()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow2.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '(20*100*0+15)convbase2
+            //1,1112
+            //
+            //'
+            Assert.AreEqual(this.AssertConverBaseFunctionAsNumberExpectedValues.UIItemEditText, uIItemEdit.Text);
+        }
+        
         #region Properties
         public virtual AdditionParams AdditionParams
         {
@@ -1870,6 +2217,210 @@ namespace CodedUITestProject2
             }
         }
         
+        public virtual ConvertBaseNegativeNumberParams ConvertBaseNegativeNumberParams
+        {
+            get
+            {
+                if ((this.mConvertBaseNegativeNumberParams == null))
+                {
+                    this.mConvertBaseNegativeNumberParams = new ConvertBaseNegativeNumberParams();
+                }
+                return this.mConvertBaseNegativeNumberParams;
+            }
+        }
+        
+        public virtual AssertConvertBaseNegativeNumberExpectedValues AssertConvertBaseNegativeNumberExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertConvertBaseNegativeNumberExpectedValues == null))
+                {
+                    this.mAssertConvertBaseNegativeNumberExpectedValues = new AssertConvertBaseNegativeNumberExpectedValues();
+                }
+                return this.mAssertConvertBaseNegativeNumberExpectedValues;
+            }
+        }
+        
+        public virtual ConvertBaseNonIntegerParams ConvertBaseNonIntegerParams
+        {
+            get
+            {
+                if ((this.mConvertBaseNonIntegerParams == null))
+                {
+                    this.mConvertBaseNonIntegerParams = new ConvertBaseNonIntegerParams();
+                }
+                return this.mConvertBaseNonIntegerParams;
+            }
+        }
+        
+        public virtual AssertConvertBaseNonIntegerExpectedValues AssertConvertBaseNonIntegerExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertConvertBaseNonIntegerExpectedValues == null))
+                {
+                    this.mAssertConvertBaseNonIntegerExpectedValues = new AssertConvertBaseNonIntegerExpectedValues();
+                }
+                return this.mAssertConvertBaseNonIntegerExpectedValues;
+            }
+        }
+        
+        public virtual ConvertBaseIrrationalNumberParams ConvertBaseIrrationalNumberParams
+        {
+            get
+            {
+                if ((this.mConvertBaseIrrationalNumberParams == null))
+                {
+                    this.mConvertBaseIrrationalNumberParams = new ConvertBaseIrrationalNumberParams();
+                }
+                return this.mConvertBaseIrrationalNumberParams;
+            }
+        }
+        
+        public virtual AssertConverBaseIrrationalNUmberExpectedValues AssertConverBaseIrrationalNUmberExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertConverBaseIrrationalNUmberExpectedValues == null))
+                {
+                    this.mAssertConverBaseIrrationalNUmberExpectedValues = new AssertConverBaseIrrationalNUmberExpectedValues();
+                }
+                return this.mAssertConverBaseIrrationalNUmberExpectedValues;
+            }
+        }
+        
+        public virtual ConvertBaseIrrationalBaseParams ConvertBaseIrrationalBaseParams
+        {
+            get
+            {
+                if ((this.mConvertBaseIrrationalBaseParams == null))
+                {
+                    this.mConvertBaseIrrationalBaseParams = new ConvertBaseIrrationalBaseParams();
+                }
+                return this.mConvertBaseIrrationalBaseParams;
+            }
+        }
+        
+        public virtual AssertConvertToBaseIrrationalBaseExpectedValues AssertConvertToBaseIrrationalBaseExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertConvertToBaseIrrationalBaseExpectedValues == null))
+                {
+                    this.mAssertConvertToBaseIrrationalBaseExpectedValues = new AssertConvertToBaseIrrationalBaseExpectedValues();
+                }
+                return this.mAssertConvertToBaseIrrationalBaseExpectedValues;
+            }
+        }
+        
+        public virtual ConvertToBaseDecimalBaseParams ConvertToBaseDecimalBaseParams
+        {
+            get
+            {
+                if ((this.mConvertToBaseDecimalBaseParams == null))
+                {
+                    this.mConvertToBaseDecimalBaseParams = new ConvertToBaseDecimalBaseParams();
+                }
+                return this.mConvertToBaseDecimalBaseParams;
+            }
+        }
+        
+        public virtual AssertConvertToBaseDecimalBaseExpectedValues AssertConvertToBaseDecimalBaseExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertConvertToBaseDecimalBaseExpectedValues == null))
+                {
+                    this.mAssertConvertToBaseDecimalBaseExpectedValues = new AssertConvertToBaseDecimalBaseExpectedValues();
+                }
+                return this.mAssertConvertToBaseDecimalBaseExpectedValues;
+            }
+        }
+        
+        public virtual ConvertBaseWithFunctionAsBaseParams ConvertBaseWithFunctionAsBaseParams
+        {
+            get
+            {
+                if ((this.mConvertBaseWithFunctionAsBaseParams == null))
+                {
+                    this.mConvertBaseWithFunctionAsBaseParams = new ConvertBaseWithFunctionAsBaseParams();
+                }
+                return this.mConvertBaseWithFunctionAsBaseParams;
+            }
+        }
+        
+        public virtual AssertConvertBaseWithFunctionAsBaseExpectedValues AssertConvertBaseWithFunctionAsBaseExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertConvertBaseWithFunctionAsBaseExpectedValues == null))
+                {
+                    this.mAssertConvertBaseWithFunctionAsBaseExpectedValues = new AssertConvertBaseWithFunctionAsBaseExpectedValues();
+                }
+                return this.mAssertConvertBaseWithFunctionAsBaseExpectedValues;
+            }
+        }
+        
+        public virtual ConvertBaseButtonParams ConvertBaseButtonParams
+        {
+            get
+            {
+                if ((this.mConvertBaseButtonParams == null))
+                {
+                    this.mConvertBaseButtonParams = new ConvertBaseButtonParams();
+                }
+                return this.mConvertBaseButtonParams;
+            }
+        }
+        
+        public virtual AssertConvertBaseButtonExpectedValues AssertConvertBaseButtonExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertConvertBaseButtonExpectedValues == null))
+                {
+                    this.mAssertConvertBaseButtonExpectedValues = new AssertConvertBaseButtonExpectedValues();
+                }
+                return this.mAssertConvertBaseButtonExpectedValues;
+            }
+        }
+        
+        public virtual AssertConvertBaseButtonEmptyInputExpectedValues AssertConvertBaseButtonEmptyInputExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertConvertBaseButtonEmptyInputExpectedValues == null))
+                {
+                    this.mAssertConvertBaseButtonEmptyInputExpectedValues = new AssertConvertBaseButtonEmptyInputExpectedValues();
+                }
+                return this.mAssertConvertBaseButtonEmptyInputExpectedValues;
+            }
+        }
+        
+        public virtual ConvertBaseFunctionAsNumberParams ConvertBaseFunctionAsNumberParams
+        {
+            get
+            {
+                if ((this.mConvertBaseFunctionAsNumberParams == null))
+                {
+                    this.mConvertBaseFunctionAsNumberParams = new ConvertBaseFunctionAsNumberParams();
+                }
+                return this.mConvertBaseFunctionAsNumberParams;
+            }
+        }
+        
+        public virtual AssertConverBaseFunctionAsNumberExpectedValues AssertConverBaseFunctionAsNumberExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertConverBaseFunctionAsNumberExpectedValues == null))
+                {
+                    this.mAssertConverBaseFunctionAsNumberExpectedValues = new AssertConverBaseFunctionAsNumberExpectedValues();
+                }
+                return this.mAssertConverBaseFunctionAsNumberExpectedValues;
+            }
+        }
+        
         public UIGraphCalcWindow UIGraphCalcWindow
         {
             get
@@ -1915,6 +2466,18 @@ namespace CodedUITestProject2
                     this.mUIRuntimeErrorWindow = new UIRuntimeErrorWindow();
                 }
                 return this.mUIRuntimeErrorWindow;
+            }
+        }
+        
+        public UIItemWindow3 UIItemWindow
+        {
+            get
+            {
+                if ((this.mUIItemWindow == null))
+                {
+                    this.mUIItemWindow = new UIItemWindow3();
+                }
+                return this.mUIItemWindow;
             }
         }
         #endregion
@@ -1996,6 +2559,40 @@ namespace CodedUITestProject2
         
         private AssertConvertBaseBetweenBasesExpectedValues mAssertConvertBaseBetweenBasesExpectedValues;
         
+        private ConvertBaseNegativeNumberParams mConvertBaseNegativeNumberParams;
+        
+        private AssertConvertBaseNegativeNumberExpectedValues mAssertConvertBaseNegativeNumberExpectedValues;
+        
+        private ConvertBaseNonIntegerParams mConvertBaseNonIntegerParams;
+        
+        private AssertConvertBaseNonIntegerExpectedValues mAssertConvertBaseNonIntegerExpectedValues;
+        
+        private ConvertBaseIrrationalNumberParams mConvertBaseIrrationalNumberParams;
+        
+        private AssertConverBaseIrrationalNUmberExpectedValues mAssertConverBaseIrrationalNUmberExpectedValues;
+        
+        private ConvertBaseIrrationalBaseParams mConvertBaseIrrationalBaseParams;
+        
+        private AssertConvertToBaseIrrationalBaseExpectedValues mAssertConvertToBaseIrrationalBaseExpectedValues;
+        
+        private ConvertToBaseDecimalBaseParams mConvertToBaseDecimalBaseParams;
+        
+        private AssertConvertToBaseDecimalBaseExpectedValues mAssertConvertToBaseDecimalBaseExpectedValues;
+        
+        private ConvertBaseWithFunctionAsBaseParams mConvertBaseWithFunctionAsBaseParams;
+        
+        private AssertConvertBaseWithFunctionAsBaseExpectedValues mAssertConvertBaseWithFunctionAsBaseExpectedValues;
+        
+        private ConvertBaseButtonParams mConvertBaseButtonParams;
+        
+        private AssertConvertBaseButtonExpectedValues mAssertConvertBaseButtonExpectedValues;
+        
+        private AssertConvertBaseButtonEmptyInputExpectedValues mAssertConvertBaseButtonEmptyInputExpectedValues;
+        
+        private ConvertBaseFunctionAsNumberParams mConvertBaseFunctionAsNumberParams;
+        
+        private AssertConverBaseFunctionAsNumberExpectedValues mAssertConverBaseFunctionAsNumberExpectedValues;
+        
         private UIGraphCalcWindow mUIGraphCalcWindow;
         
         private UIEquationErrorWindow mUIEquationErrorWindow;
@@ -2003,6 +2600,8 @@ namespace CodedUITestProject2
         private UIGrphCalcWindow mUIGrphCalcWindow;
         
         private UIRuntimeErrorWindow mUIRuntimeErrorWindow;
+        
+        private UIItemWindow3 mUIItemWindow;
         #endregion
     }
     
@@ -2012,12 +2611,11 @@ namespace CodedUITestProject2
     [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
     public class AdditionParams
     {
-
+        
         #region Fields
         /// <summary>
         /// Select '1+2' in combo box
         /// </summary>
-
         public string UIItemComboBoxEditableItem = "1+2";
         
         /// <summary>
@@ -3338,6 +3936,347 @@ namespace CodedUITestProject2
         #endregion
     }
     
+    /// <summary>
+    /// Parameters to be passed into 'ConvertBaseNegativeNumber'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class ConvertBaseNegativeNumberParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '-20 convbase 2' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "-20 convbase 2";
+        
+        /// <summary>
+        /// Type '{Enter}' in text box
+        /// </summary>
+        public string UIItemEditSendKeys = "{Enter}";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertConvertBaseNegativeNumber'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertConvertBaseNegativeNumberExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '-20 convbase 2
+        ///-10,1002
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "-20 convbase 2\n-10,1002\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'ConvertBaseNonInteger'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class ConvertBaseNonIntegerParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '3.333 convbase 2' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "3.333 convbase 2";
+        
+        /// <summary>
+        /// Type '{Enter}' in text box
+        /// </summary>
+        public string UIItemEditSendKeys = "{Enter}";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertConvertBaseNonInteger'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertConvertBaseNonIntegerExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '3.333 convbase 2
+        ///11.01010101001111110111110011101101100100010110100012
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "3.333 convbase 2\n11.01010101001111110111110011101101100100010110100012\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'ConvertBaseIrrationalNumber'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class ConvertBaseIrrationalNumberParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'sqrt 2 convbase 2' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "sqrt 2 convbase 2";
+        
+        /// <summary>
+        /// Type '{Enter}' in text box
+        /// </summary>
+        public string UIItemEditSendKeys = "{Enter}";
+        
+        /// <summary>
+        /// Select 'sqrt 3 convbase 2' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem1 = "sqrt 3 convbase 2";
+        
+        /// <summary>
+        /// Type '{Enter}' in text box
+        /// </summary>
+        public string UIItemEditSendKeys1 = "{Enter}";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertConverBaseIrrationalNUmber'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertConverBaseIrrationalNUmberExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals 'sqrt 2 convbase 2
+        ///1.011010100000100111100110011001111111001110111100112
+        ///sqrt 3 convbase 2
+        ///1.101110110110011110101110100001011000010011001010112
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "sqrt 2 convbase 2\n1.011010100000100111100110011001111111001110111100112\nsqrt 3 co" +
+            "nvbase 2\n1.101110110110011110101110100001011000010011001010112\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'ConvertBaseIrrationalBase'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class ConvertBaseIrrationalBaseParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '15 convbase ' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "15 convbase ";
+        
+        /// <summary>
+        /// Select '15 convbase sqrt 2' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem1 = "15 convbase sqrt 2";
+        
+        /// <summary>
+        /// Type '{Enter}' in text box
+        /// </summary>
+        public string UIItemEditSendKeys = "{Enter}";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertConvertToBaseIrrationalBase'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertConvertToBaseIrrationalBaseExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Exists' property of 'GrphCalc' title bar is not equal to 'True'
+        /// </summary>
+        public bool UIGrphCalcTitleBarExists = true;
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'ConvertToBaseDecimalBase'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class ConvertToBaseDecimalBaseParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '15 convbase1.5' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "15 convbase1.5";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertConvertToBaseDecimalBase'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertConvertToBaseDecimalBaseExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '
+        ///'
+        /// </summary>
+        public string UIItemEditText = "\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'ConvertBaseWithFunctionAsBase'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class ConvertBaseWithFunctionAsBaseParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '15 convbase(1+3-1)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "15 convbase(1+3-1)";
+        
+        /// <summary>
+        /// Type '{Enter}' in text box
+        /// </summary>
+        public string UIItemEditSendKeys = "{Enter}";
+        
+        /// <summary>
+        /// Select '15 convbase (1+1)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem1 = "15 convbase (1+1)";
+        
+        /// <summary>
+        /// Type '{Enter}' in text box
+        /// </summary>
+        public string UIItemEditSendKeys1 = "{Enter}";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertConvertBaseWithFunctionAsBase'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertConvertBaseWithFunctionAsBaseExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '15 convbase(1+3-1)
+        ///1203
+        ///15 convbase (1+1)
+        ///1,1112
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "15 convbase(1+3-1)\n1203\n15 convbase (1+1)\n1,1112\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'ConvertBaseButton'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class ConvertBaseButtonParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '15 ' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "15 ";
+        
+        /// <summary>
+        /// Select '12345678' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem1 = "12345678";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertConvertBaseButton'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertConvertBaseButtonExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '15  convbase 2
+        ///1,1112
+        ///12345678 convbase 36
+        ///7C,LZI36
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "15  convbase 2\n1,1112\n12345678 convbase 36\n7C,LZI36\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertConvertBaseButtonEmptyInput'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertConvertBaseButtonEmptyInputExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals ''
+        /// </summary>
+        public string UIItemEditText = "";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'ConvertBaseFunctionAsNumber'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class ConvertBaseFunctionAsNumberParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '(20*100*0+15)convbase2' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "(20*100*0+15)convbase2";
+        
+        /// <summary>
+        /// Type '{Enter}' in text box
+        /// </summary>
+        public string UIItemEditSendKeys = "{Enter}";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertConverBaseFunctionAsNumber'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertConverBaseFunctionAsNumberExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '(20*100*0+15)convbase2
+        ///1,1112
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "(20*100*0+15)convbase2\n1,1112\n\r\n";
+        #endregion
+    }
+    
     [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
     public class UIGraphCalcWindow : WinWindow
     {
@@ -3901,10 +4840,27 @@ namespace CodedUITestProject2
                 return this.mUIGrphCalcPane;
             }
         }
+        
+        public WinTitleBar UIGrphCalcTitleBar
+        {
+            get
+            {
+                if ((this.mUIGrphCalcTitleBar == null))
+                {
+                    this.mUIGrphCalcTitleBar = new WinTitleBar(this);
+                    #region Search Criteria
+                    this.mUIGrphCalcTitleBar.WindowTitles.Add("GrphCalc");
+                    #endregion
+                }
+                return this.mUIGrphCalcTitleBar;
+            }
+        }
         #endregion
         
         #region Fields
         private UIGrphCalcPane mUIGrphCalcPane;
+        
+        private WinTitleBar mUIGrphCalcTitleBar;
         #endregion
     }
     
@@ -4009,6 +4965,90 @@ namespace CodedUITestProject2
         
         #region Fields
         private WinButton mUIOKButton;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIItemWindow3 : WinWindow
+    {
+        
+        public UIItemWindow3()
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.AccessibleName] = "Context";
+            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "#32768";
+            #endregion
+        }
+        
+        #region Properties
+        public UIConvertToBaseMenuItem1 UIConvertToBaseMenuItem
+        {
+            get
+            {
+                if ((this.mUIConvertToBaseMenuItem == null))
+                {
+                    this.mUIConvertToBaseMenuItem = new UIConvertToBaseMenuItem1(this);
+                }
+                return this.mUIConvertToBaseMenuItem;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIConvertToBaseMenuItem1 mUIConvertToBaseMenuItem;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIConvertToBaseMenuItem1 : WinMenuItem
+    {
+        
+        public UIConvertToBaseMenuItem1(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinMenuItem.PropertyNames.Name] = "Convert To Base ->";
+            #endregion
+        }
+        
+        #region Properties
+        public WinMenuItem UIBinaryMenuItem
+        {
+            get
+            {
+                if ((this.mUIBinaryMenuItem == null))
+                {
+                    this.mUIBinaryMenuItem = new WinMenuItem(this);
+                    #region Search Criteria
+                    this.mUIBinaryMenuItem.SearchProperties[WinMenuItem.PropertyNames.Name] = "Binary";
+                    this.mUIBinaryMenuItem.SearchConfigurations.Add(SearchConfiguration.ExpandWhileSearching);
+                    #endregion
+                }
+                return this.mUIBinaryMenuItem;
+            }
+        }
+        
+        public WinMenuItem UIItem36MenuItem
+        {
+            get
+            {
+                if ((this.mUIItem36MenuItem == null))
+                {
+                    this.mUIItem36MenuItem = new WinMenuItem(this);
+                    #region Search Criteria
+                    this.mUIItem36MenuItem.SearchProperties[WinMenuItem.PropertyNames.Name] = "36";
+                    this.mUIItem36MenuItem.SearchConfigurations.Add(SearchConfiguration.ExpandWhileSearching);
+                    #endregion
+                }
+                return this.mUIItem36MenuItem;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinMenuItem mUIBinaryMenuItem;
+        
+        private WinMenuItem mUIItem36MenuItem;
         #endregion
     }
 }
