@@ -142,6 +142,114 @@ namespace GraphCalcTests
             this.UIMap.AssertTenthousandGreaterThanTwo();
 
         }
+        //Absolute Value
+        [TestMethod]
+        public void ABSMinusOne()
+        {
+
+            this.UIMap.TestABSMinusOne();
+            this.UIMap.AssertABSMinusOne();
+
+        }
+
+        [TestMethod]
+        public void ABSOne()
+        {
+
+            this.UIMap.TestABSOne();
+            this.UIMap.AssertABSOne();
+
+        }
+
+        [TestMethod]
+        public void ABSOnePointTwo()
+        {
+
+            this.UIMap.TestABSOnePointTwo();
+            this.UIMap.AssertABSOnePointTwo();
+
+        }
+
+        [TestMethod]
+        public void ABSMinusOnePointTwo()
+        {
+
+            this.UIMap.TestABSMinusOnePointTwo();
+            this.UIMap.AssertABSMinusOnePointTwo();
+
+        }
+
+        [TestMethod]
+        public void ABSOneMillion()
+        {
+
+            this.UIMap.TestABSOneMillion();
+            this.UIMap.AssertABSOneMillion();
+
+        }
+
+        [TestMethod]
+        public void ABSMinusOneMillion()
+        {
+
+            this.UIMap.TestABSMinusOneMillion();
+            this.UIMap.AssertABSMinusOneMillion();
+
+        }
+
+        [TestMethod]
+        public void ABSMinusOneMinusThree()
+        {
+
+            this.UIMap.TestABSMinusOneMinusThree();
+            this.UIMap.AssertABSMinusOneMinusThree();
+
+        }
+
+        [TestMethod]
+        public void ABSZero()
+        {
+
+            this.UIMap.TestABSZero();
+            this.UIMap.AssertABSZero();
+
+        }
+
+        [TestMethod]
+        public void ABSThirty()
+        {
+
+            this.UIMap.TestABSThirty();
+            this.UIMap.AssertABSThirty();
+
+        }
+
+        [TestMethod]
+        public void ABSMinusThirty()
+        {
+
+            this.UIMap.TestABSMinusThirty();
+            this.UIMap.AssertABSMinusThirty();
+
+        }
+
+        [TestMethod]
+        public void ABSMinusOneFourth()
+        {
+
+            this.UIMap.TestABSMinusOneFourth();
+            this.UIMap.AssertABSMinusOneFourth();
+
+        }
+
+        [TestMethod]
+        public void ABSOneFourth()
+        {
+
+            this.UIMap.TestABSOneFourth();
+            this.UIMap.AssertABSOneFourth();
+
+        }
         #region Additional test attributes
 
         // You can use the following additional attributes as you write your tests:

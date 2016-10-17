@@ -723,6 +723,433 @@ namespace GraphCalcTests
             Assert.AreEqual(this.AssertTenthousandGreaterThanTwoExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
         }
         
+        /// <summary>
+        /// TestABSMinusOne - Use 'TestABSMinusOneParams' to pass parameters into this method.
+        /// </summary>
+        public void TestABSMinusOne()
+        {
+            #region Variable Declarations
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Select 'abs(-1)' in combo box
+            uIItemComboBox.EditableItem = this.TestABSMinusOneParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(593, 400));
+        }
+        
+        /// <summary>
+        /// AssertABSMinusOne - Use 'AssertABSMinusOneExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertABSMinusOne()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals 'abs(-1)
+            //1
+            //
+            //'
+            Assert.AreEqual(this.AssertABSMinusOneExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestABSOne - Use 'TestABSOneParams' to pass parameters into this method.
+        /// </summary>
+        public void TestABSOne()
+        {
+            #region Variable Declarations
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GraphCalc\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Select 'abs(1)' in combo box
+            uIItemComboBox.EditableItem = this.TestABSOneParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(604, 413));
+        }
+        
+        /// <summary>
+        /// AssertABSOne - Use 'AssertABSOneExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertABSOne()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals 'abs(1)
+            //1
+            //
+            //'
+            Assert.AreEqual(this.AssertABSOneExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestABSOnePointTwo - Use 'TestABSOnePointTwoParams' to pass parameters into this method.
+        /// </summary>
+        public void TestABSOnePointTwo()
+        {
+            #region Variable Declarations
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Select 'abs(1.2)' in combo box
+            uIItemComboBox.EditableItem = this.TestABSOnePointTwoParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(592, 407));
+        }
+        
+        /// <summary>
+        /// AssertABSOnePointTwo - Use 'AssertABSOnePointTwoExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertABSOnePointTwo()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals 'abs(1.2)
+            //1.2
+            //
+            //'
+            Assert.AreEqual(this.AssertABSOnePointTwoExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestABSMinusOnePointTwo - Use 'TestABSMinusOnePointTwoParams' to pass parameters into this method.
+        /// </summary>
+        public void TestABSMinusOnePointTwo()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow2.UIItemEdit;
+            WinClient uIDesktopClient = this.UIItemWindow.UIItemWindow1.UIDesktopClient;
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Click text box
+            Mouse.Click(uIItemEdit, new Point(26, 10));
+
+            // Type '{NumLock}{NumLock}abs{LShiftKey}{(}-1.2{LShiftKey}{)}' in 'Desktop' client
+            Keyboard.SendKeys(uIDesktopClient, this.TestABSMinusOnePointTwoParams.UIDesktopClientSendKeys, ModifierKeys.None);
+
+            // Press keyboard shortcut keys 'Windows + z'
+            Keyboard.SendKeys(this.TestABSMinusOnePointTwoParams.SendKeys, ModifierKeys.Windows);
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(597, 409));
+        }
+        
+        /// <summary>
+        /// AssertABSMinusOnePointTwo - Use 'AssertABSMinusOnePointTwoExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertABSMinusOnePointTwo()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals 'abs(-1.2)
+            //1.2
+            //
+            //'
+            Assert.AreEqual(this.AssertABSMinusOnePointTwoExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestABSOneMillion - Use 'TestABSOneMillionParams' to pass parameters into this method.
+        /// </summary>
+        public void TestABSOneMillion()
+        {
+            #region Variable Declarations
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Select 'abs(1000000)' in combo box
+            uIItemComboBox.EditableItem = this.TestABSOneMillionParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(589, 402));
+        }
+        
+        /// <summary>
+        /// AssertABSOneMillion - Use 'AssertABSOneMillionExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertABSOneMillion()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals 'abs(1000000)
+            //1,000,000
+            //
+            //'
+            Assert.AreEqual(this.AssertABSOneMillionExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestABSMinusOneMillion - Use 'TestABSMinusOneMillionParams' to pass parameters into this method.
+        /// </summary>
+        public void TestABSMinusOneMillion()
+        {
+            #region Variable Declarations
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Select 'abs(-1000000)' in combo box
+            uIItemComboBox.EditableItem = this.TestABSMinusOneMillionParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(605, 399));
+        }
+        
+        /// <summary>
+        /// AssertABSMinusOneMillion - Use 'AssertABSMinusOneMillionExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertABSMinusOneMillion()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals 'abs(-1000000)
+            //1,000,000
+            //
+            //'
+            Assert.AreEqual(this.AssertABSMinusOneMillionExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestABSMinusOneMinusThree - Use 'TestABSMinusOneMinusThreeParams' to pass parameters into this method.
+        /// </summary>
+        public void TestABSMinusOneMinusThree()
+        {
+            #region Variable Declarations
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Select 'abs(-1-3)' in combo box
+            uIItemComboBox.EditableItem = this.TestABSMinusOneMinusThreeParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(601, 411));
+        }
+        
+        /// <summary>
+        /// AssertABSMinusOneMinusThree - Use 'AssertABSMinusOneMinusThreeExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertABSMinusOneMinusThree()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals 'abs(-1-3)
+            //4
+            //
+            //'
+            Assert.AreEqual(this.AssertABSMinusOneMinusThreeExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestABSZero - Use 'TestABSZeroParams' to pass parameters into this method.
+        /// </summary>
+        public void TestABSZero()
+        {
+            #region Variable Declarations
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow2.UIItemEdit;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Select 'abs(0)' in combo box
+            uIItemComboBox.EditableItem = this.TestABSZeroParams.UIItemComboBoxEditableItem;
+
+            // Type '{Enter}' in text box
+            Keyboard.SendKeys(uIItemEdit, this.TestABSZeroParams.UIItemEditSendKeys, ModifierKeys.None);
+        }
+        
+        /// <summary>
+        /// AssertABSZero - Use 'AssertABSZeroExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertABSZero()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals 'abs(0)
+            //0
+            //
+            //'
+            Assert.AreEqual(this.AssertABSZeroExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestABSThirty - Use 'TestABSThirtyParams' to pass parameters into this method.
+        /// </summary>
+        public void TestABSThirty()
+        {
+            #region Variable Declarations
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Select 'abs(30)' in combo box
+            uIItemComboBox.EditableItem = this.TestABSThirtyParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(611, 406));
+        }
+        
+        /// <summary>
+        /// AssertABSThirty - Use 'AssertABSThirtyExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertABSThirty()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals 'abs(30)
+            //30
+            //
+            //'
+            Assert.AreEqual(this.AssertABSThirtyExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestABSMinusThirty - Use 'TestABSMinusThirtyParams' to pass parameters into this method.
+        /// </summary>
+        public void TestABSMinusThirty()
+        {
+            #region Variable Declarations
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Select 'abs(-30)' in combo box
+            uIItemComboBox.EditableItem = this.TestABSMinusThirtyParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(613, 413));
+        }
+        
+        /// <summary>
+        /// AssertABSMinusThirty - Use 'AssertABSMinusThirtyExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertABSMinusThirty()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals 'abs(-30)
+            //30
+            //
+            //'
+            Assert.AreEqual(this.AssertABSMinusThirtyExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestABSMinusOneFourth - Use 'TestABSMinusOneFourthParams' to pass parameters into this method.
+        /// </summary>
+        public void TestABSMinusOneFourth()
+        {
+            #region Variable Declarations
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Select 'abs((-1)/4)' in combo box
+            uIItemComboBox.EditableItem = this.TestABSMinusOneFourthParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(608, 403));
+        }
+        
+        /// <summary>
+        /// AssertABSMinusOneFourth - Use 'AssertABSMinusOneFourthExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertABSMinusOneFourth()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals 'abs((-1)/4)
+            //0.25
+            //
+            //'
+            Assert.AreEqual(this.AssertABSMinusOneFourthExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestABSOneFourth - Use 'TestABSOneFourthParams' to pass parameters into this method.
+        /// </summary>
+        public void TestABSOneFourth()
+        {
+            #region Variable Declarations
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Select 'abs(1/4)' in combo box
+            uIItemComboBox.EditableItem = this.TestABSOneFourthParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(603, 402));
+        }
+        
+        /// <summary>
+        /// AssertABSOneFourth - Use 'AssertABSOneFourthExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertABSOneFourth()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals 'abs(1/4)
+            //0.25
+            //
+            //'
+            Assert.AreEqual(this.AssertABSOneFourthExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
         #region Properties
         public virtual AssertFourGreaterThanTwoExpectedValues AssertFourGreaterThanTwoExpectedValues
         {
@@ -1096,6 +1523,294 @@ namespace GraphCalcTests
             }
         }
         
+        public virtual TestABSMinusOneParams TestABSMinusOneParams
+        {
+            get
+            {
+                if ((this.mTestABSMinusOneParams == null))
+                {
+                    this.mTestABSMinusOneParams = new TestABSMinusOneParams();
+                }
+                return this.mTestABSMinusOneParams;
+            }
+        }
+        
+        public virtual AssertABSMinusOneExpectedValues AssertABSMinusOneExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertABSMinusOneExpectedValues == null))
+                {
+                    this.mAssertABSMinusOneExpectedValues = new AssertABSMinusOneExpectedValues();
+                }
+                return this.mAssertABSMinusOneExpectedValues;
+            }
+        }
+        
+        public virtual TestABSOneParams TestABSOneParams
+        {
+            get
+            {
+                if ((this.mTestABSOneParams == null))
+                {
+                    this.mTestABSOneParams = new TestABSOneParams();
+                }
+                return this.mTestABSOneParams;
+            }
+        }
+        
+        public virtual AssertABSOneExpectedValues AssertABSOneExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertABSOneExpectedValues == null))
+                {
+                    this.mAssertABSOneExpectedValues = new AssertABSOneExpectedValues();
+                }
+                return this.mAssertABSOneExpectedValues;
+            }
+        }
+        
+        public virtual TestABSOnePointTwoParams TestABSOnePointTwoParams
+        {
+            get
+            {
+                if ((this.mTestABSOnePointTwoParams == null))
+                {
+                    this.mTestABSOnePointTwoParams = new TestABSOnePointTwoParams();
+                }
+                return this.mTestABSOnePointTwoParams;
+            }
+        }
+        
+        public virtual AssertABSOnePointTwoExpectedValues AssertABSOnePointTwoExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertABSOnePointTwoExpectedValues == null))
+                {
+                    this.mAssertABSOnePointTwoExpectedValues = new AssertABSOnePointTwoExpectedValues();
+                }
+                return this.mAssertABSOnePointTwoExpectedValues;
+            }
+        }
+        
+        public virtual TestABSMinusOnePointTwoParams TestABSMinusOnePointTwoParams
+        {
+            get
+            {
+                if ((this.mTestABSMinusOnePointTwoParams == null))
+                {
+                    this.mTestABSMinusOnePointTwoParams = new TestABSMinusOnePointTwoParams();
+                }
+                return this.mTestABSMinusOnePointTwoParams;
+            }
+        }
+        
+        public virtual AssertABSMinusOnePointTwoExpectedValues AssertABSMinusOnePointTwoExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertABSMinusOnePointTwoExpectedValues == null))
+                {
+                    this.mAssertABSMinusOnePointTwoExpectedValues = new AssertABSMinusOnePointTwoExpectedValues();
+                }
+                return this.mAssertABSMinusOnePointTwoExpectedValues;
+            }
+        }
+        
+        public virtual TestABSOneMillionParams TestABSOneMillionParams
+        {
+            get
+            {
+                if ((this.mTestABSOneMillionParams == null))
+                {
+                    this.mTestABSOneMillionParams = new TestABSOneMillionParams();
+                }
+                return this.mTestABSOneMillionParams;
+            }
+        }
+        
+        public virtual AssertABSOneMillionExpectedValues AssertABSOneMillionExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertABSOneMillionExpectedValues == null))
+                {
+                    this.mAssertABSOneMillionExpectedValues = new AssertABSOneMillionExpectedValues();
+                }
+                return this.mAssertABSOneMillionExpectedValues;
+            }
+        }
+        
+        public virtual TestABSMinusOneMillionParams TestABSMinusOneMillionParams
+        {
+            get
+            {
+                if ((this.mTestABSMinusOneMillionParams == null))
+                {
+                    this.mTestABSMinusOneMillionParams = new TestABSMinusOneMillionParams();
+                }
+                return this.mTestABSMinusOneMillionParams;
+            }
+        }
+        
+        public virtual AssertABSMinusOneMillionExpectedValues AssertABSMinusOneMillionExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertABSMinusOneMillionExpectedValues == null))
+                {
+                    this.mAssertABSMinusOneMillionExpectedValues = new AssertABSMinusOneMillionExpectedValues();
+                }
+                return this.mAssertABSMinusOneMillionExpectedValues;
+            }
+        }
+        
+        public virtual TestABSMinusOneMinusThreeParams TestABSMinusOneMinusThreeParams
+        {
+            get
+            {
+                if ((this.mTestABSMinusOneMinusThreeParams == null))
+                {
+                    this.mTestABSMinusOneMinusThreeParams = new TestABSMinusOneMinusThreeParams();
+                }
+                return this.mTestABSMinusOneMinusThreeParams;
+            }
+        }
+        
+        public virtual AssertABSMinusOneMinusThreeExpectedValues AssertABSMinusOneMinusThreeExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertABSMinusOneMinusThreeExpectedValues == null))
+                {
+                    this.mAssertABSMinusOneMinusThreeExpectedValues = new AssertABSMinusOneMinusThreeExpectedValues();
+                }
+                return this.mAssertABSMinusOneMinusThreeExpectedValues;
+            }
+        }
+        
+        public virtual TestABSZeroParams TestABSZeroParams
+        {
+            get
+            {
+                if ((this.mTestABSZeroParams == null))
+                {
+                    this.mTestABSZeroParams = new TestABSZeroParams();
+                }
+                return this.mTestABSZeroParams;
+            }
+        }
+        
+        public virtual AssertABSZeroExpectedValues AssertABSZeroExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertABSZeroExpectedValues == null))
+                {
+                    this.mAssertABSZeroExpectedValues = new AssertABSZeroExpectedValues();
+                }
+                return this.mAssertABSZeroExpectedValues;
+            }
+        }
+        
+        public virtual TestABSThirtyParams TestABSThirtyParams
+        {
+            get
+            {
+                if ((this.mTestABSThirtyParams == null))
+                {
+                    this.mTestABSThirtyParams = new TestABSThirtyParams();
+                }
+                return this.mTestABSThirtyParams;
+            }
+        }
+        
+        public virtual AssertABSThirtyExpectedValues AssertABSThirtyExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertABSThirtyExpectedValues == null))
+                {
+                    this.mAssertABSThirtyExpectedValues = new AssertABSThirtyExpectedValues();
+                }
+                return this.mAssertABSThirtyExpectedValues;
+            }
+        }
+        
+        public virtual TestABSMinusThirtyParams TestABSMinusThirtyParams
+        {
+            get
+            {
+                if ((this.mTestABSMinusThirtyParams == null))
+                {
+                    this.mTestABSMinusThirtyParams = new TestABSMinusThirtyParams();
+                }
+                return this.mTestABSMinusThirtyParams;
+            }
+        }
+        
+        public virtual AssertABSMinusThirtyExpectedValues AssertABSMinusThirtyExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertABSMinusThirtyExpectedValues == null))
+                {
+                    this.mAssertABSMinusThirtyExpectedValues = new AssertABSMinusThirtyExpectedValues();
+                }
+                return this.mAssertABSMinusThirtyExpectedValues;
+            }
+        }
+        
+        public virtual TestABSMinusOneFourthParams TestABSMinusOneFourthParams
+        {
+            get
+            {
+                if ((this.mTestABSMinusOneFourthParams == null))
+                {
+                    this.mTestABSMinusOneFourthParams = new TestABSMinusOneFourthParams();
+                }
+                return this.mTestABSMinusOneFourthParams;
+            }
+        }
+        
+        public virtual AssertABSMinusOneFourthExpectedValues AssertABSMinusOneFourthExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertABSMinusOneFourthExpectedValues == null))
+                {
+                    this.mAssertABSMinusOneFourthExpectedValues = new AssertABSMinusOneFourthExpectedValues();
+                }
+                return this.mAssertABSMinusOneFourthExpectedValues;
+            }
+        }
+        
+        public virtual TestABSOneFourthParams TestABSOneFourthParams
+        {
+            get
+            {
+                if ((this.mTestABSOneFourthParams == null))
+                {
+                    this.mTestABSOneFourthParams = new TestABSOneFourthParams();
+                }
+                return this.mTestABSOneFourthParams;
+            }
+        }
+        
+        public virtual AssertABSOneFourthExpectedValues AssertABSOneFourthExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertABSOneFourthExpectedValues == null))
+                {
+                    this.mAssertABSOneFourthExpectedValues = new AssertABSOneFourthExpectedValues();
+                }
+                return this.mAssertABSOneFourthExpectedValues;
+            }
+        }
+        
         public UIGraphCalcWindow UIGraphCalcWindow
         {
             get
@@ -1105,6 +1820,18 @@ namespace GraphCalcTests
                     this.mUIGraphCalcWindow = new UIGraphCalcWindow();
                 }
                 return this.mUIGraphCalcWindow;
+            }
+        }
+        
+        public UIItemWindow3 UIItemWindow
+        {
+            get
+            {
+                if ((this.mUIItemWindow == null))
+                {
+                    this.mUIItemWindow = new UIItemWindow3();
+                }
+                return this.mUIItemWindow;
             }
         }
         #endregion
@@ -1172,7 +1899,57 @@ namespace GraphCalcTests
         
         private AssertTenthousandGreaterThanTwoExpectedValues mAssertTenthousandGreaterThanTwoExpectedValues;
         
+        private TestABSMinusOneParams mTestABSMinusOneParams;
+        
+        private AssertABSMinusOneExpectedValues mAssertABSMinusOneExpectedValues;
+        
+        private TestABSOneParams mTestABSOneParams;
+        
+        private AssertABSOneExpectedValues mAssertABSOneExpectedValues;
+        
+        private TestABSOnePointTwoParams mTestABSOnePointTwoParams;
+        
+        private AssertABSOnePointTwoExpectedValues mAssertABSOnePointTwoExpectedValues;
+        
+        private TestABSMinusOnePointTwoParams mTestABSMinusOnePointTwoParams;
+        
+        private AssertABSMinusOnePointTwoExpectedValues mAssertABSMinusOnePointTwoExpectedValues;
+        
+        private TestABSOneMillionParams mTestABSOneMillionParams;
+        
+        private AssertABSOneMillionExpectedValues mAssertABSOneMillionExpectedValues;
+        
+        private TestABSMinusOneMillionParams mTestABSMinusOneMillionParams;
+        
+        private AssertABSMinusOneMillionExpectedValues mAssertABSMinusOneMillionExpectedValues;
+        
+        private TestABSMinusOneMinusThreeParams mTestABSMinusOneMinusThreeParams;
+        
+        private AssertABSMinusOneMinusThreeExpectedValues mAssertABSMinusOneMinusThreeExpectedValues;
+        
+        private TestABSZeroParams mTestABSZeroParams;
+        
+        private AssertABSZeroExpectedValues mAssertABSZeroExpectedValues;
+        
+        private TestABSThirtyParams mTestABSThirtyParams;
+        
+        private AssertABSThirtyExpectedValues mAssertABSThirtyExpectedValues;
+        
+        private TestABSMinusThirtyParams mTestABSMinusThirtyParams;
+        
+        private AssertABSMinusThirtyExpectedValues mAssertABSMinusThirtyExpectedValues;
+        
+        private TestABSMinusOneFourthParams mTestABSMinusOneFourthParams;
+        
+        private AssertABSMinusOneFourthExpectedValues mAssertABSMinusOneFourthExpectedValues;
+        
+        private TestABSOneFourthParams mTestABSOneFourthParams;
+        
+        private AssertABSOneFourthExpectedValues mAssertABSOneFourthExpectedValues;
+        
         private UIGraphCalcWindow mUIGraphCalcWindow;
+        
+        private UIItemWindow3 mUIItemWindow;
         #endregion
     }
     
@@ -1223,7 +2000,7 @@ namespace GraphCalcTests
         ///
         ///'
         /// </summary>
-        public string UIItemEditText = "4>2\n1\n\r\n";
+        public string UIItemEditText = "4>2\n1.000000000000000\n\r\n";
         #endregion
     }
     
@@ -1342,7 +2119,7 @@ namespace GraphCalcTests
         /// <summary>
         /// Select '-1>-2' in combo box
         /// </summary>
-        public string UIItemComboBoxEditableItem = "(-1)>-2";
+        public string UIItemComboBoxEditableItem = "-1>-2";
         
         /// <summary>
         /// Press keyboard shortcut keys 'Windows + z'
@@ -1365,7 +2142,7 @@ namespace GraphCalcTests
         ///
         ///'
         /// </summary>
-        public string UIItemEditText = "(-1)>-2\n1\n\r\n";
+        public string UIItemEditText = "-1>-2\n1\n\r\n";
         #endregion
     }
     
@@ -1717,6 +2494,412 @@ namespace GraphCalcTests
         #endregion
     }
     
+    /// <summary>
+    /// Parameters to be passed into 'TestABSMinusOne'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestABSMinusOneParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'abs(-1)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "abs(-1)";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertABSMinusOne'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertABSMinusOneExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals 'abs(-1)
+        ///1
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "abs(-1)\n1\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestABSOne'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestABSOneParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'abs(1)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "abs(1)";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertABSOne'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertABSOneExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals 'abs(1)
+        ///1
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "abs(1)\n1\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestABSOnePointTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestABSOnePointTwoParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'abs(1.2)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "abs(1.2)";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertABSOnePointTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertABSOnePointTwoExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals 'abs(1.2)
+        ///1.2
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "abs(1.2)\n1.2\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestABSMinusOnePointTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestABSMinusOnePointTwoParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type '{NumLock}{NumLock}abs{LShiftKey}{(}-1.2{LShiftKey}{)}' in 'Desktop' client
+        /// </summary>
+        public string UIDesktopClientSendKeys = "{NumLock}{NumLock}abs{LShiftKey}{(}-1.2{LShiftKey}{)}";
+        
+        /// <summary>
+        /// Press keyboard shortcut keys 'Windows + z'
+        /// </summary>
+        public string SendKeys = "z";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertABSMinusOnePointTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertABSMinusOnePointTwoExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals 'abs(-1.2)
+        ///1.2
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "abs(-1.2)\n1.2\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestABSOneMillion'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestABSOneMillionParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'abs(1000000)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "abs(1000000)";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertABSOneMillion'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertABSOneMillionExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals 'abs(1000000)
+        ///1,000,000
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "abs(1000000)\n1,000,000\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestABSMinusOneMillion'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestABSMinusOneMillionParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'abs(-1000000)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "abs(-1000000)";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertABSMinusOneMillion'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertABSMinusOneMillionExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals 'abs(-1000000)
+        ///1,000,000
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "abs(-1000000)\n1,000,000\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestABSMinusOneMinusThree'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestABSMinusOneMinusThreeParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'abs(-1-3)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "abs(-1-3)";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertABSMinusOneMinusThree'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertABSMinusOneMinusThreeExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals 'abs(-1-3)
+        ///4
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "abs(-1-3)\n4\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestABSZero'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestABSZeroParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'abs(0)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "abs(0)";
+        
+        /// <summary>
+        /// Type '{Enter}' in text box
+        /// </summary>
+        public string UIItemEditSendKeys = "{Enter}";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertABSZero'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertABSZeroExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals 'abs(0)
+        ///0
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "abs(0)\n0\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestABSThirty'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestABSThirtyParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'abs(30)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "abs(30)";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertABSThirty'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertABSThirtyExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals 'abs(30)
+        ///30
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "abs(30)\n30\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestABSMinusThirty'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestABSMinusThirtyParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'abs(-30)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "abs(-30)";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertABSMinusThirty'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertABSMinusThirtyExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals 'abs(-30)
+        ///30
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "abs(-30)\n30\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestABSMinusOneFourth'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestABSMinusOneFourthParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'abs((-1)/4)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "abs((-1)/4)";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertABSMinusOneFourth'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertABSMinusOneFourthExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals 'abs((-1)/4)
+        ///0.25
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "abs((-1)/4)\n0.25\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestABSOneFourth'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestABSOneFourthParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'abs(1/4)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "abs(1/4)";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertABSOneFourth'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertABSOneFourthExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals 'abs(1/4)
+        ///0.25
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "abs(1/4)\n0.25\n\r\n";
+        #endregion
+    }
+    
     [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
     public class UIGraphCalcWindow : WinWindow
     {
@@ -1771,6 +2954,18 @@ namespace GraphCalcTests
                 return this.mUIItemWindow1;
             }
         }
+        
+        public UIItemWindow2 UIItemWindow2
+        {
+            get
+            {
+                if ((this.mUIItemWindow2 == null))
+                {
+                    this.mUIItemWindow2 = new UIItemWindow2(this);
+                }
+                return this.mUIItemWindow2;
+            }
+        }
         #endregion
         
         #region Fields
@@ -1779,6 +2974,8 @@ namespace GraphCalcTests
         private UIItemWindow mUIItemWindow;
         
         private UIItemWindow1 mUIItemWindow1;
+        
+        private UIItemWindow2 mUIItemWindow2;
         #endregion
     }
     
@@ -1849,6 +3046,104 @@ namespace GraphCalcTests
         
         #region Fields
         private WinComboBox mUIItemComboBox;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIItemWindow2 : WinWindow
+    {
+        
+        public UIItemWindow2(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "1001";
+            this.SearchProperties[WinWindow.PropertyNames.Instance] = "2";
+            this.WindowTitles.Add("GraphCalc");
+            #endregion
+        }
+        
+        #region Properties
+        public WinEdit UIItemEdit
+        {
+            get
+            {
+                if ((this.mUIItemEdit == null))
+                {
+                    this.mUIItemEdit = new WinEdit(this);
+                    #region Search Criteria
+                    this.mUIItemEdit.WindowTitles.Add("GraphCalc");
+                    #endregion
+                }
+                return this.mUIItemEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinEdit mUIItemEdit;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIItemWindow3 : WinWindow
+    {
+        
+        public UIItemWindow3()
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.AccessibleName] = "Desktop";
+            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "#32769";
+            #endregion
+        }
+        
+        #region Properties
+        public UIItemWindow11 UIItemWindow1
+        {
+            get
+            {
+                if ((this.mUIItemWindow1 == null))
+                {
+                    this.mUIItemWindow1 = new UIItemWindow11(this);
+                }
+                return this.mUIItemWindow1;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIItemWindow11 mUIItemWindow1;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIItemWindow11 : WinWindow
+    {
+        
+        public UIItemWindow11(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "prl_cc_wndclass";
+            #endregion
+        }
+        
+        #region Properties
+        public WinClient UIDesktopClient
+        {
+            get
+            {
+                if ((this.mUIDesktopClient == null))
+                {
+                    this.mUIDesktopClient = new WinClient(this);
+                }
+                return this.mUIDesktopClient;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinClient mUIDesktopClient;
         #endregion
     }
 }
