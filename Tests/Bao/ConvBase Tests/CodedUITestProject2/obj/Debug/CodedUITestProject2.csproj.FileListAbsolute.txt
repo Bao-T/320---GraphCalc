@@ -8,3 +8,8 @@ C:\Users\Bao\Documents\Classes\S3\Quality Assurance in Software Development\Home
 C:\Users\Bao\Documents\Classes\S3\Quality Assurance in Software Development\Homework\EX07\CodedUITestProject2\CodedUITestProject2\obj\Debug\CodedUITestProject2.csprojResolveAssemblyReference.cache
 C:\Users\Bao\Documents\Classes\S3\Quality Assurance in Software Development\Homework\EX07\CodedUITestProject2\CodedUITestProject2\obj\Debug\CodedUITestProject2.dll
 C:\Users\Bao\Documents\Classes\S3\Quality Assurance in Software Development\Homework\EX07\CodedUITestProject2\CodedUITestProject2\obj\Debug\CodedUITestProject2.pdb
+C:\Users\Bao\Documents\GitHub\320---GraphCalc\Tests\Bao\ConvBase Tests\CodedUITestProject2\bin\Debug\CodedUITestProject2.dll
+C:\Users\Bao\Documents\GitHub\320---GraphCalc\Tests\Bao\ConvBase Tests\CodedUITestProject2\bin\Debug\CodedUITestProject2.pdb
+C:\Users\Bao\Documents\GitHub\320---GraphCalc\Tests\Bao\ConvBase Tests\CodedUITestProject2\obj\Debug\CodedUITestProject2.csprojResolveAssemblyReference.cache
+C:\Users\Bao\Documents\GitHub\320---GraphCalc\Tests\Bao\ConvBase Tests\CodedUITestProject2\obj\Debug\CodedUITestProject2.dll
+C:\Users\Bao\Documents\GitHub\320---GraphCalc\Tests\Bao\ConvBase Tests\CodedUITestProject2\obj\Debug\CodedUITestProject2.pdb
