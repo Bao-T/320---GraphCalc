@@ -250,6 +250,15 @@ namespace GraphCalcTests
             this.UIMap.AssertABSOneFourth();
 
         }
+
+        [TestMethod]
+        public void ABSOneFifth()
+        {
+
+            this.UIMap.TestABSOneFifth();
+            this.UIMap.AssertABSOneFifth();
+
+        }
         #region Additional test attributes
 
         // You can use the following additional attributes as you write your tests:

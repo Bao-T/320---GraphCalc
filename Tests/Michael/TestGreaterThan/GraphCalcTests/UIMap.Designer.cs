@@ -1150,6 +1150,41 @@ namespace GraphCalcTests
             Assert.AreEqual(this.AssertABSOneFourthExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
         }
         
+        /// <summary>
+        /// TestABSOneFifth - Use 'TestABSOneFifthParams' to pass parameters into this method.
+        /// </summary>
+        public void TestABSOneFifth()
+        {
+            #region Variable Declarations
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Select 'abs(1/5)' in combo box
+            uIItemComboBox.EditableItem = this.TestABSOneFifthParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(594, 399));
+        }
+        
+        /// <summary>
+        /// AssertABSOneFifth - Use 'AssertABSOneFifthExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertABSOneFifth()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals 'abs(1/5)
+            //0.2
+            //
+            //'
+            Assert.AreEqual(this.AssertABSOneFifthExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
         #region Properties
         public virtual AssertFourGreaterThanTwoExpectedValues AssertFourGreaterThanTwoExpectedValues
         {
@@ -1811,6 +1846,30 @@ namespace GraphCalcTests
             }
         }
         
+        public virtual TestABSOneFifthParams TestABSOneFifthParams
+        {
+            get
+            {
+                if ((this.mTestABSOneFifthParams == null))
+                {
+                    this.mTestABSOneFifthParams = new TestABSOneFifthParams();
+                }
+                return this.mTestABSOneFifthParams;
+            }
+        }
+        
+        public virtual AssertABSOneFifthExpectedValues AssertABSOneFifthExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertABSOneFifthExpectedValues == null))
+                {
+                    this.mAssertABSOneFifthExpectedValues = new AssertABSOneFifthExpectedValues();
+                }
+                return this.mAssertABSOneFifthExpectedValues;
+            }
+        }
+        
         public UIGraphCalcWindow UIGraphCalcWindow
         {
             get
@@ -1946,6 +2005,10 @@ namespace GraphCalcTests
         private TestABSOneFourthParams mTestABSOneFourthParams;
         
         private AssertABSOneFourthExpectedValues mAssertABSOneFourthExpectedValues;
+        
+        private TestABSOneFifthParams mTestABSOneFifthParams;
+        
+        private AssertABSOneFifthExpectedValues mAssertABSOneFifthExpectedValues;
         
         private UIGraphCalcWindow mUIGraphCalcWindow;
         
@@ -2897,6 +2960,39 @@ namespace GraphCalcTests
         ///'
         /// </summary>
         public string UIItemEditText = "abs(1/4)\n0.25\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestABSOneFifth'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestABSOneFifthParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'abs(1/5)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "abs(1/5)";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertABSOneFifth'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertABSOneFifthExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals 'abs(1/5)
+        ///0.2
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "abs(1/5)\n0.2\n\r\n";
         #endregion
     }
     
