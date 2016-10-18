@@ -15,10 +15,10 @@ namespace CodedUITestProject2
     /// </summary>
     ///    Random rnd = new Random();
     [CodedUITest]
-    public class CodedUITest1
+    public class CodedUITest1_ConvBase
     {
         private ApplicationUnderTest testapp;
-        public CodedUITest1()
+        public CodedUITest1_ConvBase()
         {
         }
         [TestInitialize()]

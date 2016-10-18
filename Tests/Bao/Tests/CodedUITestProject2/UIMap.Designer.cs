@@ -1760,6 +1760,190 @@ namespace CodedUITestProject2
             Assert.AreEqual(this.AssertConverBaseFunctionAsNumberExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
         
+        /// <summary>
+        /// ConstPi - Use 'ConstPiParams' to pass parameters into this method.
+        /// </summary>
+        public void ConstPi()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinMenuItem uIPIMenuItem = this.UIItemWindow.UIMathMenuItem.UIPIMenuItem;
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow1.UIItemEdit;
+            #endregion
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(510, 231));
+
+            // Click 'Math' -> 'pi' menu item
+            Mouse.Click(uIPIMenuItem, new Point(52, 7));
+
+            // Type '{Enter}' in text box
+            Keyboard.SendKeys(uIItemEdit, this.ConstPiParams.UIItemEditSendKeys, ModifierKeys.None);
+        }
+        
+        /// <summary>
+        /// AssertConstPi - Use 'AssertConstPiExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertConstPi()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow2.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '(Math|pi)
+            //3.1415926535898
+            //
+            //'
+            Assert.AreEqual(this.AssertConstPiExpectedValues.UIItemEditText, uIItemEdit.Text);
+        }
+        
+        /// <summary>
+        /// SpeedOfLight
+        /// </summary>
+        public void SpeedOfLight()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinMenuItem uICmsMenuItem = this.UIItemWindow.UIPhysicsMenuItem.UICmsMenuItem;
+            #endregion
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(505, 220));
+
+            // Click 'Physics' -> 'c (m/s)' menu item
+            Mouse.Click(uICmsMenuItem, new Point(147, 14));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(599, 394));
+        }
+        
+        /// <summary>
+        /// AssertSpeedOfLight - Use 'AssertSpeedOfLightExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertSpeedOfLight()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow2.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '(Physics|c (m/s))
+            //299,792,458
+            //
+            //'
+            Assert.AreEqual(this.AssertSpeedOfLightExpectedValues.UIItemEditText, uIItemEdit.Text);
+        }
+        
+        /// <summary>
+        /// ConstEarthGravity
+        /// </summary>
+        public void ConstEarthGravity()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinMenuItem uIGMenuItem = this.UIItemWindow.UIPhysicsMenuItem.UIGMenuItem;
+            #endregion
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(510, 231));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(510, 231));
+
+            // Click 'Physics' -> 'g' menu item
+            Mouse.Click(uIGMenuItem, new Point(166, 9));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(590, 397));
+        }
+        
+        /// <summary>
+        /// AssertConstEarthGravity - Use 'AssertConstEarthGravityExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertConstEarthGravity()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow2.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '(Physics|g)
+            //9.80665
+            //
+            //'
+            Assert.AreEqual(this.AssertConstEarthGravityExpectedValues.UIItemEditText, uIItemEdit.Text);
+        }
+        
+        /// <summary>
+        /// ConstBoltzman
+        /// </summary>
+        public void ConstBoltzman()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinMenuItem uIBoltzmansconstantJKMenuItem = this.UIItemWindow.UIPhysicsMenuItem.UIBoltzmansconstantJKMenuItem;
+            #endregion
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(502, 233));
+
+            // Click 'Physics' -> 'Boltzman's constant (J/K)' menu item
+            Mouse.Click(uIBoltzmansconstantJKMenuItem, new Point(150, 15));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(595, 392));
+        }
+        
+        /// <summary>
+        /// AssertBoltzmansConst - Use 'AssertBoltzmansConstExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertBoltzmansConst()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow2.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '(Physics|Boltzman's constant (J/K))
+            //1.380658e-023
+            //
+            //'
+            Assert.AreEqual(this.AssertBoltzmansConstExpectedValues.UIItemEditText, uIItemEdit.Text);
+        }
+        
+        /// <summary>
+        /// GasConst
+        /// </summary>
+        public void GasConst()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinMenuItem uIGasconstantMenuItem = this.UIItemWindow.UIPhysicsMenuItem.UIGasconstantMenuItem;
+            #endregion
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(509, 226));
+
+            // Click 'Physics' -> 'gas constant' menu item
+            Mouse.Click(uIGasconstantMenuItem, new Point(101, 7));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(601, 393));
+        }
+        
+        /// <summary>
+        /// AssertGasConst - Use 'AssertGasConstExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertGasConst()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow2.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '(Physics|gas constant)
+            //8.31451
+            //
+            //'
+            Assert.AreEqual(this.AssertGasConstExpectedValues.UIItemEditText, uIItemEdit.Text);
+        }
+        
         #region Properties
         public virtual AdditionParams AdditionParams
         {
@@ -2421,6 +2605,78 @@ namespace CodedUITestProject2
             }
         }
         
+        public virtual ConstPiParams ConstPiParams
+        {
+            get
+            {
+                if ((this.mConstPiParams == null))
+                {
+                    this.mConstPiParams = new ConstPiParams();
+                }
+                return this.mConstPiParams;
+            }
+        }
+        
+        public virtual AssertConstPiExpectedValues AssertConstPiExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertConstPiExpectedValues == null))
+                {
+                    this.mAssertConstPiExpectedValues = new AssertConstPiExpectedValues();
+                }
+                return this.mAssertConstPiExpectedValues;
+            }
+        }
+        
+        public virtual AssertSpeedOfLightExpectedValues AssertSpeedOfLightExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertSpeedOfLightExpectedValues == null))
+                {
+                    this.mAssertSpeedOfLightExpectedValues = new AssertSpeedOfLightExpectedValues();
+                }
+                return this.mAssertSpeedOfLightExpectedValues;
+            }
+        }
+        
+        public virtual AssertConstEarthGravityExpectedValues AssertConstEarthGravityExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertConstEarthGravityExpectedValues == null))
+                {
+                    this.mAssertConstEarthGravityExpectedValues = new AssertConstEarthGravityExpectedValues();
+                }
+                return this.mAssertConstEarthGravityExpectedValues;
+            }
+        }
+        
+        public virtual AssertBoltzmansConstExpectedValues AssertBoltzmansConstExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertBoltzmansConstExpectedValues == null))
+                {
+                    this.mAssertBoltzmansConstExpectedValues = new AssertBoltzmansConstExpectedValues();
+                }
+                return this.mAssertBoltzmansConstExpectedValues;
+            }
+        }
+        
+        public virtual AssertGasConstExpectedValues AssertGasConstExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertGasConstExpectedValues == null))
+                {
+                    this.mAssertGasConstExpectedValues = new AssertGasConstExpectedValues();
+                }
+                return this.mAssertGasConstExpectedValues;
+            }
+        }
+        
         public UIGraphCalcWindow UIGraphCalcWindow
         {
             get
@@ -2592,6 +2848,18 @@ namespace CodedUITestProject2
         private ConvertBaseFunctionAsNumberParams mConvertBaseFunctionAsNumberParams;
         
         private AssertConverBaseFunctionAsNumberExpectedValues mAssertConverBaseFunctionAsNumberExpectedValues;
+        
+        private ConstPiParams mConstPiParams;
+        
+        private AssertConstPiExpectedValues mAssertConstPiExpectedValues;
+        
+        private AssertSpeedOfLightExpectedValues mAssertSpeedOfLightExpectedValues;
+        
+        private AssertConstEarthGravityExpectedValues mAssertConstEarthGravityExpectedValues;
+        
+        private AssertBoltzmansConstExpectedValues mAssertBoltzmansConstExpectedValues;
+        
+        private AssertGasConstExpectedValues mAssertGasConstExpectedValues;
         
         private UIGraphCalcWindow mUIGraphCalcWindow;
         
@@ -4277,6 +4545,111 @@ namespace CodedUITestProject2
         #endregion
     }
     
+    /// <summary>
+    /// Parameters to be passed into 'ConstPi'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class ConstPiParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type '{Enter}' in text box
+        /// </summary>
+        public string UIItemEditSendKeys = "{Enter}";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertConstPi'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertConstPiExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '(Math|pi)
+        ///3.1415926535898
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "(Math|pi)\n3.1415926535898\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertSpeedOfLight'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertSpeedOfLightExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '(Physics|c (m/s))
+        ///299,792,458
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "(Physics|c (m/s))\n299,792,458\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertConstEarthGravity'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertConstEarthGravityExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '(Physics|g)
+        ///9.80665
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "(Physics|g)\n9.80665\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertBoltzmansConst'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertBoltzmansConstExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '(Physics|Boltzman's constant (J/K))
+        ///1.380658e-023
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "(Physics|Boltzman\'s constant (J/K))\n1.380658e-023\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertGasConst'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertGasConstExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '(Physics|gas constant)
+        ///8.31451
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "(Physics|gas constant)\n8.31451\n\r\n";
+        #endregion
+    }
+    
     [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
     public class UIGraphCalcWindow : WinWindow
     {
@@ -4992,10 +5365,38 @@ namespace CodedUITestProject2
                 return this.mUIConvertToBaseMenuItem;
             }
         }
+        
+        public UIMathMenuItem UIMathMenuItem
+        {
+            get
+            {
+                if ((this.mUIMathMenuItem == null))
+                {
+                    this.mUIMathMenuItem = new UIMathMenuItem(this);
+                }
+                return this.mUIMathMenuItem;
+            }
+        }
+        
+        public UIPhysicsMenuItem UIPhysicsMenuItem
+        {
+            get
+            {
+                if ((this.mUIPhysicsMenuItem == null))
+                {
+                    this.mUIPhysicsMenuItem = new UIPhysicsMenuItem(this);
+                }
+                return this.mUIPhysicsMenuItem;
+            }
+        }
         #endregion
         
         #region Fields
         private UIConvertToBaseMenuItem1 mUIConvertToBaseMenuItem;
+        
+        private UIMathMenuItem mUIMathMenuItem;
+        
+        private UIPhysicsMenuItem mUIPhysicsMenuItem;
         #endregion
     }
     
@@ -5049,6 +5450,130 @@ namespace CodedUITestProject2
         private WinMenuItem mUIBinaryMenuItem;
         
         private WinMenuItem mUIItem36MenuItem;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIMathMenuItem : WinMenuItem
+    {
+        
+        public UIMathMenuItem(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinMenuItem.PropertyNames.Name] = "Math";
+            #endregion
+        }
+        
+        #region Properties
+        public WinMenuItem UIPIMenuItem
+        {
+            get
+            {
+                if ((this.mUIPIMenuItem == null))
+                {
+                    this.mUIPIMenuItem = new WinMenuItem(this);
+                    #region Search Criteria
+                    this.mUIPIMenuItem.SearchProperties[WinMenuItem.PropertyNames.Name] = "pi";
+                    this.mUIPIMenuItem.SearchConfigurations.Add(SearchConfiguration.ExpandWhileSearching);
+                    #endregion
+                }
+                return this.mUIPIMenuItem;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinMenuItem mUIPIMenuItem;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIPhysicsMenuItem : WinMenuItem
+    {
+        
+        public UIPhysicsMenuItem(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinMenuItem.PropertyNames.Name] = "Physics";
+            #endregion
+        }
+        
+        #region Properties
+        public WinMenuItem UICmsMenuItem
+        {
+            get
+            {
+                if ((this.mUICmsMenuItem == null))
+                {
+                    this.mUICmsMenuItem = new WinMenuItem(this);
+                    #region Search Criteria
+                    this.mUICmsMenuItem.SearchProperties[WinMenuItem.PropertyNames.Name] = "c (m/s)";
+                    this.mUICmsMenuItem.SearchConfigurations.Add(SearchConfiguration.ExpandWhileSearching);
+                    #endregion
+                }
+                return this.mUICmsMenuItem;
+            }
+        }
+        
+        public WinMenuItem UIGMenuItem
+        {
+            get
+            {
+                if ((this.mUIGMenuItem == null))
+                {
+                    this.mUIGMenuItem = new WinMenuItem(this);
+                    #region Search Criteria
+                    this.mUIGMenuItem.SearchProperties[WinMenuItem.PropertyNames.Name] = "g";
+                    this.mUIGMenuItem.SearchConfigurations.Add(SearchConfiguration.ExpandWhileSearching);
+                    #endregion
+                }
+                return this.mUIGMenuItem;
+            }
+        }
+        
+        public WinMenuItem UIBoltzmansconstantJKMenuItem
+        {
+            get
+            {
+                if ((this.mUIBoltzmansconstantJKMenuItem == null))
+                {
+                    this.mUIBoltzmansconstantJKMenuItem = new WinMenuItem(this);
+                    #region Search Criteria
+                    this.mUIBoltzmansconstantJKMenuItem.SearchProperties[WinMenuItem.PropertyNames.Name] = "Boltzman\'s constant (J/K)";
+                    this.mUIBoltzmansconstantJKMenuItem.SearchConfigurations.Add(SearchConfiguration.ExpandWhileSearching);
+                    #endregion
+                }
+                return this.mUIBoltzmansconstantJKMenuItem;
+            }
+        }
+        
+        public WinMenuItem UIGasconstantMenuItem
+        {
+            get
+            {
+                if ((this.mUIGasconstantMenuItem == null))
+                {
+                    this.mUIGasconstantMenuItem = new WinMenuItem(this);
+                    #region Search Criteria
+                    this.mUIGasconstantMenuItem.SearchProperties[WinMenuItem.PropertyNames.Name] = "gas constant";
+                    this.mUIGasconstantMenuItem.SearchConfigurations.Add(SearchConfiguration.ExpandWhileSearching);
+                    #endregion
+                }
+                return this.mUIGasconstantMenuItem;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinMenuItem mUICmsMenuItem;
+        
+        private WinMenuItem mUIGMenuItem;
+        
+        private WinMenuItem mUIBoltzmansconstantJKMenuItem;
+        
+        private WinMenuItem mUIGasconstantMenuItem;
         #endregion
     }
 }

@@ -16,10 +16,10 @@ namespace CodedUITestProject2
     /// Summary description for CodedUITest2
     /// </summary>
     [CodedUITest]
-    public class CodedUITest2
+    public class CodedUITest2_Constants
     {
         private ApplicationUnderTest testapp;
-        public CodedUITest2()
+        public CodedUITest2_Constants()
         {
         }
         [TestInitialize()]
@@ -29,11 +29,48 @@ namespace CodedUITestProject2
             testapp = ApplicationUnderTest.Launch(@"C:\Program Files (x86)\GraphCalc\GrphCalc.exe");
         }
         [TestMethod]
-        public void CodedUITestMethod1()
+        public void ConstPi()
         {
-            // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
+
+            this.UIMap.ConstPi();
+            this.UIMap.AssertConstPi();
+
         }
 
+        [TestMethod]
+        public void ConstSpeedOfLight()
+        {
+
+            this.UIMap.SpeedOfLight();
+            this.UIMap.AssertSpeedOfLight();
+
+        }
+        [TestMethod]
+        public void ConstEarthGravity()
+        {
+
+            this.UIMap.ConstEarthGravity();
+            this.UIMap.AssertConstEarthGravity();
+
+
+        }
+        [TestMethod]
+        public void ConstBoltzman()
+        {
+
+            this.UIMap.ConstBoltzman();
+            this.UIMap.AssertBoltzmansConst();
+
+        }
+        [TestMethod]
+        public void ConstGas()
+        {
+
+            this.UIMap.GasConst();
+            this.UIMap.AssertGasConst();
+
+
+        }
         #region Additional test attributes
 
         // You can use the following additional attributes as you write your tests:
@@ -70,5 +107,20 @@ namespace CodedUITestProject2
             }
         }
         private TestContext testContextInstance;
+
+        public UIMap UIMap
+        {
+            get
+            {
+                if ((this.map == null))
+                {
+                    this.map = new UIMap();
+                }
+
+                return this.map;
+            }
+        }
+
+        private UIMap map;
     }
 }
