@@ -1,0 +1,224 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red65\green182\blue69;\red0\green0\blue0;\red178\green24\blue137;
+\red120\green109\blue196;\red219\green44\blue56;}
+{\*\expandedcolortbl;\csgray\c100000;\csgenericrgb\c25500\c71400\c27000;\csgenericrgb\c0\c0\c0;\csgenericrgb\c69800\c9500\c53600;
+\csgenericrgb\c46900\c42600\c77000;\csgenericrgb\c85900\c17100\c21900;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab529
+\pard\tx529\pardeftab529\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 /*********************************************************/\cf3 \
+\cf2 // CCalculator::GetNextChar(CString &form)\cf3 \
+\cf2 // Pre:	none\cf3 \
+\cf2 // Post:none\cf3 \
+\cf2 // Return Value: the next character from form\cf3 \
+\cf2 // Intent: to ge tthe next non whitespace character from\cf3 \
+\cf2 //		   the formula form\cf3 \
+\cf2 /*********************************************************/\cf3 \
+\cf4 char\cf3  CCalculator::GetNextChar(CString &form)\
+\{	\
+	\cf4 if\cf3  (form.GetLength() == \cf5 0\cf3 )\
+		\cf4 return\cf3  \cf5 ' '\cf3 ;\
+	\
+	\cf4 char\cf3  nextchar = form[\cf5 0\cf3 ];\
+	form = form.Right(form.GetLength() - \cf5 1\cf3 );\
+	\
+	\cf2 // loop through and remove whitespace up to next \cf3 \
+	\cf2 // non-whitespace character\cf3 \
+	\cf4 while\cf3 ((form.GetLength() != \cf5 0\cf3 ) && (IsWhiteSpace(nextchar)))\{\
+		nextchar = form[\cf5 0\cf3 ];\
+		form = form.Right(form.GetLength() - \cf5 1\cf3 );\
+	\}\
+	\
+	\cf4 if\cf3  ((form.GetLength() == \cf5 0\cf3 ) && (IsWhiteSpace(nextchar)))\
+		\cf4 return\cf3  \cf5 ' '\cf3 ;\
+	\
+	\cf4 return\cf3  nextchar;\
+\}\
+\'97lines 422 to 449 CCalculator.cpp\
+\
+\cf4 long\cf3  \cf4 double\cf3  CCalculator::RoundTrig(\cf4 long\cf3  \cf4 double\cf3  num)\
+\{\
+	\cf4 if\cf3  ((num < \cf5 0.000000000000001\cf3 ) && (num > -\cf5 0.000000000000001\cf3 )) \cf4 return\cf3  \cf5 0\cf3 ;\
+	\cf4 return\cf3  num;\
+\}\
+\'97 lines 655 to 659 CCalculaor.cpp\
+\
+\cf2 /*********************************************************/\cf3 \
+\cf2 // CCalculator::IsCharNotInBase(int base, char badchar)\cf3 \
+\cf2 // Pre: base >= 2 && base <= 36\cf3 \
+\cf2 // Post: none\cf3 \
+\cf2 // Return Value: false if badchar is valid for the current \cf3 \
+\cf2 //				 base\cf3 \
+\cf2 // Intent: to determine if badchar is valid in the current\cf3 \
+\cf2 //		   base\cf3 \
+\cf2 /*********************************************************/\cf3 \
+\cf4 bool\cf3  CCalculator::IsCharNotInBase(\cf4 int\cf3  base, \cf4 char\cf3  badchar)\
+\{\
+	\cf4 if\cf3 ((base > (badchar - \cf5 '0'\cf3 )) && (badchar >= \cf5 '0'\cf3 ))\
+		\cf4 return\cf3  \cf4 false\cf3 ;\
+	\cf4 else\cf3  \cf4 if\cf3 ((badchar < (base + \cf5 'A'\cf3  - \cf5 10\cf3 )) && (badchar >= \cf5 'A'\cf3 ) && (base > \cf5 10\cf3 ))\
+		\cf4 return\cf3  \cf4 false\cf3 ;\
+	\cf4 else\cf3  \cf4 if\cf3 ((m_IntlMode == US && badchar == \cf5 '.'\cf3 ) || (m_IntlMode == EUROPEAN && badchar == \cf5 ','\cf3 ))\
+		\cf4 return\cf3  \cf4 false\cf3 ;\
+	\
+	\cf4 return\cf3  \cf4 true\cf3 ;\
+\}\
+- lines 365 to 384 CCalculator.cpp\
+\
+\cf2 /*********************************************************/\cf3 \
+\cf2 // CCalculator::StringToDecimal(CString theNum, int base, long double &total)\cf3 \
+\cf2 // Pre: m_base >= 2 && m_base <= 36\cf3 \
+\cf2 // Post: total has the answer now\cf3 \
+\cf2 // Return Value: error messages\cf3 \
+\cf2 // Intent: to convert a string in base m_base to a decimal\cf3 \
+\cf2 //		   value in base 10\cf3 \
+\cf2 /*********************************************************/\cf3 \
+ErrorT CCalculator::StringToDecimal(CString theNum, \cf4 int\cf3  base, \cf4 long\cf3  \cf4 double\cf3  &total)\
+\{\
+	theNum.Replace(\cf6 ","\cf3 , \cf6 "."\cf3 );  \cf2 // if in international mode a '.' is actually a '.'\cf3 \
+\
+	\cf4 if\cf3 (theNum.IsEmpty())\{\
+		total = \cf5 0\cf3 ;\
+		\cf4 return\cf3  SUCCESSFULL;\
+	\}\
+\
+	\cf4 bool\cf3  neg(\cf4 false\cf3 );\
+	\cf4 char\cf3  cur;\
+	total = \cf5 0\cf3 ;\
+	\cf4 int\cf3  dec_flag(\cf5 0\cf3 );\
+\
+	\cf4 if\cf3 (theNum[\cf5 0\cf3 ] == \cf5 '-'\cf3 )\{\
+		neg = \cf4 true\cf3 ;\
+		theNum = theNum.Right(theNum.GetLength() - \cf5 1\cf3 );\
+	\}\
+\
+	\cf4 int\cf3  count = theNum.GetLength();\
+	\
+	\cf4 for\cf3  (\cf4 int\cf3  n = \cf5 0\cf3 ; n < count; ++n)\{\
+		cur = theNum[\cf5 0\cf3 ];\
+		\
+		\cf4 bool\cf3  badchar(\cf4 true\cf3 );\
+		\
+		\cf4 if\cf3 ((base > (cur - \cf5 '0'\cf3 )) && (cur >= \cf5 '0'\cf3 ))\
+			badchar = \cf4 false\cf3 ;\
+		\cf4 else\cf3  \cf4 if\cf3 ((cur < (base + \cf5 'a'\cf3  - \cf5 10\cf3 )) && (cur >= \cf5 'a'\cf3 ) && (base > \cf5 10\cf3 ))\
+			badchar = \cf4 false\cf3 ;\
+		\cf4 else\cf3  \cf4 if\cf3 ((cur < (base + \cf5 'A'\cf3  - \cf5 10\cf3 )) && (cur >= \cf5 'A'\cf3 ) && (base > \cf5 10\cf3 ))\
+			badchar = \cf4 false\cf3 ;\
+		\cf4 else\cf3  \cf4 if\cf3 (cur == \cf5 '.'\cf3 )\
+			badchar = \cf4 false\cf3 ;\
+		\
+		\cf4 if\cf3 (badchar)\
+			\cf4 return\cf3  BASE_OUT_OF_RANGE;\
+		\
+		\cf4 if\cf3  (cur == \cf5 '.'\cf3  && !dec_flag)\
+			dec_flag = \cf5 1\cf3 ;\
+		\cf4 else\cf3  \cf4 if\cf3 (cur == \cf5 '.'\cf3  && dec_flag)\
+			\cf4 return\cf3  MULTIPLE_DECIMAL;\
+		\cf4 else\cf3 \{\
+			\cf4 if\cf3  (dec_flag == \cf5 0\cf3 )\{\
+				\cf2 //Handle characters before the decimal\cf3 \
+				total *= base;\
+				\cf4 if\cf3  ((cur >= \cf5 '0'\cf3 ) && (cur <= \cf5 '9'\cf3 ))\
+					total += (cur - \cf5 '0'\cf3 );\
+				\cf4 else\cf3  \cf4 if\cf3  ((cur >= \cf5 'a'\cf3 ) && (cur <= \cf5 'z'\cf3 ))\
+					total += (cur - \cf5 'a'\cf3  + \cf5 10\cf3 );\
+				\cf4 else\cf3  \cf4 if\cf3  ((cur >= \cf5 'A'\cf3 ) && (cur <= \cf5 'Z'\cf3 ))\
+					total += (cur - \cf5 'A'\cf3  + \cf5 10\cf3 );\
+				\cf4 else\cf3 \
+					\cf4 return\cf3  BASE_ERROR;  \cf2 // Bad character... very bad character\cf3 \
+			\}\
+			\cf4 else\cf3 \{\
+				\cf2 //Handle character after the decimal\cf3 \
+				\cf4 if\cf3  ((cur >= \cf5 '0'\cf3 ) && (cur <= \cf5 '9'\cf3 ))\
+					total += pow(base, (-\cf5 1\cf3  * dec_flag)) * (cur - \cf5 '0'\cf3 );\
+				\cf4 else\cf3  \cf4 if\cf3  ((cur >= \cf5 'a'\cf3 ) && (cur <= \cf5 'z'\cf3 ))\
+					total += pow(base, (-\cf5 1\cf3  * dec_flag)) * (cur - \cf5 'a'\cf3  + \cf5 10\cf3 );\
+				\cf4 else\cf3  \cf4 if\cf3  ((cur >= \cf5 'A'\cf3 ) && (cur <= \cf5 'Z'\cf3 ))\
+					total += pow(base, (-\cf5 1\cf3  * dec_flag)) * (cur - \cf5 'A'\cf3  + \cf5 10\cf3 );\
+				\cf4 else\cf3 \
+					\cf4 return\cf3  BASE_ERROR;  \cf2 // Bad character... very bad character\cf3 \
+				++dec_flag;\
+			\}\
+		\}\
+		theNum = theNum.Mid(\cf5 1\cf3 ,theNum.GetLength()-\cf5 1\cf3 );\
+	\}\
+\
+	\cf4 if\cf3 (neg)\
+		total *= -\cf5 1\cf3 ;\
+\
+	\cf4 return\cf3  SUCCESSFULL;\
+\}\
+- lines 1977 to 2060 CCalculator.cpp\
+\
+\cf2 /*********************************************************/\cf3 \
+\cf2 // CCalculator::abs(long double num)\cf3 \
+\cf2 // Pre: one\cf3 \
+\cf2 // Post: none\cf3 \
+\cf2 // Return Value: |num|\cf3 \
+\cf2 // Intent: to find the absolute value of num\cf3 \
+\cf2 /*********************************************************/\cf3 \
+\cf4 long\cf3  \cf4 double\cf3  CCalculator::abs(\cf4 long\cf3  \cf4 double\cf3  num)\
+\{\
+	\cf4 if\cf3 (num >= \cf5 0\cf3 )\
+		\cf4 return\cf3  num;\
+	\cf4 else\cf3 \
+		\cf4 return\cf3  (-\cf5 1\cf3 *num);\
+\}\
+\
+\cf4 long\cf3  \cf4 double\cf3  CCalculator::fibonacci(\cf4 int\cf3  n)\
+\{\
+	\cf4 if\cf3 (n == \cf5 1\cf3  || n == \cf5 2\cf3 )\
+		\cf4 return\cf3  \cf5 1\cf3 ;\
+\
+	\cf4 int\cf3  a(\cf5 1\cf3 ), b(\cf5 1\cf3 );\
+\
+	\cf4 for\cf3 (\cf4 int\cf3  i(\cf5 2\cf3 ); i < n; ++i)\{\
+		\cf4 int\cf3  t(b);\
+		b += a;\
+		a = t;\
+	\}\
+\
+	\cf4 return\cf3  b;\
+\}\
+\'97lines 2089 to 2118 CCalculator.cpp\
+\
+\cf2 /*********************************************************/\cf3 \
+\cf2 // CCalculator::HandleRunTimeError(ErrorT error)\cf3 \
+\cf2 // Pre: m_Hwnd is set;\cf3 \
+\cf2 // Post: none\cf3 \
+\cf2 // Return Value: none\cf3 \
+\cf2 // Intent: to display a message box with an appropriate \cf3 \
+\cf2 //		   error message in it for runtime errors\cf3 \
+\cf2 /*********************************************************/\cf3 \
+\cf4 void\cf3  CCalculator::HandleRunTimeError(ErrorT error, CString eq)\
+\{\
+	CString message(\cf6 "Runtime Error"\cf3 );\
+	\
+	\cf4 switch\cf3 (error)\{\
+	\cf4 case\cf3  DIV_ZERO:		message = \cf6 "Illegal attempt to divide by zero"\cf3 ;		\cf4 break\cf3 ;\
+	\cf4 case\cf3  NCR_SIZE:		message = \cf6 "The first value in nCr must be larger than the second"\cf3 ;		\cf4 break\cf3 ;\
+	\cf4 case\cf3  NCR_INTEGERS:		message = \cf6 "nCr requires integers only"\cf3 ;		\cf4 break\cf3 ;\
+	\cf4 case\cf3  GCD_ZERO:		message = \cf6 "gcd requires non 0 values"\cf3 ;		\cf4 break\cf3 ;\
+	\cf4 case\cf3  LCM_ZERO:		message = \cf6 "lcm requires non 0 values"\cf3 ;		\cf4 break\cf3 ;\
+	\cf4 case\cf3  FACT_INT_ZERO:		message = \cf6 "Factorial requires positive integers"\cf3 ;		\cf4 break\cf3 ;\
+	\cf4 case\cf3  NPR_INTEGERS:		message = \cf6 "nPr requires integers only"\cf3 ;		\cf4 break\cf3 ;\
+	\cf4 case\cf3  NPR_SIZE:		message = \cf6 "The first value in nPr must be larger than the second"\cf3 ;		\cf4 break\cf3 ;\
+	\cf4 case\cf3  GCD_INTEGERS:		message = \cf6 "gcd must take integer parameters"\cf3 ;		\cf4 break\cf3 ;\
+	\cf4 case\cf3  LCM_INTEGERS:		message = \cf6 "lcm must take integer parameters"\cf3 ;		\cf4 break\cf3 ;\
+	\cf4 case\cf3  OUT_OF_STACK_RANGE:		message = \cf6 "Stack index out of range!"\cf3 ;		\cf4 break\cf3 ;\
+	\cf4 case\cf3  INVALID_BASE:		message = \cf6 "You can only convert values to a base between 2 and 36"\cf3 ;		\cf4 break\cf3 ;\
+	\cf4 case\cf3  FIB_VALUE:		message = \cf6 "You must enter a positive integer for a fibonacci number - eg fib(6)"\cf3 ; \cf4 break\cf3 ;\
+	\cf4 case\cf3  ERR_UNKNOWN_OP_TYPE: message = \cf6 "Unknown operator type"\cf3 ; \cf4 break\cf3 ;\
+	\cf4 case\cf3  UNKNOWN_VARIABLE: message = \cf6 "Undefined constant"\cf3 ; \cf4 break\cf3 ;\
+	\cf4 case\cf3  UNKNOWNERR:		\
+	\cf4 default\cf3 :	\cf4 break\cf3 ;\
+	\}\
+	\
+	MessageBox(ghDlg, (\cf6 "ERROR: "\cf3  + message + \cf6 "\\nEQUATION ENTERED: "\cf3  + eq),\cf6 "Runtime Error"\cf3 , MB_OK | MB_ICONEXCLAMATION | MB_SETFOREGROUND);\
+\}\
+\'97lines 1464 to 1497 CCalculator.cpp\
+\
+}
