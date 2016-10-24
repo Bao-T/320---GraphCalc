@@ -13,3 +13,8 @@ C:\Users\Bao\Documents\GitHub\320---GraphCalc\Tests\Bao\ConvBase Tests\CodedUITe
 C:\Users\Bao\Documents\GitHub\320---GraphCalc\Tests\Bao\ConvBase Tests\CodedUITestProject2\obj\Debug\CodedUITestProject2.csprojResolveAssemblyReference.cache
 C:\Users\Bao\Documents\GitHub\320---GraphCalc\Tests\Bao\ConvBase Tests\CodedUITestProject2\obj\Debug\CodedUITestProject2.dll
 C:\Users\Bao\Documents\GitHub\320---GraphCalc\Tests\Bao\ConvBase Tests\CodedUITestProject2\obj\Debug\CodedUITestProject2.pdb
+C:\Users\Bao\Documents\GitHub\320---GraphCalc\Tests\Bao\Tests\CodedUITestProject2\bin\Debug\CodedUITestProject2.dll
+C:\Users\Bao\Documents\GitHub\320---GraphCalc\Tests\Bao\Tests\CodedUITestProject2\bin\Debug\CodedUITestProject2.pdb
+C:\Users\Bao\Documents\GitHub\320---GraphCalc\Tests\Bao\Tests\CodedUITestProject2\obj\Debug\CodedUITestProject2.csprojResolveAssemblyReference.cache
+C:\Users\Bao\Documents\GitHub\320---GraphCalc\Tests\Bao\Tests\CodedUITestProject2\obj\Debug\CodedUITestProject2.dll
+C:\Users\Bao\Documents\GitHub\320---GraphCalc\Tests\Bao\Tests\CodedUITestProject2\obj\Debug\CodedUITestProject2.pdb
