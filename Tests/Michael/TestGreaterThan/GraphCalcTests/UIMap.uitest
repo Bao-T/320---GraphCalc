@@ -1811,6 +1811,633 @@
       <WorkItemId>0</WorkItemId>
       <MarkerRegionType>Assertion</MarkerRegionType>
     </TestStepMarkerAction>
+    <ErrorAction>
+      <ParameterName />
+      <Message>The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.</Message>
+    </ErrorAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="454" Y="350" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox">
+      <ParameterName />
+      <Value Encoded="false">4&lt;2</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="591" Y="404" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="TestFourLessThanTwo">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <AssertAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow.UIItemEdit">
+      <ParameterName />
+      <PropertyName>Text</PropertyName>
+      <ExpectedValue>4&lt;2
+0
+
+</ExpectedValue>
+      <MessageOnValidationFailure>Incorrect Answer</MessageOnValidationFailure>
+      <Type>String</Type>
+      <PropertyCondition>AreEqual</PropertyCondition>
+    </AssertAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="AssertFourLessThanTwo">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Assertion</MarkerRegionType>
+    </TestStepMarkerAction>
+    <ErrorAction>
+      <ParameterName />
+      <Message>The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.</Message>
+    </ErrorAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="499" Y="372" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox">
+      <ParameterName />
+      <Value Encoded="false">2&lt;2</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <SendKeysAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow2.UIItemEdit">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Enter}</Text>
+    </SendKeysAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="TestTwoLessThanTwo">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <AssertAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow.UIItemEdit">
+      <ParameterName />
+      <PropertyName>Text</PropertyName>
+      <ExpectedValue>2&lt;2
+0
+
+</ExpectedValue>
+      <MessageOnValidationFailure>Incorrect Answer</MessageOnValidationFailure>
+      <Type>String</Type>
+      <PropertyCondition>AreEqual</PropertyCondition>
+    </AssertAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="AssertTwoLessThanTwo">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Assertion</MarkerRegionType>
+    </TestStepMarkerAction>
+    <ErrorAction>
+      <ParameterName />
+      <Message>The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.</Message>
+    </ErrorAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="460" Y="375" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox">
+      <ParameterName />
+      <Value Encoded="false">1&lt;</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="515" Y="380" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="617" Y="406" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="TestOneLessThanTwo">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <AssertAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow.UIItemEdit">
+      <ParameterName />
+      <PropertyName>Text</PropertyName>
+      <ExpectedValue>1&lt;2
+1
+
+</ExpectedValue>
+      <MessageOnValidationFailure>Incorrect Answer</MessageOnValidationFailure>
+      <Type>String</Type>
+      <PropertyCondition>AreEqual</PropertyCondition>
+    </AssertAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="AssertOneLessThanTwo">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Assertion</MarkerRegionType>
+    </TestStepMarkerAction>
+    <ErrorAction>
+      <ParameterName />
+      <Message>The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.</Message>
+    </ErrorAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="458" Y="399" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox">
+      <ParameterName />
+      <Value Encoded="false">0&lt;-1</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="602" Y="399" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="TestZeroLessThanMinusOne">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <AssertAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow.UIItemEdit">
+      <ParameterName />
+      <PropertyName>Text</PropertyName>
+      <ExpectedValue>0&lt;-1
+0
+
+</ExpectedValue>
+      <MessageOnValidationFailure>Incorrect Answer</MessageOnValidationFailure>
+      <Type>String</Type>
+      <PropertyCondition>AreEqual</PropertyCondition>
+    </AssertAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="AssertZeroLessThanMinusOne">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Assertion</MarkerRegionType>
+    </TestStepMarkerAction>
+    <ErrorAction>
+      <ParameterName />
+      <Message>The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.</Message>
+    </ErrorAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="500" Y="302" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox">
+      <ParameterName />
+      <Value Encoded="false">(-1</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="541" Y="297" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox">
+      <ParameterName />
+      <Value Encoded="false">(-1)&lt;-2</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="598" Y="406" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="TestMinusOneLessThanMinusTwo">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <AssertAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow.UIItemEdit">
+      <ParameterName />
+      <PropertyName>Text</PropertyName>
+      <ExpectedValue>(-1)&lt;-2
+0
+
+</ExpectedValue>
+      <MessageOnValidationFailure>Incorrect Answer</MessageOnValidationFailure>
+      <Type>String</Type>
+      <PropertyCondition>AreEqual</PropertyCondition>
+    </AssertAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="AssertMinusOneLessThanMinusTwo">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Assertion</MarkerRegionType>
+    </TestStepMarkerAction>
+    <ErrorAction>
+      <ParameterName />
+      <Message>The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.</Message>
+    </ErrorAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="504" Y="299" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox">
+      <ParameterName />
+      <Value Encoded="false">(-2)&lt;-1</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="599" Y="405" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="TestMinusTwoLessThanMinusOne">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <AssertAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow.UIItemEdit">
+      <ParameterName />
+      <PropertyName>Text</PropertyName>
+      <ExpectedValue>(-2)&lt;-1
+1
+
+</ExpectedValue>
+      <MessageOnValidationFailure>Incorrect Answer</MessageOnValidationFailure>
+      <Type>String</Type>
+      <PropertyCondition>AreEqual</PropertyCondition>
+    </AssertAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="AssertMinusTwoLessThanMinusOne">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Assertion</MarkerRegionType>
+    </TestStepMarkerAction>
+    <ErrorAction>
+      <ParameterName />
+      <Message>The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.</Message>
+    </ErrorAction>
+    <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox">
+      <ParameterName />
+      <Value Encoded="false">(-1)&lt;0</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="601" Y="403" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="TestMinusOneLessThanZero">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <AssertAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow.UIItemEdit">
+      <ParameterName />
+      <PropertyName>Text</PropertyName>
+      <ExpectedValue>(-1)&lt;0
+1
+
+</ExpectedValue>
+      <MessageOnValidationFailure>Incorrect Answer</MessageOnValidationFailure>
+      <Type>String</Type>
+      <PropertyCondition>AreEqual</PropertyCondition>
+    </AssertAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="AssertMinusOneLessThanZero">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Assertion</MarkerRegionType>
+    </TestStepMarkerAction>
+    <ErrorAction>
+      <ParameterName />
+      <Message>The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.</Message>
+    </ErrorAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="461" Y="404" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox">
+      <ParameterName />
+      <Value Encoded="false">0&lt;</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="461" Y="404" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="605" Y="403" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="TestZeroLessThanZero">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <AssertAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow.UIItemEdit">
+      <ParameterName />
+      <PropertyName>Text</PropertyName>
+      <ExpectedValue>0&lt;0
+0
+
+</ExpectedValue>
+      <MessageOnValidationFailure>Incorrect Answer</MessageOnValidationFailure>
+      <Type>String</Type>
+      <PropertyCondition>AreEqual</PropertyCondition>
+    </AssertAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="AssertZeroLessThanZero">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Assertion</MarkerRegionType>
+    </TestStepMarkerAction>
+    <ErrorAction>
+      <ParameterName />
+      <Message>The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.</Message>
+    </ErrorAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="455" Y="379" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="455" Y="402" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox">
+      <ParameterName />
+      <Value Encoded="false">10&lt;</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="486" Y="373" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="600" Y="403" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="TestTenLessThanTwo">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <AssertAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow.UIItemEdit">
+      <ParameterName />
+      <PropertyName>Text</PropertyName>
+      <ExpectedValue>10&lt;2
+0
+
+</ExpectedValue>
+      <MessageOnValidationFailure>Incorrect Answer</MessageOnValidationFailure>
+      <Type>String</Type>
+      <PropertyCondition>AreEqual</PropertyCondition>
+    </AssertAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="AssertTenLessThanTwo">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Assertion</MarkerRegionType>
+    </TestStepMarkerAction>
+    <ErrorAction>
+      <ParameterName />
+      <Message>The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.</Message>
+    </ErrorAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="463" Y="377" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="463" Y="401" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>DoubleClick</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox">
+      <ParameterName />
+      <Value Encoded="false">100&lt;</Value>
+      <Type>String</Type>
+      <PreferEdit>True</PreferEdit>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="500" Y="382" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UIGraphCalcWindow.UIGraphCalcDialog">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="611" Y="408" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="OneHundredLessThanTwo">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <AssertAction UIObjectName="UIMap.UIGraphCalcWindow.UIItemWindow.UIItemEdit">
+      <ParameterName />
+      <PropertyName>Text</PropertyName>
+      <ExpectedValue>100&lt;2
+0
+
+</ExpectedValue>
+      <MessageOnValidationFailure>Incorrect Answer</MessageOnValidationFailure>
+      <Type>String</Type>
+      <PropertyCondition>AreEqual</PropertyCondition>
+    </AssertAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="AssertOnehundredLessThanTwo">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Assertion</MarkerRegionType>
+    </TestStepMarkerAction>
   </ExecuteActions>
   <CleanupActions />
   <OnErrorActions />

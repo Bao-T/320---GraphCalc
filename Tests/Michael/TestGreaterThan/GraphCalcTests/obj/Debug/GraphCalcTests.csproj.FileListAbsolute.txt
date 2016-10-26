@@ -8,3 +8,8 @@
 \\Mac\Home\Desktop\320 - GraphCalc\Tests\Michael\TestGreaterThan\GraphCalcTests\obj\Debug\GraphCalcTests.csprojResolveAssemblyReference.cache
 \\Mac\Home\Desktop\320 - GraphCalc\Tests\Michael\TestGreaterThan\GraphCalcTests\obj\Debug\GraphCalcTests.dll
 \\Mac\Home\Desktop\320 - GraphCalc\Tests\Michael\TestGreaterThan\GraphCalcTests\obj\Debug\GraphCalcTests.pdb
+\\Mac\Desktop\320 - GraphCalc\Tests\Michael\TestGreaterThan\GraphCalcTests\bin\Debug\GraphCalcTests.dll
+\\Mac\Desktop\320 - GraphCalc\Tests\Michael\TestGreaterThan\GraphCalcTests\bin\Debug\GraphCalcTests.pdb
+\\Mac\Desktop\320 - GraphCalc\Tests\Michael\TestGreaterThan\GraphCalcTests\obj\Debug\GraphCalcTests.csprojResolveAssemblyReference.cache
+\\Mac\Desktop\320 - GraphCalc\Tests\Michael\TestGreaterThan\GraphCalcTests\obj\Debug\GraphCalcTests.dll
+\\Mac\Desktop\320 - GraphCalc\Tests\Michael\TestGreaterThan\GraphCalcTests\obj\Debug\GraphCalcTests.pdb

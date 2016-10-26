@@ -259,6 +259,96 @@ namespace GraphCalcTests
             this.UIMap.AssertABSOneFifth();
 
         }
+
+        [TestMethod]
+        public void FourLessThanTwo()
+        {
+
+            this.UIMap.TestFourLessThanTwo();
+            this.UIMap.AssertFourLessThanTwo();
+
+        }
+
+        [TestMethod]
+        public void TwoLessThanTwo()
+        {
+
+            this.UIMap.TestTwoLessThanTwo();
+            this.UIMap.AssertTwoLessThanTwo();
+
+        }
+
+        [TestMethod]
+        public void OneLessThanTwo()
+        {
+
+            this.UIMap.TestOneLessThanTwo();
+            this.UIMap.AssertOneLessThanTwo();
+
+        }
+
+        [TestMethod]
+        public void ZeroLessThanMinusOne()
+        {
+
+            this.UIMap.TestZeroLessThanMinusOne();
+            this.UIMap.AssertZeroLessThanMinusOne();
+
+        }
+
+        [TestMethod]
+        public void MinusOneLessThanMinusTwo()
+        {
+
+            this.UIMap.TestMinusOneLessThanMinusTwo();
+            this.UIMap.AssertMinusOneLessThanMinusTwo();
+
+        }
+
+        [TestMethod]
+        public void MinusTwoLessThanMinusOne()
+        {
+
+            this.UIMap.TestMinusTwoLessThanMinusOne();
+            this.UIMap.AssertMinusTwoLessThanMinusOne();
+
+        }
+
+        [TestMethod]
+        public void MinusOneLessThanZero()
+        {
+
+            this.UIMap.TestMinusOneLessThanZero();
+            this.UIMap.AssertMinusOneLessThanZero();
+
+        }
+
+        [TestMethod]
+        public void ZeroLessThanZero()
+        {
+
+            this.UIMap.TestZeroLessThanZero();
+            this.UIMap.AssertZeroLessThanZero();
+
+        }
+
+        [TestMethod]
+        public void TenLessThanTwo()
+        {
+
+            this.UIMap.TestTenLessThanTwo();
+            this.UIMap.AssertTenLessThanTwo();
+
+        }
+
+        [TestMethod]
+        public void OneHundredLessThanTwo()
+        {
+
+            this.UIMap.OneHundredLessThanTwo();
+            this.UIMap.AssertOnehundredLessThanTwo();
+
+        }
         #region Additional test attributes
 
         // You can use the following additional attributes as you write your tests:

@@ -1185,6 +1185,408 @@ namespace GraphCalcTests
             Assert.AreEqual(this.AssertABSOneFifthExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
         }
         
+        /// <summary>
+        /// TestFourLessThanTwo - Use 'TestFourLessThanTwoParams' to pass parameters into this method.
+        /// </summary>
+        public void TestFourLessThanTwo()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(454, 350));
+
+            // Select '4<2' in combo box
+            uIItemComboBox.EditableItem = this.TestFourLessThanTwoParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(591, 404));
+        }
+        
+        /// <summary>
+        /// AssertFourLessThanTwo - Use 'AssertFourLessThanTwoExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertFourLessThanTwo()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '4<2
+            //0
+            //
+            //'
+            Assert.AreEqual(this.AssertFourLessThanTwoExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestTwoLessThanTwo - Use 'TestTwoLessThanTwoParams' to pass parameters into this method.
+        /// </summary>
+        public void TestTwoLessThanTwo()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow2.UIItemEdit;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(499, 372));
+
+            // Select '2<2' in combo box
+            uIItemComboBox.EditableItem = this.TestTwoLessThanTwoParams.UIItemComboBoxEditableItem;
+
+            // Type '{Enter}' in text box
+            Keyboard.SendKeys(uIItemEdit, this.TestTwoLessThanTwoParams.UIItemEditSendKeys, ModifierKeys.None);
+        }
+        
+        /// <summary>
+        /// AssertTwoLessThanTwo - Use 'AssertTwoLessThanTwoExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertTwoLessThanTwo()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '2<2
+            //0
+            //
+            //'
+            Assert.AreEqual(this.AssertTwoLessThanTwoExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestOneLessThanTwo - Use 'TestOneLessThanTwoParams' to pass parameters into this method.
+        /// </summary>
+        public void TestOneLessThanTwo()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(460, 375));
+
+            // Select '1<' in combo box
+            uIItemComboBox.EditableItem = this.TestOneLessThanTwoParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(515, 380));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(617, 406));
+        }
+        
+        /// <summary>
+        /// AssertOneLessThanTwo - Use 'AssertOneLessThanTwoExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertOneLessThanTwo()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '1<2
+            //1
+            //
+            //'
+            Assert.AreEqual(this.AssertOneLessThanTwoExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestZeroLessThanMinusOne - Use 'TestZeroLessThanMinusOneParams' to pass parameters into this method.
+        /// </summary>
+        public void TestZeroLessThanMinusOne()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(458, 399));
+
+            // Select '0<-1' in combo box
+            uIItemComboBox.EditableItem = this.TestZeroLessThanMinusOneParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(602, 399));
+        }
+        
+        /// <summary>
+        /// AssertZeroLessThanMinusOne - Use 'AssertZeroLessThanMinusOneExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertZeroLessThanMinusOne()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '0<-1
+            //0
+            //
+            //'
+            Assert.AreEqual(this.AssertZeroLessThanMinusOneExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestMinusOneLessThanMinusTwo - Use 'TestMinusOneLessThanMinusTwoParams' to pass parameters into this method.
+        /// </summary>
+        public void TestMinusOneLessThanMinusTwo()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(500, 302));
+
+            // Select '(-1' in combo box
+            uIItemComboBox.EditableItem = this.TestMinusOneLessThanMinusTwoParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(541, 297));
+
+            // Select '(-1)<-2' in combo box
+            uIItemComboBox.EditableItem = this.TestMinusOneLessThanMinusTwoParams.UIItemComboBoxEditableItem1;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(598, 406));
+        }
+        
+        /// <summary>
+        /// AssertMinusOneLessThanMinusTwo - Use 'AssertMinusOneLessThanMinusTwoExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertMinusOneLessThanMinusTwo()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '(-1)<-2
+            //0
+            //
+            //'
+            Assert.AreEqual(this.AssertMinusOneLessThanMinusTwoExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestMinusTwoLessThanMinusOne - Use 'TestMinusTwoLessThanMinusOneParams' to pass parameters into this method.
+        /// </summary>
+        public void TestMinusTwoLessThanMinusOne()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(504, 299));
+
+            // Select '(-2)<-1' in combo box
+            uIItemComboBox.EditableItem = this.TestMinusTwoLessThanMinusOneParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(599, 405));
+        }
+        
+        /// <summary>
+        /// AssertMinusTwoLessThanMinusOne - Use 'AssertMinusTwoLessThanMinusOneExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertMinusTwoLessThanMinusOne()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '(-2)<-1
+            //1
+            //
+            //'
+            Assert.AreEqual(this.AssertMinusTwoLessThanMinusOneExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestMinusOneLessThanZero - Use 'TestMinusOneLessThanZeroParams' to pass parameters into this method.
+        /// </summary>
+        public void TestMinusOneLessThanZero()
+        {
+            #region Variable Declarations
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Select '(-1)<0' in combo box
+            uIItemComboBox.EditableItem = this.TestMinusOneLessThanZeroParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(601, 403));
+        }
+        
+        /// <summary>
+        /// AssertMinusOneLessThanZero - Use 'AssertMinusOneLessThanZeroExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertMinusOneLessThanZero()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '(-1)<0
+            //1
+            //
+            //'
+            Assert.AreEqual(this.AssertMinusOneLessThanZeroExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestZeroLessThanZero - Use 'TestZeroLessThanZeroParams' to pass parameters into this method.
+        /// </summary>
+        public void TestZeroLessThanZero()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(461, 404));
+
+            // Select '0<' in combo box
+            uIItemComboBox.EditableItem = this.TestZeroLessThanZeroParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(461, 404));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(605, 403));
+        }
+        
+        /// <summary>
+        /// AssertZeroLessThanZero - Use 'AssertZeroLessThanZeroExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertZeroLessThanZero()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '0<0
+            //0
+            //
+            //'
+            Assert.AreEqual(this.AssertZeroLessThanZeroExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// TestTenLessThanTwo - Use 'TestTenLessThanTwoParams' to pass parameters into this method.
+        /// </summary>
+        public void TestTenLessThanTwo()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(455, 379));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(455, 402));
+
+            // Select '10<' in combo box
+            uIItemComboBox.EditableItem = this.TestTenLessThanTwoParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(486, 373));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(600, 403));
+        }
+        
+        /// <summary>
+        /// AssertTenLessThanTwo - Use 'AssertTenLessThanTwoExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertTenLessThanTwo()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '10<2
+            //0
+            //
+            //'
+            Assert.AreEqual(this.AssertTenLessThanTwoExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
+        /// <summary>
+        /// OneHundredLessThanTwo - Use 'OneHundredLessThanTwoParams' to pass parameters into this method.
+        /// </summary>
+        public void OneHundredLessThanTwo()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow1.UIItemComboBox;
+            #endregion
+
+            // The recording for the application under test '\\Mac\Desktop\GrphCalc.exe' may not be correct as it is located on a network share. Please install the application on a local path.
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(463, 377));
+
+            // Double-Click 'GraphCalc' Dialog
+            Mouse.DoubleClick(uIGraphCalcDialog, new Point(463, 401));
+
+            // Select '100<' in combo box
+            uIItemComboBox.EditableItem = this.OneHundredLessThanTwoParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(500, 382));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(611, 408));
+        }
+        
+        /// <summary>
+        /// AssertOnehundredLessThanTwo - Use 'AssertOnehundredLessThanTwoExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertOnehundredLessThanTwo()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '100<2
+            //0
+            //
+            //'
+            Assert.AreEqual(this.AssertOnehundredLessThanTwoExpectedValues.UIItemEditText, uIItemEdit.Text, "Incorrect Answer");
+        }
+        
         #region Properties
         public virtual AssertFourGreaterThanTwoExpectedValues AssertFourGreaterThanTwoExpectedValues
         {
@@ -1870,6 +2272,246 @@ namespace GraphCalcTests
             }
         }
         
+        public virtual TestFourLessThanTwoParams TestFourLessThanTwoParams
+        {
+            get
+            {
+                if ((this.mTestFourLessThanTwoParams == null))
+                {
+                    this.mTestFourLessThanTwoParams = new TestFourLessThanTwoParams();
+                }
+                return this.mTestFourLessThanTwoParams;
+            }
+        }
+        
+        public virtual AssertFourLessThanTwoExpectedValues AssertFourLessThanTwoExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertFourLessThanTwoExpectedValues == null))
+                {
+                    this.mAssertFourLessThanTwoExpectedValues = new AssertFourLessThanTwoExpectedValues();
+                }
+                return this.mAssertFourLessThanTwoExpectedValues;
+            }
+        }
+        
+        public virtual TestTwoLessThanTwoParams TestTwoLessThanTwoParams
+        {
+            get
+            {
+                if ((this.mTestTwoLessThanTwoParams == null))
+                {
+                    this.mTestTwoLessThanTwoParams = new TestTwoLessThanTwoParams();
+                }
+                return this.mTestTwoLessThanTwoParams;
+            }
+        }
+        
+        public virtual AssertTwoLessThanTwoExpectedValues AssertTwoLessThanTwoExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertTwoLessThanTwoExpectedValues == null))
+                {
+                    this.mAssertTwoLessThanTwoExpectedValues = new AssertTwoLessThanTwoExpectedValues();
+                }
+                return this.mAssertTwoLessThanTwoExpectedValues;
+            }
+        }
+        
+        public virtual TestOneLessThanTwoParams TestOneLessThanTwoParams
+        {
+            get
+            {
+                if ((this.mTestOneLessThanTwoParams == null))
+                {
+                    this.mTestOneLessThanTwoParams = new TestOneLessThanTwoParams();
+                }
+                return this.mTestOneLessThanTwoParams;
+            }
+        }
+        
+        public virtual AssertOneLessThanTwoExpectedValues AssertOneLessThanTwoExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertOneLessThanTwoExpectedValues == null))
+                {
+                    this.mAssertOneLessThanTwoExpectedValues = new AssertOneLessThanTwoExpectedValues();
+                }
+                return this.mAssertOneLessThanTwoExpectedValues;
+            }
+        }
+        
+        public virtual TestZeroLessThanMinusOneParams TestZeroLessThanMinusOneParams
+        {
+            get
+            {
+                if ((this.mTestZeroLessThanMinusOneParams == null))
+                {
+                    this.mTestZeroLessThanMinusOneParams = new TestZeroLessThanMinusOneParams();
+                }
+                return this.mTestZeroLessThanMinusOneParams;
+            }
+        }
+        
+        public virtual AssertZeroLessThanMinusOneExpectedValues AssertZeroLessThanMinusOneExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertZeroLessThanMinusOneExpectedValues == null))
+                {
+                    this.mAssertZeroLessThanMinusOneExpectedValues = new AssertZeroLessThanMinusOneExpectedValues();
+                }
+                return this.mAssertZeroLessThanMinusOneExpectedValues;
+            }
+        }
+        
+        public virtual TestMinusOneLessThanMinusTwoParams TestMinusOneLessThanMinusTwoParams
+        {
+            get
+            {
+                if ((this.mTestMinusOneLessThanMinusTwoParams == null))
+                {
+                    this.mTestMinusOneLessThanMinusTwoParams = new TestMinusOneLessThanMinusTwoParams();
+                }
+                return this.mTestMinusOneLessThanMinusTwoParams;
+            }
+        }
+        
+        public virtual AssertMinusOneLessThanMinusTwoExpectedValues AssertMinusOneLessThanMinusTwoExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertMinusOneLessThanMinusTwoExpectedValues == null))
+                {
+                    this.mAssertMinusOneLessThanMinusTwoExpectedValues = new AssertMinusOneLessThanMinusTwoExpectedValues();
+                }
+                return this.mAssertMinusOneLessThanMinusTwoExpectedValues;
+            }
+        }
+        
+        public virtual TestMinusTwoLessThanMinusOneParams TestMinusTwoLessThanMinusOneParams
+        {
+            get
+            {
+                if ((this.mTestMinusTwoLessThanMinusOneParams == null))
+                {
+                    this.mTestMinusTwoLessThanMinusOneParams = new TestMinusTwoLessThanMinusOneParams();
+                }
+                return this.mTestMinusTwoLessThanMinusOneParams;
+            }
+        }
+        
+        public virtual AssertMinusTwoLessThanMinusOneExpectedValues AssertMinusTwoLessThanMinusOneExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertMinusTwoLessThanMinusOneExpectedValues == null))
+                {
+                    this.mAssertMinusTwoLessThanMinusOneExpectedValues = new AssertMinusTwoLessThanMinusOneExpectedValues();
+                }
+                return this.mAssertMinusTwoLessThanMinusOneExpectedValues;
+            }
+        }
+        
+        public virtual TestMinusOneLessThanZeroParams TestMinusOneLessThanZeroParams
+        {
+            get
+            {
+                if ((this.mTestMinusOneLessThanZeroParams == null))
+                {
+                    this.mTestMinusOneLessThanZeroParams = new TestMinusOneLessThanZeroParams();
+                }
+                return this.mTestMinusOneLessThanZeroParams;
+            }
+        }
+        
+        public virtual AssertMinusOneLessThanZeroExpectedValues AssertMinusOneLessThanZeroExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertMinusOneLessThanZeroExpectedValues == null))
+                {
+                    this.mAssertMinusOneLessThanZeroExpectedValues = new AssertMinusOneLessThanZeroExpectedValues();
+                }
+                return this.mAssertMinusOneLessThanZeroExpectedValues;
+            }
+        }
+        
+        public virtual TestZeroLessThanZeroParams TestZeroLessThanZeroParams
+        {
+            get
+            {
+                if ((this.mTestZeroLessThanZeroParams == null))
+                {
+                    this.mTestZeroLessThanZeroParams = new TestZeroLessThanZeroParams();
+                }
+                return this.mTestZeroLessThanZeroParams;
+            }
+        }
+        
+        public virtual AssertZeroLessThanZeroExpectedValues AssertZeroLessThanZeroExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertZeroLessThanZeroExpectedValues == null))
+                {
+                    this.mAssertZeroLessThanZeroExpectedValues = new AssertZeroLessThanZeroExpectedValues();
+                }
+                return this.mAssertZeroLessThanZeroExpectedValues;
+            }
+        }
+        
+        public virtual TestTenLessThanTwoParams TestTenLessThanTwoParams
+        {
+            get
+            {
+                if ((this.mTestTenLessThanTwoParams == null))
+                {
+                    this.mTestTenLessThanTwoParams = new TestTenLessThanTwoParams();
+                }
+                return this.mTestTenLessThanTwoParams;
+            }
+        }
+        
+        public virtual AssertTenLessThanTwoExpectedValues AssertTenLessThanTwoExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertTenLessThanTwoExpectedValues == null))
+                {
+                    this.mAssertTenLessThanTwoExpectedValues = new AssertTenLessThanTwoExpectedValues();
+                }
+                return this.mAssertTenLessThanTwoExpectedValues;
+            }
+        }
+        
+        public virtual OneHundredLessThanTwoParams OneHundredLessThanTwoParams
+        {
+            get
+            {
+                if ((this.mOneHundredLessThanTwoParams == null))
+                {
+                    this.mOneHundredLessThanTwoParams = new OneHundredLessThanTwoParams();
+                }
+                return this.mOneHundredLessThanTwoParams;
+            }
+        }
+        
+        public virtual AssertOnehundredLessThanTwoExpectedValues AssertOnehundredLessThanTwoExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertOnehundredLessThanTwoExpectedValues == null))
+                {
+                    this.mAssertOnehundredLessThanTwoExpectedValues = new AssertOnehundredLessThanTwoExpectedValues();
+                }
+                return this.mAssertOnehundredLessThanTwoExpectedValues;
+            }
+        }
+        
         public UIGraphCalcWindow UIGraphCalcWindow
         {
             get
@@ -2009,6 +2651,46 @@ namespace GraphCalcTests
         private TestABSOneFifthParams mTestABSOneFifthParams;
         
         private AssertABSOneFifthExpectedValues mAssertABSOneFifthExpectedValues;
+        
+        private TestFourLessThanTwoParams mTestFourLessThanTwoParams;
+        
+        private AssertFourLessThanTwoExpectedValues mAssertFourLessThanTwoExpectedValues;
+        
+        private TestTwoLessThanTwoParams mTestTwoLessThanTwoParams;
+        
+        private AssertTwoLessThanTwoExpectedValues mAssertTwoLessThanTwoExpectedValues;
+        
+        private TestOneLessThanTwoParams mTestOneLessThanTwoParams;
+        
+        private AssertOneLessThanTwoExpectedValues mAssertOneLessThanTwoExpectedValues;
+        
+        private TestZeroLessThanMinusOneParams mTestZeroLessThanMinusOneParams;
+        
+        private AssertZeroLessThanMinusOneExpectedValues mAssertZeroLessThanMinusOneExpectedValues;
+        
+        private TestMinusOneLessThanMinusTwoParams mTestMinusOneLessThanMinusTwoParams;
+        
+        private AssertMinusOneLessThanMinusTwoExpectedValues mAssertMinusOneLessThanMinusTwoExpectedValues;
+        
+        private TestMinusTwoLessThanMinusOneParams mTestMinusTwoLessThanMinusOneParams;
+        
+        private AssertMinusTwoLessThanMinusOneExpectedValues mAssertMinusTwoLessThanMinusOneExpectedValues;
+        
+        private TestMinusOneLessThanZeroParams mTestMinusOneLessThanZeroParams;
+        
+        private AssertMinusOneLessThanZeroExpectedValues mAssertMinusOneLessThanZeroExpectedValues;
+        
+        private TestZeroLessThanZeroParams mTestZeroLessThanZeroParams;
+        
+        private AssertZeroLessThanZeroExpectedValues mAssertZeroLessThanZeroExpectedValues;
+        
+        private TestTenLessThanTwoParams mTestTenLessThanTwoParams;
+        
+        private AssertTenLessThanTwoExpectedValues mAssertTenLessThanTwoExpectedValues;
+        
+        private OneHundredLessThanTwoParams mOneHundredLessThanTwoParams;
+        
+        private AssertOnehundredLessThanTwoExpectedValues mAssertOnehundredLessThanTwoExpectedValues;
         
         private UIGraphCalcWindow mUIGraphCalcWindow;
         
@@ -2993,6 +3675,346 @@ namespace GraphCalcTests
         ///'
         /// </summary>
         public string UIItemEditText = "abs(1/5)\n0.2\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestFourLessThanTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestFourLessThanTwoParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '4<2' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "4<2";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertFourLessThanTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertFourLessThanTwoExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '4<2
+        ///0
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "4<2\n0\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestTwoLessThanTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestTwoLessThanTwoParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '2<2' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "2<2";
+        
+        /// <summary>
+        /// Type '{Enter}' in text box
+        /// </summary>
+        public string UIItemEditSendKeys = "{Enter}";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertTwoLessThanTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertTwoLessThanTwoExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '2<2
+        ///0
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "2<2\n0\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestOneLessThanTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestOneLessThanTwoParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '1<' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "1<";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertOneLessThanTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertOneLessThanTwoExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '1<2
+        ///1
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "1<2\n1\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestZeroLessThanMinusOne'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestZeroLessThanMinusOneParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '0<-1' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "0<-1";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertZeroLessThanMinusOne'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertZeroLessThanMinusOneExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '0<-1
+        ///0
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "0<-1\n0\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestMinusOneLessThanMinusTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestMinusOneLessThanMinusTwoParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '(-1' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "(-1";
+        
+        /// <summary>
+        /// Select '(-1)<-2' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem1 = "(-1)<-2";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertMinusOneLessThanMinusTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertMinusOneLessThanMinusTwoExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '(-1)<-2
+        ///0
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "(-1)<-2\n0\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestMinusTwoLessThanMinusOne'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestMinusTwoLessThanMinusOneParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '(-2)<-1' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "(-2)<-1";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertMinusTwoLessThanMinusOne'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertMinusTwoLessThanMinusOneExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '(-2)<-1
+        ///1
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "(-2)<-1\n1\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestMinusOneLessThanZero'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestMinusOneLessThanZeroParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '(-1)<0' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "(-1)<0";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertMinusOneLessThanZero'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertMinusOneLessThanZeroExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '(-1)<0
+        ///1
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "(-1)<0\n1\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestZeroLessThanZero'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestZeroLessThanZeroParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '0<' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "0<";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertZeroLessThanZero'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertZeroLessThanZeroExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '0<0
+        ///0
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "0<0\n0\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TestTenLessThanTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class TestTenLessThanTwoParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '10<' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "10<";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertTenLessThanTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertTenLessThanTwoExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '10<2
+        ///0
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "10<2\n0\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'OneHundredLessThanTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class OneHundredLessThanTwoParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '100<' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "100<";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertOnehundredLessThanTwo'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class AssertOnehundredLessThanTwoExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '100<2
+        ///0
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "100<2\n0\n\r\n";
         #endregion
     }
     
