@@ -221,4 +221,42 @@ ErrorT CCalculator::StringToDecimal(CString theNum, \cf4 int\cf3  base, \cf4 lon
 \}\
 \'97lines 1464 to 1497 CCalculator.cpp\
 \
-}
+\cf2 /*********************************************************/\cf3 \
+\cf2 // CCalculator::IsCharNotInBase(int base, char badchar)\cf3 \
+\cf2 // Pre: base >= 2 && base <= 36\cf3 \
+\cf2 // Post: none\cf3 \
+\cf2 // Return Value: false if badchar is valid for the current \cf3 \
+\cf2 //				 base\cf3 \
+\cf2 // Intent: to determine if badchar is valid in the current\cf3 \
+\cf2 //		   base\cf3 \
+\cf2 /*********************************************************/\cf3 \
+\cf4 bool\cf3  CCalculator::IsCharNotInBase(\cf4 int\cf3  base, \cf4 char\cf3  badchar)\
+\{\
+	\cf4 if\cf3 ((base > (badchar - \cf5 '0'\cf3 )) && (badchar >= \cf5 '0'\cf3 ))\
+		\cf4 return\cf3  \cf4 false\cf3 ;\
+	\cf4 else\cf3  \cf4 if\cf3 ((badchar < (base + \cf5 'A'\cf3  - \cf5 10\cf3 )) && (badchar >= \cf5 'A'\cf3 ) && (base > \cf5 10\cf3 ))\
+		\cf4 return\cf3  \cf4 false\cf3 ;\
+	\cf4 else\cf3  \cf4 if\cf3 ((m_IntlMode == US && badchar == \cf5 '.'\cf3 ) || (m_IntlMode == EUROPEAN && badchar == \cf5 ','\cf3 ))\
+		\cf4 return\cf3  \cf4 false\cf3 ;\
+	\
+	\cf4 return\cf3  \cf4 true\cf3 ;\
+\}\
+\'97 lines 365-384 CCalculator.cpp\
+\
+\cf2 /*********************************************************/\cf3 \
+\cf2 // CCalculator::nPr(long double first, long double second)\cf3 \
+\cf2 // Pre: none\cf3 \
+\cf2 // Post: none\cf3 \
+\cf2 // Return Value: first nPr second\cf3 \
+\cf2 // Intent: the number of permutations of second values\cf3 \
+\cf2 //		   given first values\cf3 \
+\cf2 /*********************************************************/\cf3 \
+\cf4 long\cf3  \cf4 double\cf3  CCalculator::nPr(\cf4 long\cf3  \cf4 double\cf3  first, \cf4 long\cf3  \cf4 double\cf3  second)\
+\{\
+	\cf4 if\cf3 (\cf4 int\cf3 (first) != first || \cf4 int\cf3 (second) != second)\{\
+		\cf4 return\cf3  \cf5 0\cf3 ;\
+	\}\
+	\
+	\cf4 return\cf3  (factorial(first) / factorial(first-second));\
+\}\
+- lines 1941 to 1956 CCalculator.cpp}
