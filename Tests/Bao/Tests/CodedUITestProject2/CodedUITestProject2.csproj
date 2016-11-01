@@ -53,6 +53,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodedUITest3_Fibonacci.cs" />
     <Compile Include="CodedUITest1_ConvBase.cs" />
     <Compile Include="CodedUITest2_Constants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
