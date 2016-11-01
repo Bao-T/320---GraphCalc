@@ -1944,6 +1944,393 @@ namespace CodedUITestProject2
             Assert.AreEqual(this.AssertGasConstExpectedValues.UIItemEditText, uIItemEdit.Text);
         }
         
+        /// <summary>
+        /// Fibonacci_Zero_Input - Use 'Fibonacci_Zero_InputParams' to pass parameters into this method.
+        /// </summary>
+        public void Fibonacci_Zero_Input()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
+            #endregion
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(501, 118));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(452, 385));
+
+            // Select '' in combo box
+            uIItemComboBox.EditableItem = this.Fibonacci_Zero_InputParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(486, 129));
+
+            // Select 'fib(0)' in combo box
+            uIItemComboBox.EditableItem = this.Fibonacci_Zero_InputParams.UIItemComboBoxEditableItem1;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(605, 393));
+        }
+        
+        /// <summary>
+        /// Assert_Fibonacci_Zero_Input - Use 'Assert_Fibonacci_Zero_InputExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void Assert_Fibonacci_Zero_Input()
+        {
+            #region Variable Declarations
+            WinTitleBar uIRuntimeErrorTitleBar = this.UIRuntimeErrorWindow.UIRuntimeErrorTitleBar;
+            #endregion
+
+            // Verify that the 'DisplayText' property of 'Runtime Error' title bar equals 'Runtime Error'
+            Assert.AreEqual(this.Assert_Fibonacci_Zero_InputExpectedValues.UIRuntimeErrorTitleBarDisplayText, uIRuntimeErrorTitleBar.DisplayText);
+        }
+        
+        /// <summary>
+        /// Fibonacci_Negative_Input - Use 'Fibonacci_Negative_InputParams' to pass parameters into this method.
+        /// </summary>
+        public void Fibonacci_Negative_Input()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
+            #endregion
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(501, 116));
+
+            // Select 'fib(-1)' in combo box
+            uIItemComboBox.EditableItem = this.Fibonacci_Negative_InputParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(595, 393));
+        }
+        
+        /// <summary>
+        /// Assert_Fibonacci_Negative_Input - Use 'Assert_Fibonacci_Negative_InputExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void Assert_Fibonacci_Negative_Input()
+        {
+            #region Variable Declarations
+            WinTitleBar uIRuntimeErrorTitleBar = this.UIRuntimeErrorWindow.UIRuntimeErrorTitleBar;
+            #endregion
+
+            // Verify that the 'DisplayText' property of 'Runtime Error' title bar equals 'Runtime Error'
+            Assert.AreEqual(this.Assert_Fibonacci_Negative_InputExpectedValues.UIRuntimeErrorTitleBarDisplayText, uIRuntimeErrorTitleBar.DisplayText);
+        }
+        
+        /// <summary>
+        /// Fibonacci_Large_Input - Use 'Fibonacci_Large_InputParams' to pass parameters into this method.
+        /// </summary>
+        public void Fibonacci_Large_Input()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow1.UIItemEdit;
+            #endregion
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(491, 120));
+
+            // Select 'fib(999999999999999999999999999999)' in combo box
+            uIItemComboBox.EditableItem = this.Fibonacci_Large_InputParams.UIItemComboBoxEditableItem;
+
+            // Type '{Enter}' in text box
+            Keyboard.SendKeys(uIItemEdit, this.Fibonacci_Large_InputParams.UIItemEditSendKeys, ModifierKeys.None);
+        }
+        
+        /// <summary>
+        /// Assert_Fibonacci_Large_Input - Use 'Assert_Fibonacci_Large_InputExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void Assert_Fibonacci_Large_Input()
+        {
+            #region Variable Declarations
+            WinText uIERRORYoumustenterapoText = this.UIRuntimeErrorWindow.UIERRORYoumustenterapoWindow.UIERRORYoumustenterapoText;
+            #endregion
+
+            // Verify that the 'DisplayText' property of 'ERROR: You must enter a positive integer for a fib...' label is not equal to 'ERROR: You must enter a positive integer for a fibonacci number - eg fib(6)
+            //EQUATION ENTERED: fib(999999999999999999999999999999)'
+            Assert.AreNotEqual(this.Assert_Fibonacci_Large_InputExpectedValues.UIERRORYoumustenterapoTextDisplayText, uIERRORYoumustenterapoText.DisplayText);
+        }
+        
+        /// <summary>
+        /// Fibonacci_Fibonacci_Input - Use 'Fibonacci_Fibonacci_InputParams' to pass parameters into this method.
+        /// </summary>
+        public void Fibonacci_Fibonacci_Input()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
+            #endregion
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(493, 123));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(493, 123));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(493, 123));
+
+            // Select 'fib(fib(6))' in combo box
+            uIItemComboBox.EditableItem = this.Fibonacci_Fibonacci_InputParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(587, 385));
+        }
+        
+        /// <summary>
+        /// Asser_Fibonacci_Fibonacci_Input - Use 'Asser_Fibonacci_Fibonacci_InputExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void Asser_Fibonacci_Fibonacci_Input()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow2.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals 'fib(fib(6))
+            //21
+            //
+            //'
+            Assert.AreEqual(this.Asser_Fibonacci_Fibonacci_InputExpectedValues.UIItemEditText, uIItemEdit.Text);
+        }
+        
+        /// <summary>
+        /// Fibonacci_Decimal_Input - Use 'Fibonacci_Decimal_InputParams' to pass parameters into this method.
+        /// </summary>
+        public void Fibonacci_Decimal_Input()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
+            #endregion
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(503, 125));
+
+            // Select 'fib(3.5)' in combo box
+            uIItemComboBox.EditableItem = this.Fibonacci_Decimal_InputParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(600, 393));
+        }
+        
+        /// <summary>
+        /// Assert_Fibonacci_Decimal_Input - Use 'Assert_Fibonacci_Decimal_InputExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void Assert_Fibonacci_Decimal_Input()
+        {
+            #region Variable Declarations
+            WinText uIERRORYoumustenterapoText1 = this.UIRuntimeErrorWindow.UIERRORYoumustenterapoWindow.UIERRORYoumustenterapoText1;
+            #endregion
+
+            // Verify that the 'DisplayText' property of 'ERROR: You must enter a positive integer for a fib...' label equals 'ERROR: You must enter a positive integer for a fibonacci number - eg fib(6)
+            //EQUATION ENTERED: fib(3.5)'
+            Assert.AreEqual(this.Assert_Fibonacci_Decimal_InputExpectedValues.UIERRORYoumustenterapoText1DisplayText, uIERRORYoumustenterapoText1.DisplayText);
+        }
+        
+        /// <summary>
+        /// Fibonacci_Irrational_Input
+        /// </summary>
+        public void Fibonacci_Irrational_Input()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            #endregion
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(499, 117));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(398, 336));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(492, 358));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(583, 390));
+        }
+        
+        /// <summary>
+        /// Asser_Fibonacci_Irrational_Input - Use 'Asser_Fibonacci_Irrational_InputExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void Asser_Fibonacci_Irrational_Input()
+        {
+            #region Variable Declarations
+            WinText uIERRORYoumustenterapoText2 = this.UIRuntimeErrorWindow.UIERRORYoumustenterapoWindow.UIERRORYoumustenterapoText2;
+            #endregion
+
+            // Verify that the 'DisplayText' property of 'ERROR: You must enter a positive integer for a fib...' label equals 'ERROR: You must enter a positive integer for a fibonacci number - eg fib(6)
+            //EQUATION ENTERED: fib(sqrt 2)'
+            Assert.AreEqual(this.Asser_Fibonacci_Irrational_InputExpectedValues.UIERRORYoumustenterapoText2DisplayText, uIERRORYoumustenterapoText2.DisplayText);
+        }
+        
+        /// <summary>
+        /// Fibonacci_Function_Input
+        /// </summary>
+        public void Fibonacci_Function_Input()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            #endregion
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(495, 123));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(444, 308));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(606, 308));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(500, 309));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(592, 340));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(544, 340));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(583, 360));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(460, 359));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(592, 395));
+        }
+        
+        /// <summary>
+        /// Assert_Fibonacci_Function_Input - Use 'Assert_Fibonacci_Function_InputExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void Assert_Fibonacci_Function_Input()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow2.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box is not equal to 'fib(7*8-6+1)
+            //-1,109,825,406
+            //
+            //'
+            Assert.AreNotEqual(this.Assert_Fibonacci_Function_InputExpectedValues.UIItemEditText, uIItemEdit.Text);
+        }
+        
+        /// <summary>
+        /// Fibonacci_ans_Input - Use 'Fibonacci_ans_InputParams' to pass parameters into this method.
+        /// </summary>
+        public void Fibonacci_ans_Input()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
+            #endregion
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(554, 338));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(592, 388));
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(491, 120));
+
+            // Select 'fib(ans)' in combo box
+            uIItemComboBox.EditableItem = this.Fibonacci_ans_InputParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(599, 394));
+        }
+        
+        /// <summary>
+        /// Asser_Fibonacci_ans_Input - Use 'Asser_Fibonacci_ans_InputExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void Asser_Fibonacci_ans_Input()
+        {
+            #region Variable Declarations
+            WinEdit uIItemEdit = this.UIGraphCalcWindow.UIItemWindow2.UIItemEdit;
+            #endregion
+
+            // Verify that the 'Text' property of text box equals '6
+            //6
+            //fib(ans)
+            //8
+            //
+            //'
+            Assert.AreEqual(this.Asser_Fibonacci_ans_InputExpectedValues.UIItemEditText, uIItemEdit.Text);
+        }
+        
+        /// <summary>
+        /// Fibonacci_UndefinedVariable_Input - Use 'Fibonacci_UndefinedVariable_InputParams' to pass parameters into this method.
+        /// </summary>
+        public void Fibonacci_UndefinedVariable_Input()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
+            #endregion
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(493, 119));
+
+            // Select 'fib(j)' in combo box
+            uIItemComboBox.EditableItem = this.Fibonacci_UndefinedVariable_InputParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(591, 390));
+        }
+        
+        /// <summary>
+        /// Asser_Fibonacci_UndefinedVariable_Input - Use 'Asser_Fibonacci_UndefinedVariable_InputExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void Asser_Fibonacci_UndefinedVariable_Input()
+        {
+            #region Variable Declarations
+            WinText uIERRORUndefinedconstaText = this.UIRuntimeErrorWindow.UIERRORYoumustenterapoWindow.UIERRORUndefinedconstaText;
+            #endregion
+
+            // Verify that the 'DisplayText' property of 'ERROR: Undefined constant EQUATION ENTERED: fib(j)' label equals 'ERROR: Undefined constant
+            //EQUATION ENTERED: fib(j)'
+            Assert.AreEqual(this.Asser_Fibonacci_UndefinedVariable_InputExpectedValues.UIERRORUndefinedconstaTextDisplayText, uIERRORUndefinedconstaText.DisplayText);
+        }
+        
+        /// <summary>
+        /// Fibonacci_NULL_Input - Use 'Fibonacci_NULL_InputParams' to pass parameters into this method.
+        /// </summary>
+        public void Fibonacci_NULL_Input()
+        {
+            #region Variable Declarations
+            WinControl uIGraphCalcDialog = this.UIGraphCalcWindow.UIGraphCalcDialog;
+            WinComboBox uIItemComboBox = this.UIGraphCalcWindow.UIItemWindow.UIItemComboBox;
+            #endregion
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(496, 120));
+
+            // Select 'fib()' in combo box
+            uIItemComboBox.EditableItem = this.Fibonacci_NULL_InputParams.UIItemComboBoxEditableItem;
+
+            // Click 'GraphCalc' Dialog
+            Mouse.Click(uIGraphCalcDialog, new Point(593, 398));
+        }
+        
+        /// <summary>
+        /// Asser_Fibonacci_NULL_Input - Use 'Asser_Fibonacci_NULL_InputExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void Asser_Fibonacci_NULL_Input()
+        {
+            #region Variable Declarations
+            WinText uIERROREmptysetofparenText = this.UIEquationErrorWindow.UIERROREmptysetofparenWindow.UIERROREmptysetofparenText;
+            #endregion
+
+            // Verify that the 'DisplayText' property of 'ERROR: Empty set of parenthesis EQUATION ENTERED: ...' label equals 'ERROR: Empty set of parenthesis
+            //EQUATION ENTERED: fib()'
+            Assert.AreEqual(this.Asser_Fibonacci_NULL_InputExpectedValues.UIERROREmptysetofparenTextDisplayText, uIERROREmptysetofparenText.DisplayText);
+        }
+        
         #region Properties
         public virtual AdditionParams AdditionParams
         {
@@ -2677,6 +3064,222 @@ namespace CodedUITestProject2
             }
         }
         
+        public virtual Fibonacci_Zero_InputParams Fibonacci_Zero_InputParams
+        {
+            get
+            {
+                if ((this.mFibonacci_Zero_InputParams == null))
+                {
+                    this.mFibonacci_Zero_InputParams = new Fibonacci_Zero_InputParams();
+                }
+                return this.mFibonacci_Zero_InputParams;
+            }
+        }
+        
+        public virtual Assert_Fibonacci_Zero_InputExpectedValues Assert_Fibonacci_Zero_InputExpectedValues
+        {
+            get
+            {
+                if ((this.mAssert_Fibonacci_Zero_InputExpectedValues == null))
+                {
+                    this.mAssert_Fibonacci_Zero_InputExpectedValues = new Assert_Fibonacci_Zero_InputExpectedValues();
+                }
+                return this.mAssert_Fibonacci_Zero_InputExpectedValues;
+            }
+        }
+        
+        public virtual Fibonacci_Negative_InputParams Fibonacci_Negative_InputParams
+        {
+            get
+            {
+                if ((this.mFibonacci_Negative_InputParams == null))
+                {
+                    this.mFibonacci_Negative_InputParams = new Fibonacci_Negative_InputParams();
+                }
+                return this.mFibonacci_Negative_InputParams;
+            }
+        }
+        
+        public virtual Assert_Fibonacci_Negative_InputExpectedValues Assert_Fibonacci_Negative_InputExpectedValues
+        {
+            get
+            {
+                if ((this.mAssert_Fibonacci_Negative_InputExpectedValues == null))
+                {
+                    this.mAssert_Fibonacci_Negative_InputExpectedValues = new Assert_Fibonacci_Negative_InputExpectedValues();
+                }
+                return this.mAssert_Fibonacci_Negative_InputExpectedValues;
+            }
+        }
+        
+        public virtual Fibonacci_Large_InputParams Fibonacci_Large_InputParams
+        {
+            get
+            {
+                if ((this.mFibonacci_Large_InputParams == null))
+                {
+                    this.mFibonacci_Large_InputParams = new Fibonacci_Large_InputParams();
+                }
+                return this.mFibonacci_Large_InputParams;
+            }
+        }
+        
+        public virtual Assert_Fibonacci_Large_InputExpectedValues Assert_Fibonacci_Large_InputExpectedValues
+        {
+            get
+            {
+                if ((this.mAssert_Fibonacci_Large_InputExpectedValues == null))
+                {
+                    this.mAssert_Fibonacci_Large_InputExpectedValues = new Assert_Fibonacci_Large_InputExpectedValues();
+                }
+                return this.mAssert_Fibonacci_Large_InputExpectedValues;
+            }
+        }
+        
+        public virtual Fibonacci_Fibonacci_InputParams Fibonacci_Fibonacci_InputParams
+        {
+            get
+            {
+                if ((this.mFibonacci_Fibonacci_InputParams == null))
+                {
+                    this.mFibonacci_Fibonacci_InputParams = new Fibonacci_Fibonacci_InputParams();
+                }
+                return this.mFibonacci_Fibonacci_InputParams;
+            }
+        }
+        
+        public virtual Asser_Fibonacci_Fibonacci_InputExpectedValues Asser_Fibonacci_Fibonacci_InputExpectedValues
+        {
+            get
+            {
+                if ((this.mAsser_Fibonacci_Fibonacci_InputExpectedValues == null))
+                {
+                    this.mAsser_Fibonacci_Fibonacci_InputExpectedValues = new Asser_Fibonacci_Fibonacci_InputExpectedValues();
+                }
+                return this.mAsser_Fibonacci_Fibonacci_InputExpectedValues;
+            }
+        }
+        
+        public virtual Fibonacci_Decimal_InputParams Fibonacci_Decimal_InputParams
+        {
+            get
+            {
+                if ((this.mFibonacci_Decimal_InputParams == null))
+                {
+                    this.mFibonacci_Decimal_InputParams = new Fibonacci_Decimal_InputParams();
+                }
+                return this.mFibonacci_Decimal_InputParams;
+            }
+        }
+        
+        public virtual Assert_Fibonacci_Decimal_InputExpectedValues Assert_Fibonacci_Decimal_InputExpectedValues
+        {
+            get
+            {
+                if ((this.mAssert_Fibonacci_Decimal_InputExpectedValues == null))
+                {
+                    this.mAssert_Fibonacci_Decimal_InputExpectedValues = new Assert_Fibonacci_Decimal_InputExpectedValues();
+                }
+                return this.mAssert_Fibonacci_Decimal_InputExpectedValues;
+            }
+        }
+        
+        public virtual Asser_Fibonacci_Irrational_InputExpectedValues Asser_Fibonacci_Irrational_InputExpectedValues
+        {
+            get
+            {
+                if ((this.mAsser_Fibonacci_Irrational_InputExpectedValues == null))
+                {
+                    this.mAsser_Fibonacci_Irrational_InputExpectedValues = new Asser_Fibonacci_Irrational_InputExpectedValues();
+                }
+                return this.mAsser_Fibonacci_Irrational_InputExpectedValues;
+            }
+        }
+        
+        public virtual Assert_Fibonacci_Function_InputExpectedValues Assert_Fibonacci_Function_InputExpectedValues
+        {
+            get
+            {
+                if ((this.mAssert_Fibonacci_Function_InputExpectedValues == null))
+                {
+                    this.mAssert_Fibonacci_Function_InputExpectedValues = new Assert_Fibonacci_Function_InputExpectedValues();
+                }
+                return this.mAssert_Fibonacci_Function_InputExpectedValues;
+            }
+        }
+        
+        public virtual Fibonacci_ans_InputParams Fibonacci_ans_InputParams
+        {
+            get
+            {
+                if ((this.mFibonacci_ans_InputParams == null))
+                {
+                    this.mFibonacci_ans_InputParams = new Fibonacci_ans_InputParams();
+                }
+                return this.mFibonacci_ans_InputParams;
+            }
+        }
+        
+        public virtual Asser_Fibonacci_ans_InputExpectedValues Asser_Fibonacci_ans_InputExpectedValues
+        {
+            get
+            {
+                if ((this.mAsser_Fibonacci_ans_InputExpectedValues == null))
+                {
+                    this.mAsser_Fibonacci_ans_InputExpectedValues = new Asser_Fibonacci_ans_InputExpectedValues();
+                }
+                return this.mAsser_Fibonacci_ans_InputExpectedValues;
+            }
+        }
+        
+        public virtual Fibonacci_UndefinedVariable_InputParams Fibonacci_UndefinedVariable_InputParams
+        {
+            get
+            {
+                if ((this.mFibonacci_UndefinedVariable_InputParams == null))
+                {
+                    this.mFibonacci_UndefinedVariable_InputParams = new Fibonacci_UndefinedVariable_InputParams();
+                }
+                return this.mFibonacci_UndefinedVariable_InputParams;
+            }
+        }
+        
+        public virtual Asser_Fibonacci_UndefinedVariable_InputExpectedValues Asser_Fibonacci_UndefinedVariable_InputExpectedValues
+        {
+            get
+            {
+                if ((this.mAsser_Fibonacci_UndefinedVariable_InputExpectedValues == null))
+                {
+                    this.mAsser_Fibonacci_UndefinedVariable_InputExpectedValues = new Asser_Fibonacci_UndefinedVariable_InputExpectedValues();
+                }
+                return this.mAsser_Fibonacci_UndefinedVariable_InputExpectedValues;
+            }
+        }
+        
+        public virtual Fibonacci_NULL_InputParams Fibonacci_NULL_InputParams
+        {
+            get
+            {
+                if ((this.mFibonacci_NULL_InputParams == null))
+                {
+                    this.mFibonacci_NULL_InputParams = new Fibonacci_NULL_InputParams();
+                }
+                return this.mFibonacci_NULL_InputParams;
+            }
+        }
+        
+        public virtual Asser_Fibonacci_NULL_InputExpectedValues Asser_Fibonacci_NULL_InputExpectedValues
+        {
+            get
+            {
+                if ((this.mAsser_Fibonacci_NULL_InputExpectedValues == null))
+                {
+                    this.mAsser_Fibonacci_NULL_InputExpectedValues = new Asser_Fibonacci_NULL_InputExpectedValues();
+                }
+                return this.mAsser_Fibonacci_NULL_InputExpectedValues;
+            }
+        }
+        
         public UIGraphCalcWindow UIGraphCalcWindow
         {
             get
@@ -2860,6 +3463,42 @@ namespace CodedUITestProject2
         private AssertBoltzmansConstExpectedValues mAssertBoltzmansConstExpectedValues;
         
         private AssertGasConstExpectedValues mAssertGasConstExpectedValues;
+        
+        private Fibonacci_Zero_InputParams mFibonacci_Zero_InputParams;
+        
+        private Assert_Fibonacci_Zero_InputExpectedValues mAssert_Fibonacci_Zero_InputExpectedValues;
+        
+        private Fibonacci_Negative_InputParams mFibonacci_Negative_InputParams;
+        
+        private Assert_Fibonacci_Negative_InputExpectedValues mAssert_Fibonacci_Negative_InputExpectedValues;
+        
+        private Fibonacci_Large_InputParams mFibonacci_Large_InputParams;
+        
+        private Assert_Fibonacci_Large_InputExpectedValues mAssert_Fibonacci_Large_InputExpectedValues;
+        
+        private Fibonacci_Fibonacci_InputParams mFibonacci_Fibonacci_InputParams;
+        
+        private Asser_Fibonacci_Fibonacci_InputExpectedValues mAsser_Fibonacci_Fibonacci_InputExpectedValues;
+        
+        private Fibonacci_Decimal_InputParams mFibonacci_Decimal_InputParams;
+        
+        private Assert_Fibonacci_Decimal_InputExpectedValues mAssert_Fibonacci_Decimal_InputExpectedValues;
+        
+        private Asser_Fibonacci_Irrational_InputExpectedValues mAsser_Fibonacci_Irrational_InputExpectedValues;
+        
+        private Assert_Fibonacci_Function_InputExpectedValues mAssert_Fibonacci_Function_InputExpectedValues;
+        
+        private Fibonacci_ans_InputParams mFibonacci_ans_InputParams;
+        
+        private Asser_Fibonacci_ans_InputExpectedValues mAsser_Fibonacci_ans_InputExpectedValues;
+        
+        private Fibonacci_UndefinedVariable_InputParams mFibonacci_UndefinedVariable_InputParams;
+        
+        private Asser_Fibonacci_UndefinedVariable_InputExpectedValues mAsser_Fibonacci_UndefinedVariable_InputExpectedValues;
+        
+        private Fibonacci_NULL_InputParams mFibonacci_NULL_InputParams;
+        
+        private Asser_Fibonacci_NULL_InputExpectedValues mAsser_Fibonacci_NULL_InputExpectedValues;
         
         private UIGraphCalcWindow mUIGraphCalcWindow;
         
@@ -4650,6 +5289,305 @@ namespace CodedUITestProject2
         #endregion
     }
     
+    /// <summary>
+    /// Parameters to be passed into 'Fibonacci_Zero_Input'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class Fibonacci_Zero_InputParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select '' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "";
+        
+        /// <summary>
+        /// Select 'fib(0)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem1 = "fib(0)";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'Assert_Fibonacci_Zero_Input'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class Assert_Fibonacci_Zero_InputExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'DisplayText' property of 'Runtime Error' title bar equals 'Runtime Error'
+        /// </summary>
+        public string UIRuntimeErrorTitleBarDisplayText = "Runtime Error";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'Fibonacci_Negative_Input'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class Fibonacci_Negative_InputParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'fib(-1)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "fib(-1)";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'Assert_Fibonacci_Negative_Input'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class Assert_Fibonacci_Negative_InputExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'DisplayText' property of 'Runtime Error' title bar equals 'Runtime Error'
+        /// </summary>
+        public string UIRuntimeErrorTitleBarDisplayText = "Runtime Error";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'Fibonacci_Large_Input'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class Fibonacci_Large_InputParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'fib(999999999999999999999999999999)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "fib(999999999999999999999999999999)";
+        
+        /// <summary>
+        /// Type '{Enter}' in text box
+        /// </summary>
+        public string UIItemEditSendKeys = "{Enter}";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'Assert_Fibonacci_Large_Input'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class Assert_Fibonacci_Large_InputExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'DisplayText' property of 'ERROR: You must enter a positive integer for a fib...' label is not equal to 'ERROR: You must enter a positive integer for a fibonacci number - eg fib(6)
+        ///EQUATION ENTERED: fib(999999999999999999999999999999)'
+        /// </summary>
+        public string UIERRORYoumustenterapoTextDisplayText = "ERROR: You must enter a positive integer for a fibonacci number - eg fib(6)\nEQUAT" +
+            "ION ENTERED: fib(999999999999999999999999999999)";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'Fibonacci_Fibonacci_Input'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class Fibonacci_Fibonacci_InputParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'fib(fib(6))' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "fib(fib(6))";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'Asser_Fibonacci_Fibonacci_Input'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class Asser_Fibonacci_Fibonacci_InputExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals 'fib(fib(6))
+        ///21
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "fib(fib(6))\n21\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'Fibonacci_Decimal_Input'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class Fibonacci_Decimal_InputParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'fib(3.5)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "fib(3.5)";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'Assert_Fibonacci_Decimal_Input'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class Assert_Fibonacci_Decimal_InputExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'DisplayText' property of 'ERROR: You must enter a positive integer for a fib...' label equals 'ERROR: You must enter a positive integer for a fibonacci number - eg fib(6)
+        ///EQUATION ENTERED: fib(3.5)'
+        /// </summary>
+        public string UIERRORYoumustenterapoText1DisplayText = "ERROR: You must enter a positive integer for a fibonacci number - eg fib(6)\nEQUAT" +
+            "ION ENTERED: fib(3.5)";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'Asser_Fibonacci_Irrational_Input'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class Asser_Fibonacci_Irrational_InputExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'DisplayText' property of 'ERROR: You must enter a positive integer for a fib...' label equals 'ERROR: You must enter a positive integer for a fibonacci number - eg fib(6)
+        ///EQUATION ENTERED: fib(sqrt 2)'
+        /// </summary>
+        public string UIERRORYoumustenterapoText2DisplayText = "ERROR: You must enter a positive integer for a fibonacci number - eg fib(6)\nEQUAT" +
+            "ION ENTERED: fib(sqrt 2)";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'Assert_Fibonacci_Function_Input'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class Assert_Fibonacci_Function_InputExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box is not equal to 'fib(7*8-6+1)
+        ///-1,109,825,406
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "fib(7*8-6+1)\n-1,109,825,406\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'Fibonacci_ans_Input'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class Fibonacci_ans_InputParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'fib(ans)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "fib(ans)";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'Asser_Fibonacci_ans_Input'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class Asser_Fibonacci_ans_InputExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Text' property of text box equals '6
+        ///6
+        ///fib(ans)
+        ///8
+        ///
+        ///'
+        /// </summary>
+        public string UIItemEditText = "6\n6\nfib(ans)\n8\n\r\n";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'Fibonacci_UndefinedVariable_Input'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class Fibonacci_UndefinedVariable_InputParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'fib(j)' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "fib(j)";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'Asser_Fibonacci_UndefinedVariable_Input'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class Asser_Fibonacci_UndefinedVariable_InputExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'DisplayText' property of 'ERROR: Undefined constant EQUATION ENTERED: fib(j)' label equals 'ERROR: Undefined constant
+        ///EQUATION ENTERED: fib(j)'
+        /// </summary>
+        public string UIERRORUndefinedconstaTextDisplayText = "ERROR: Undefined constant\nEQUATION ENTERED: fib(j)";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'Fibonacci_NULL_Input'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class Fibonacci_NULL_InputParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'fib()' in combo box
+        /// </summary>
+        public string UIItemComboBoxEditableItem = "fib()";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'Asser_Fibonacci_NULL_Input'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class Asser_Fibonacci_NULL_InputExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'DisplayText' property of 'ERROR: Empty set of parenthesis EQUATION ENTERED: ...' label equals 'ERROR: Empty set of parenthesis
+        ///EQUATION ENTERED: fib()'
+        /// </summary>
+        public string UIERROREmptysetofparenTextDisplayText = "ERROR: Empty set of parenthesis\nEQUATION ENTERED: fib()";
+        #endregion
+    }
+    
     [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
     public class UIGraphCalcWindow : WinWindow
     {
@@ -5108,12 +6046,26 @@ namespace CodedUITestProject2
                 return this.mUIEquationErrorTitleBar;
             }
         }
+        
+        public UIERROREmptysetofparenWindow UIERROREmptysetofparenWindow
+        {
+            get
+            {
+                if ((this.mUIERROREmptysetofparenWindow == null))
+                {
+                    this.mUIERROREmptysetofparenWindow = new UIERROREmptysetofparenWindow(this);
+                }
+                return this.mUIERROREmptysetofparenWindow;
+            }
+        }
         #endregion
         
         #region Fields
         private UIOKWindow mUIOKWindow;
         
         private UIEquationErrorTitleBar mUIEquationErrorTitleBar;
+        
+        private UIERROREmptysetofparenWindow mUIERROREmptysetofparenWindow;
         #endregion
     }
     
@@ -5185,6 +6137,42 @@ namespace CodedUITestProject2
         
         #region Fields
         private WinButton mUICloseButton;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIERROREmptysetofparenWindow : WinWindow
+    {
+        
+        public UIERROREmptysetofparenWindow(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "65535";
+            this.WindowTitles.Add("Equation Error");
+            #endregion
+        }
+        
+        #region Properties
+        public WinText UIERROREmptysetofparenText
+        {
+            get
+            {
+                if ((this.mUIERROREmptysetofparenText == null))
+                {
+                    this.mUIERROREmptysetofparenText = new WinText(this);
+                    #region Search Criteria
+                    this.mUIERROREmptysetofparenText.SearchProperties[WinText.PropertyNames.Name] = "ERROR: Empty set of parenthesisEQUATION ENTERED: fib()";
+                    this.mUIERROREmptysetofparenText.WindowTitles.Add("Equation Error");
+                    #endregion
+                }
+                return this.mUIERROREmptysetofparenText;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinText mUIERROREmptysetofparenText;
         #endregion
     }
     
@@ -5298,10 +6286,41 @@ namespace CodedUITestProject2
                 return this.mUIOKWindow;
             }
         }
+        
+        public WinTitleBar UIRuntimeErrorTitleBar
+        {
+            get
+            {
+                if ((this.mUIRuntimeErrorTitleBar == null))
+                {
+                    this.mUIRuntimeErrorTitleBar = new WinTitleBar(this);
+                    #region Search Criteria
+                    this.mUIRuntimeErrorTitleBar.WindowTitles.Add("Runtime Error");
+                    #endregion
+                }
+                return this.mUIRuntimeErrorTitleBar;
+            }
+        }
+        
+        public UIERRORYoumustenterapoWindow UIERRORYoumustenterapoWindow
+        {
+            get
+            {
+                if ((this.mUIERRORYoumustenterapoWindow == null))
+                {
+                    this.mUIERRORYoumustenterapoWindow = new UIERRORYoumustenterapoWindow(this);
+                }
+                return this.mUIERRORYoumustenterapoWindow;
+            }
+        }
         #endregion
         
         #region Fields
         private UIOKWindow1 mUIOKWindow;
+        
+        private WinTitleBar mUIRuntimeErrorTitleBar;
+        
+        private UIERRORYoumustenterapoWindow mUIERRORYoumustenterapoWindow;
         #endregion
     }
     
@@ -5338,6 +6357,99 @@ namespace CodedUITestProject2
         
         #region Fields
         private WinButton mUIOKButton;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIERRORYoumustenterapoWindow : WinWindow
+    {
+        
+        public UIERRORYoumustenterapoWindow(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "65535";
+            this.WindowTitles.Add("Runtime Error");
+            #endregion
+        }
+        
+        #region Properties
+        public WinText UIERRORYoumustenterapoText
+        {
+            get
+            {
+                if ((this.mUIERRORYoumustenterapoText == null))
+                {
+                    this.mUIERRORYoumustenterapoText = new WinText(this);
+                    #region Search Criteria
+                    this.mUIERRORYoumustenterapoText.SearchProperties[WinText.PropertyNames.Name] = "ERROR: You must enter a positive integer for a fibonacci number - eg fib(6)EQUATI" +
+                        "ON ENTERED: fib(999999999999999999999999999999)";
+                    this.mUIERRORYoumustenterapoText.WindowTitles.Add("Runtime Error");
+                    #endregion
+                }
+                return this.mUIERRORYoumustenterapoText;
+            }
+        }
+        
+        public WinText UIERRORYoumustenterapoText1
+        {
+            get
+            {
+                if ((this.mUIERRORYoumustenterapoText1 == null))
+                {
+                    this.mUIERRORYoumustenterapoText1 = new WinText(this);
+                    #region Search Criteria
+                    this.mUIERRORYoumustenterapoText1.SearchProperties[WinText.PropertyNames.Name] = "ERROR: You must enter a positive integer for a fibonacci number - eg fib(6)EQUATI" +
+                        "ON ENTERED: fib(3.5)";
+                    this.mUIERRORYoumustenterapoText1.WindowTitles.Add("Runtime Error");
+                    #endregion
+                }
+                return this.mUIERRORYoumustenterapoText1;
+            }
+        }
+        
+        public WinText UIERRORYoumustenterapoText2
+        {
+            get
+            {
+                if ((this.mUIERRORYoumustenterapoText2 == null))
+                {
+                    this.mUIERRORYoumustenterapoText2 = new WinText(this);
+                    #region Search Criteria
+                    this.mUIERRORYoumustenterapoText2.SearchProperties[WinText.PropertyNames.Name] = "ERROR: You must enter a positive integer for a fibonacci number - eg fib(6)EQUATI" +
+                        "ON ENTERED: fib(sqrt 2)";
+                    this.mUIERRORYoumustenterapoText2.WindowTitles.Add("Runtime Error");
+                    #endregion
+                }
+                return this.mUIERRORYoumustenterapoText2;
+            }
+        }
+        
+        public WinText UIERRORUndefinedconstaText
+        {
+            get
+            {
+                if ((this.mUIERRORUndefinedconstaText == null))
+                {
+                    this.mUIERRORUndefinedconstaText = new WinText(this);
+                    #region Search Criteria
+                    this.mUIERRORUndefinedconstaText.SearchProperties[WinText.PropertyNames.Name] = "ERROR: Undefined constantEQUATION ENTERED: fib(j)";
+                    this.mUIERRORUndefinedconstaText.WindowTitles.Add("Runtime Error");
+                    #endregion
+                }
+                return this.mUIERRORUndefinedconstaText;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinText mUIERRORYoumustenterapoText;
+        
+        private WinText mUIERRORYoumustenterapoText1;
+        
+        private WinText mUIERRORYoumustenterapoText2;
+        
+        private WinText mUIERRORUndefinedconstaText;
         #endregion
     }
     
